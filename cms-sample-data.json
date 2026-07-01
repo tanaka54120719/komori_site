@@ -1,0 +1,38 @@
+{
+  "news": [
+    {
+      "title": "院内掲示を更新しました",
+      "date": "2026-06-02",
+      "category": "patient",
+      "categoryLabel": "患者さん",
+      "linkType": "none"
+    },
+    {
+      "title": "ご面会について",
+      "date": "2026-05-07",
+      "category": "patient",
+      "categoryLabel": "患者さん",
+      "linkType": "page",
+      "pageId": "page-admission"
+    }
+  ],
+  "blog": [
+    {
+      "title": "梅雨の季節の過ごし方",
+      "month": "2026-06",
+      "displayMonth": "2026年6月",
+      "date": "2026-06-01",
+      "volume": "Vol.03",
+      "sections": [
+        {
+          "title": "梅雨時期の病棟環境",
+          "body": [
+            "梅雨入りとともに、病棟の湿度管理がスタッフの大切な仕事のひとつになります。",
+            "患者様が快適に過ごせるよう、換気と除湿を徹底しています。"
+          ],
+          "caption": "病棟内の換気・感染対策を徹底しています"
+        }
+      ]
+    }
+  ]
+}

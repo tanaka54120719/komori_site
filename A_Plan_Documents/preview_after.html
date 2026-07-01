@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小森病院 トップページ 改善後プレビュー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --f1: #0f2318;
+  --f2: #1a3828;
+  --f3: #2d5a3d;
+  --f4: #4a7c59;
+  --f5: #8eb89a;
+  --sage: #c8e0cc;
+  --sage-pale: #e8f2ea;
+  --cream: #f6f1e5;
+  --cream2: #ede5d4;
+  --cream3: #e0d4c0;
+  --terra: #b8441a;
+  --terra2: #d4622e;
+  --gold: #c09020;
+  --gold2: #f0d070;
+  --text1: #1a1e18;
+  --text2: #3a3c38;
+  --text3: #6a6c68;
+  --text4: #9a9c98;
+  --white: #fefcf8;
+  --red: #c0392b;
+  --border: #c8c0a8;
+  --border2: #ddd8c8;
+  --shadow: rgba(26,56,40,.10);
+  --shadow2: rgba(26,56,40,.18);
+}
+
+body {
+  background: #c8c4b8;
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  padding: 32px 16px 60px;
+}
+
+/* ドキュメントヘッダー */
+.doc-meta {
+  width: 794px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.doc-tag-after {
+  background: var(--f3);
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+.doc-meta-title { font-size: 13px; color: #444; font-weight: bold; }
+.doc-meta-note { font-size: 11px; color: #777; margin-left: auto; }
+
+/* A4ページフレーム */
+.page {
+  width: 794px;
+  background: var(--cream);
+  margin: 0 auto;
+  box-shadow: 0 8px 48px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.15);
+  font-size: 13px;
+  color: var(--text1);
+  overflow: hidden;
+}
+
+/* 改善アノテーション */
+.improve-band {
+  background: #e8f5ea;
+  border-left: 5px solid var(--f3);
+  border-top: 1px solid #c8e8cc;
+  border-bottom: 1px solid #c8e8cc;
+  padding: 7px 14px;
+  font-size: 11px;
+  color: #1a4828;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.improve-band .imp-icon { font-size: 14px; }
+.improve-band .imp-text { line-height: 1.5; }
+.improve-band .imp-label {
+  margin-left: auto;
+  background: var(--f3);
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 9px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.new-label {
+  background: var(--terra);
+  color: #fff;
+}
+
+/* ================================================================
+   ① ヘッダー — 電話番号を常時表示
+================================================================ */
+.site-header {
+  background: var(--white);
+  border-bottom: 3px solid var(--f3);
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 18px;
+  background: var(--f2);
+  color: rgba(255,255,255,.9);
+}
+.header-phone-area {
+  flex: 1;
+}
+.header-phone-label { font-size: 10px; opacity: .7; margin-bottom: 1px; }
+.header-phone-num {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  color: var(--gold2);
+}
+.header-phone-sub { font-size: 10px; opacity: .65; margin-top: 1px; }
+.header-cta-btn {
+  background: var(--terra);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+  white-space: nowrap;
+  border: none;
+}
+.header-logo-row {
+  display: flex;
+  align-items: stretch;
+  min-height: 110px;
+  padding: 10px 0;
+  background: var(--white);
+}
+.header-logo-box {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 18px;
+}
+.header-logo-inner {
+  border: 2px solid var(--f3);
+  padding: 8px 14px;
+  border-radius: 3px;
+  text-align: center;
+  color: var(--f2);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+  font-family: 'Shippori Mincho B1', serif;
+}
+.header-slideshow {
+  flex: 1;
+  background: linear-gradient(135deg, #2d5a3d 0%, #4a7c59 30%, #8eb89a 55%, #c8e0cc 70%, #e8f0e0 80%, #e8dcc8 90%, #d8c8a8 100%);
+  position: relative;
+  overflow: hidden;
+}
+.slideshow-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,252,248,.8) 0%, rgba(255,252,248,0) 35%);
+}
+.slideshow-label {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 10px;
+  color: rgba(255,255,255,.7);
+  background: rgba(0,0,0,.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.slide-dots-row {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+.sdot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.5); }
+.sdot.active { background: rgba(255,255,255,.95); }
+
+/* ================================================================
+   ② ナビゲーション
+================================================================ */
+.site-nav {
+  background: var(--white);
+  border-bottom: 2px solid var(--f3);
+  display: flex;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+.site-nav a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 11px 3px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--f3);
+  background: var(--white);
+  border-right: 1px solid var(--border2);
+  line-height: 1.4;
+  text-decoration: none;
+  letter-spacing: .02em;
+}
+.site-nav a.active { background: var(--f2); color: var(--white); }
+
+/* ================================================================
+   ③ ヒーローセクション — 大型・写真背景
+================================================================ */
+.hero {
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(160deg, rgba(15,35,20,.68) 0%, rgba(20,45,30,.52) 45%, rgba(26,56,40,.60) 100%),
+    radial-gradient(ellipse at 72% 28%, rgba(180,210,155,.75) 0%, transparent 48%),
+    radial-gradient(ellipse at 18% 75%, rgba(100,150,110,.55) 0%, transparent 42%),
+    linear-gradient(148deg,
+      #1a3828 0%, #2d5a3d 18%, #4a7c59 35%,
+      #8eb89a 50%, #c0d8a8 62%, #e8f0d0 70%,
+      #f0e8c8 78%, #e0d4a8 88%, #c8b888 100%
+    );
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 36px 30px;
+  max-width: 580px;
+}
+.hero-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255,255,255,.75);
+  border: 1px solid rgba(255,255,255,.35);
+  padding: 3px 10px;
+  border-radius: 2px;
+  letter-spacing: .1em;
+  margin-bottom: 14px;
+}
+.hero-title {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.55;
+  letter-spacing: .06em;
+  margin-bottom: 8px;
+}
+.hero-title::after {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--gold);
+  margin-top: 14px;
+  border-radius: 1px;
+}
+.hero-sub {
+  font-size: 11.5px;
+  color: rgba(255,255,255,.82);
+  line-height: 2;
+  margin-top: 14px;
+  font-weight: 300;
+}
+.hero-cta-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+.btn-hero-primary {
+  background: var(--terra);
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 11px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+}
+.btn-hero-secondary {
+  background: rgba(255,255,255,.15);
+  border: 1.5px solid rgba(255,255,255,.55);
+  color: rgba(255,255,255,.92);
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 11px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 14px;
+  right: 22px;
+  color: rgba(255,255,255,.5);
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(rgba(255,255,255,.5), transparent);
+}
+
+/* ================================================================
+   ④ 数値バー
+================================================================ */
+.stats-bar {
+  background: var(--f1);
+  display: flex;
+}
+.stat-item {
+  flex: 1;
+  padding: 14px 12px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.08);
+  position: relative;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold2);
+  letter-spacing: .03em;
+  line-height: 1.2;
+}
+.stat-num sup { font-size: 11px; vertical-align: super; }
+.stat-label { font-size: 10px; color: rgba(255,255,255,.6); margin-top: 3px; }
+
+/* ================================================================
+   ⑤ デュアルCTA
+================================================================ */
+.dual-cta-section { display: flex; }
+.cta-care {
+  flex: 1;
+  background: linear-gradient(135deg, #8b2018, var(--red));
+  color: #fff;
+  padding: 16px 20px;
+  text-decoration: none;
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.cta-family {
+  flex: 1;
+  background: linear-gradient(135deg, var(--f2), var(--f3));
+  color: #fff;
+  padding: 16px 20px;
+  text-decoration: none;
+}
+.cta-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(255,255,255,.22);
+  padding: 2px 9px;
+  border-radius: 9px;
+  margin-bottom: 6px;
+}
+.cta-title { font-size: 13px; font-weight: 700; line-height: 1.4; }
+.cta-sub { font-size: 10px; opacity: .72; margin-top: 4px; }
+
+/* ================================================================
+   セクション共通
+================================================================ */
+.section-wrap { padding: 24px 20px; background: var(--cream); }
+.section-wrap.alt { background: var(--white); }
+.section-wrap.dark { background: var(--f2); }
+
+.sec-title {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--f2);
+  letter-spacing: .06em;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.sec-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin-left: 12px;
+}
+.sec-sub { font-size: 10.5px; color: var(--text3); margin-bottom: 18px; line-height: 1.6; }
+
+/* ================================================================
+   ⑥ 診療時間
+================================================================ */
+.hours-wrap { padding: 16px 20px; background: var(--white); border-top: 1px solid var(--border2); border-bottom: 1px solid var(--border2); }
+.hours-title2 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--f2);
+  margin-bottom: 10px;
+  letter-spacing: .04em;
+}
+.hours-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.hours-table th { background: var(--f3); color: #fff; padding: 6px 8px; border: 1px solid var(--f4); text-align: center; }
+.hours-table th.th-time { background: var(--f2); width: 82px; }
+.hours-table td { padding: 7px 6px; border: 1px solid var(--border2); text-align: center; }
+.hours-table .td-time { background: var(--sage-pale); font-weight: 700; color: var(--f2); font-size: 10px; }
+.hours-table td.open { color: var(--f3); font-weight: 700; font-size: 12px; }
+.hours-table td.closed { color: var(--border); font-size: 14px; }
+.hours-note2 { font-size: 10px; color: var(--text4); margin-top: 6px; line-height: 1.8; }
+.hours-note2 strong { color: var(--terra); }
+
+/* ================================================================
+   ⑦ 3つの強み
+================================================================ */
+.strengths-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.strength-card {
+  background: var(--white);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 18px 14px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.str-num {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--f3), var(--f2));
+  color: #fff;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+.str-head {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--f2);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.str-body { font-size: 10.5px; color: var(--text3); line-height: 1.8; text-align: left; }
+.str-photo {
+  width: 100%;
+  height: 64px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.str-photo-1 { background: linear-gradient(135deg, #2d3a50 0%, #3d4a60 40%, #6a7890 70%, #8090a8 100%); }
+.str-photo-2 { background: linear-gradient(135deg, #3a6050 0%, #5a8068 40%, #80a890 70%, #a8c8b8 100%); }
+.str-photo-3 { background: linear-gradient(135deg, #4a3840 0%, #6a5060 40%, #9080a0 70%, #b8a8c0 100%); }
+.str-photo-inner {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.6);
+  font-size: 10px;
+}
+
+/* ================================================================
+   ⑧ 施設ギャラリー（NEW）
+================================================================ */
+.gallery-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 8px; }
+.gallery-card {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.gallery-photo {
+  height: 72px;
+  width: 100%;
+}
+.gp-room    { background: linear-gradient(145deg, #f0e8d8, #e0d0b8, #d0c0a0); }
+.gp-rehab   { background: linear-gradient(145deg, #d8eaf0, #b8cede, #98b8cc); }
+.gp-day     { background: linear-gradient(145deg, #f0ecd8, #e0d8b0, #d0c898); }
+.gp-dining  { background: linear-gradient(145deg, #f4ead8, #e8d8b8, #dcc898); }
+.gp-enter   { background: linear-gradient(145deg, #e8ede8, #d0d8d0, #b8c8b8); }
+.gallery-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(15,35,20,.7));
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 12px 6px 4px;
+  text-align: center;
+}
+
+/* ================================================================
+   ⑨ ご家族様の声（NEW）
+================================================================ */
+.voices-section { background: var(--sage-pale); padding: 24px 20px; }
+.voices-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.voice-card {
+  background: var(--white);
+  border-radius: 6px;
+  padding: 16px 14px;
+  box-shadow: 0 2px 8px var(--shadow);
+  position: relative;
+}
+.voice-quote {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+  opacity: .6;
+}
+.voice-text {
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+.voice-person {
+  border-top: 1px solid var(--border2);
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.voice-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  color: #fff;
+}
+.va1 { background: var(--f3); }
+.va2 { background: var(--terra); }
+.va3 { background: var(--gold); }
+.voice-info { font-size: 10px; color: var(--text3); line-height: 1.5; }
+.voice-info strong { display: block; color: var(--f2); font-size: 11px; }
+
+/* ================================================================
+   ⑩ スタッフ紹介（NEW）
+================================================================ */
+.staff-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+.staff-card {
+  background: var(--white);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: 0 1px 4px var(--shadow);
+}
+.staff-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.sa1 { background: linear-gradient(135deg, var(--f2), var(--f3)); }
+.sa2 { background: linear-gradient(135deg, var(--f3), var(--f4)); }
+.sa3 { background: linear-gradient(135deg, #5a6080, #7a8090); }
+.sa4 { background: linear-gradient(135deg, #7a5060, #9a7080); }
+.staff-role { font-size: 10px; color: var(--terra); font-weight: 700; margin-bottom: 3px; }
+.staff-name {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--f2);
+  margin-bottom: 6px;
+}
+.staff-msg { font-size: 10px; color: var(--text3); line-height: 1.7; }
+
+/* ================================================================
+   ⑪ FAQ（NEW）
+================================================================ */
+.faq-list { }
+.faq-item {
+  border-bottom: 1px solid var(--border2);
+  padding: 12px 0;
+}
+.faq-item:first-child { border-top: 1px solid var(--border2); }
+.faq-q {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.faq-q-mark {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--f2);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Shippori Mincho B1', serif;
+}
+.faq-q-text { font-size: 12px; font-weight: 700; color: var(--f2); padding-top: 2px; line-height: 1.5; flex: 1; }
+.faq-expand {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text4);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.faq-a {
+  display: flex;
+  gap: 10px;
+  padding-left: 32px;
+}
+.faq-a-mark {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--f4);
+  color: var(--f4);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Shippori Mincho B1', serif;
+}
+.faq-a-text { font-size: 11px; color: var(--text2); line-height: 1.8; }
+
+/* ================================================================
+   ⑫ アクセス・診療時間（簡略）
+================================================================ */
+.access-section {
+  background: var(--cream2);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.access-map {
+  background: linear-gradient(145deg, #d0dcd0, #b8c8b8, #a8b8a8);
+  border-radius: 5px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.8);
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+.access-info { font-size: 11px; color: var(--text2); line-height: 2; }
+.access-info h3 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 13px;
+  color: var(--f2);
+  margin-bottom: 8px;
+}
+.access-info .tel-big { font-size: 15px; font-weight: 700; color: var(--terra); }
+
+/* ================================================================
+   ⑬ お問い合わせ（強化）
+================================================================ */
+.contact-section {
+  background: linear-gradient(135deg, var(--f1) 0%, var(--f2) 60%, #3d6a50 100%);
+  padding: 28px 24px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.04);
+  pointer-events: none;
+}
+.contact-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20px; left: 40%;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.03);
+  pointer-events: none;
+}
+.contact-heading {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: .06em;
+  position: relative;
+}
+.contact-heading::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: var(--gold);
+  margin-top: 10px;
+  border-radius: 1px;
+}
+.contact-sub { font-size: 11px; opacity: .72; margin: 12px 0 20px; line-height: 1.8; position: relative; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; position: relative; }
+.contact-phone-box {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 6px;
+  padding: 16px 18px;
+}
+.contact-phone-label { font-size: 10px; opacity: .65; margin-bottom: 4px; }
+.contact-phone-num {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold2);
+  letter-spacing: .04em;
+}
+.contact-phone-detail { font-size: 10px; opacity: .6; margin-top: 4px; line-height: 1.7; }
+.contact-form-box {
+  background: var(--terra);
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.contact-form-sub { font-size: 10px; opacity: .8; margin-bottom: 12px; line-height: 1.6; }
+.contact-form-btn {
+  background: rgba(255,255,255,.2);
+  border: 1.5px solid rgba(255,255,255,.5);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-align: center;
+  width: fit-content;
+}
+
+/* ================================================================
+   フッター
+================================================================ */
+.site-footer {
+  background: var(--f1);
+  color: rgba(255,255,255,.7);
+  padding: 18px 20px;
+  font-size: 11px;
+  line-height: 2.1;
+}
+.footer-inner {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.footer-logo {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 12px;
+  color: rgba(255,255,255,.85);
+  line-height: 1.7;
+  flex-shrink: 0;
+}
+.footer-links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.footer-links a { color: rgba(255,255,255,.6); font-size: 11px; text-decoration: none; }
+.footer-copy { font-size: 10px; opacity: .4; text-align: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 10px; }
+</style>
+</head>
+<body>
+
+<!-- ドキュメントメタ -->
+<div class="doc-meta">
+  <span class="doc-tag-after">改善後 AFTER</span>
+  <span class="doc-meta-title">小森病院 トップページ — 改善デザインプレビュー「小森の杜」</span>
+  <span class="doc-meta-note">緑帯 = 改善点・新規追加セクション</span>
+</div>
+
+<!-- A4ページフレーム -->
+<div class="page">
+
+  <!-- ① ヘッダー：電話番号を常時表示 -->
+  <div class="improve-band">
+    <span class="imp-icon">✓</span>
+    <span class="imp-text">ヘッダーに電話番号を常時表示。どのページを見ていても問い合わせへの導線が確保される。</span>
+    <span class="imp-label">改善①</span>
+  </div>
+
+  <header class="site-header">
+    <!-- 電話番号固定帯 -->
+    <div class="header-top">
+      <div style="font-family:'Shippori Mincho B1',serif; font-size:12px; color:rgba(255,255,255,.85); letter-spacing:.04em; padding-right:14px; border-right:1px solid rgba(255,255,255,.15);">
+        医療法人社団 成友会<br>小森病院
+      </div>
+      <div class="header-phone-area" style="padding-left:14px;">
+        <div class="header-phone-label">お電話でのご相談・お問い合わせ</div>
+        <div class="header-phone-num">☎ 0422-55-8311</div>
+        <div class="header-phone-sub">入院相談直通 0422-55-8312 ｜ 受付：平日 9:00〜17:00</div>
+      </div>
+      <button class="header-cta-btn">施設見学のご予約・相談</button>
+    </div>
+
+    <!-- ロゴ + スライドショー -->
+    <div class="header-logo-row">
+      <div class="header-logo-box">
+        <div class="header-logo-inner">
+          医療法人社団 成友会<br>
+          <span style="font-size:16px; letter-spacing:.08em;">小森病院</span><br>
+          <span style="font-size:9px; color:var(--f4);">Komori Hospital</span>
+        </div>
+      </div>
+      <div class="header-slideshow">
+        <div class="slideshow-overlay"></div>
+        <div class="slideshow-label">院内写真スライドショー（6枚）</div>
+        <div class="slide-dots-row">
+          <div class="sdot active"></div><div class="sdot"></div><div class="sdot"></div>
+          <div class="sdot"></div><div class="sdot"></div><div class="sdot"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ② ナビゲーション -->
+  <nav class="site-nav">
+    <a class="active">TOP</a>
+    <a>病院紹介・診療内容</a>
+    <a>入院のご案内</a>
+    <a>採用情報</a>
+    <a>こもりヘルパーステーション</a>
+    <a>アクセス</a>
+  </nav>
+
+  <!-- ③ ヒーローセクション -->
+  <div class="improve-band">
+    <span class="imp-icon">✓</span>
+    <span class="imp-text">大型ヒーロー（縦260px以上）に拡大。実写真＋大型Serifフォントでキャッチコピーを視覚的に際立たせる。</span>
+    <span class="imp-label">改善②</span>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-tag">東京都武蔵野市 ／ 医療療養型病院 ／ 療養病床 57床</div>
+      <h1 class="hero-title">住み慣れた地域で、<br>最期までその人らしく。</h1>
+      <p class="hero-sub">
+        脳梗塞の後遺症・認知症・長期療養が必要な方を<br>
+        医療と介護が一体となって24時間支えます。
+      </p>
+      <div class="hero-cta-row">
+        <a class="btn-hero-primary">ケアマネ様へ 空床状況を確認 →</a>
+        <a class="btn-hero-secondary">ご家族様へ 入院の流れを見る</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      SCROLL
+    </div>
+  </section>
+
+  <!-- ④ 数値バー -->
+  <div class="improve-band">
+    <span class="imp-icon">★</span>
+    <span class="imp-text">数値で実績を可視化。「57床・24時間・30年以上」を一目で訴求し、信頼性を高める。</span>
+    <span class="imp-label new-label">新規追加</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">57<sup>床</sup></div>
+      <div class="stat-label">医療療養病床数</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24<sup>h</sup></div>
+      <div class="stat-label">医師・看護体制</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">30<sup>年+</sup></div>
+      <div class="stat-label">地域医療の実績</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" style="font-size:14px;">武蔵野市</div>
+      <div class="stat-label">関前 ／ JR武蔵境より</div>
+    </div>
+  </div>
+
+  <!-- ⑤ デュアルCTA -->
+  <div class="dual-cta-section">
+    <a class="cta-care">
+      <div class="cta-badge">ケアマネ様・医療機関様へ</div>
+      <div class="cta-title">現在の空床・受け入れ状況はこちら →</div>
+      <div class="cta-sub">FAX：0422-53-0480 でのご照会も承ります</div>
+    </a>
+    <a class="cta-family">
+      <div class="cta-badge">ご家族様へ</div>
+      <div class="cta-title">入院の流れ・施設見学のご案内 →</div>
+      <div class="cta-sub">まずはお気軽にお電話ください</div>
+    </a>
+  </div>
+
+  <!-- ⑥ 診療時間 -->
+  <div class="hours-wrap">
+    <div class="hours-title2">外来診療時間 ／ 担当医師</div>
+    <table class="hours-table">
+      <thead>
+        <tr>
+          <th class="th-time">診療時間</th>
+          <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-time">9:00〜12:00</td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">酒井</small></td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">酒井</small></td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">市川</small></td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">酒井</small></td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">穂苅</small></td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">岩田</small></td>
+        </tr>
+        <tr>
+          <td class="td-time">14:00〜17:00</td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">矢野</small></td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">酒井</small></td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">市川</small></td>
+          <td class="closed">－</td>
+          <td class="open">○<br><small style="font-size:10px;color:var(--text3);">穂苅</small></td>
+          <td class="closed">－</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="hours-note2">※木曜午後・土曜午後・日祝は休診　<strong>☎ 0422-55-8311</strong></p>
+  </div>
+
+  <!-- ⑦ 3つの強み -->
+  <div class="section-wrap">
+    <div class="sec-title">小森病院の3つの強み</div>
+    <p class="sec-sub">地域の方々と長年歩んできた、私たちの医療・ケアの柱です。</p>
+    <div class="strengths-grid">
+      <div class="strength-card">
+        <div class="str-photo str-photo-1">
+          <div class="str-photo-inner">夜間看護シーン（写真）</div>
+        </div>
+        <div class="str-num">01</div>
+        <h3 class="str-head">24時間体制の<br>医療・看護</h3>
+        <p class="str-body">医師が常駐し、夜間の急な体調変化にも迅速に対応いたします。</p>
+      </div>
+      <div class="strength-card">
+        <div class="str-photo str-photo-2">
+          <div class="str-photo-inner">リハビリシーン（写真）</div>
+        </div>
+        <div class="str-num">02</div>
+        <h3 class="str-head">生活に根差した<br>リハビリ</h3>
+        <p class="str-body">「もう一度、自分の手でお茶を飲みたい」——日々の喜びを取り戻すリハビリ。</p>
+      </div>
+      <div class="strength-card">
+        <div class="str-photo str-photo-3">
+          <div class="str-photo-inner">看取りケアシーン（写真）</div>
+        </div>
+        <div class="str-num">03</div>
+        <h3 class="str-head">ご家族も安心の<br>お看取りケア</h3>
+        <p class="str-body">最期の時間を穏やかに。ご本人とご家族の想いを最優先に寄り添います。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑧ 施設ギャラリー -->
+  <div class="improve-band">
+    <span class="imp-icon">★</span>
+    <span class="imp-text">施設ギャラリーを新設。「病室・リハビリ室・デイルーム」等の写真で施設の雰囲気を視覚的に伝える。</span>
+    <span class="imp-label new-label">新規追加</span>
+  </div>
+
+  <div class="section-wrap alt" style="padding-bottom:20px;">
+    <div class="sec-title">施設ギャラリー</div>
+    <p class="sec-sub">清潔で温かな療養環境をご覧ください。見学も随時受け付けております。</p>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <div class="gallery-photo gp-room"></div>
+        <div class="gallery-label">個室・病室</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-photo gp-rehab"></div>
+        <div class="gallery-label">リハビリ室</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-photo gp-day"></div>
+        <div class="gallery-label">デイルーム</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-photo gp-dining"></div>
+        <div class="gallery-label">食堂</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-photo gp-enter"></div>
+        <div class="gallery-label">エントランス</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:14px;">
+      <a style="display:inline-block; border:1.5px solid var(--f3); color:var(--f3); font-size:11px; font-weight:700; padding:8px 24px; border-radius:3px; text-decoration:none; letter-spacing:.04em;">施設見学を申し込む →</a>
+    </div>
+  </div>
+
+  <!-- ⑨ ご家族様の声 -->
+  <div class="improve-band">
+    <span class="imp-icon">★</span>
+    <span class="imp-text">「ご家族様の声」セクションを新設。実際の体験談が成約の決め手になる最重要コンテンツ。</span>
+    <span class="imp-label new-label">新規追加</span>
+  </div>
+
+  <div class="voices-section">
+    <div class="sec-title" style="margin-bottom:4px;">ご家族様の声</div>
+    <p class="sec-sub">小森病院をお選びいただいたご家族からの言葉をご紹介します。</p>
+    <div class="voices-grid">
+      <div class="voice-card">
+        <div class="voice-quote">"</div>
+        <p class="voice-text">急性期病院からの転院で不安でしたが、担当の看護師さんが毎日声をかけてくださり、父も穏やかに過ごしています。医師の先生にも気軽に相談できて安心です。</p>
+        <div class="voice-person">
+          <div class="voice-avatar va1">山</div>
+          <div class="voice-info"><strong>山田 様（60代・ご長女）</strong>父が入院して3ヶ月。武蔵野市在住。</div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-quote">"</div>
+        <p class="voice-text">脳梗塞の後遺症でリハビリが必要でした。理学療法士の先生が丁寧に付き合ってくださり、少しずつ手を動かせるようになりました。転院して本当に良かったです。</p>
+        <div class="voice-person">
+          <div class="voice-avatar va2">田</div>
+          <div class="voice-info"><strong>田中 様（50代・ご次男）</strong>母が入院して6ヶ月。小金井市在住。</div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-quote">"</div>
+        <p class="voice-text">看取りのことを相談しにくいと思っていましたが、相談員の方が親身になって聞いてくださいました。最期まで家族として関わることができ、感謝しています。</p>
+        <div class="voice-person">
+          <div class="voice-avatar va3">木</div>
+          <div class="voice-info"><strong>木村 様（40代・ご長男）</strong>母が入院。三鷹市在住。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑩ スタッフ紹介 -->
+  <div class="improve-band">
+    <span class="imp-icon">★</span>
+    <span class="imp-text">スタッフ紹介セクションを新設。顔が見えることで安心感が大幅に向上する。</span>
+    <span class="imp-label new-label">新規追加</span>
+  </div>
+
+  <div class="section-wrap">
+    <div class="sec-title">スタッフ紹介</div>
+    <p class="sec-sub">医師・看護師・理学療法士・医療相談員が連携してケアを提供します。</p>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <div class="staff-avatar sa1">酒</div>
+        <div class="staff-role">院長 ／ 内科医</div>
+        <div class="staff-name">酒井 忠司</div>
+        <p class="staff-msg">「地域の方が安心して最期まで暮らせる場所を目指しています」</p>
+      </div>
+      <div class="staff-card">
+        <div class="staff-avatar sa2">看</div>
+        <div class="staff-role">看護師長</div>
+        <div class="staff-name">（担当者名）</div>
+        <p class="staff-msg">「24時間365日、患者様に寄り添う看護を提供します」</p>
+      </div>
+      <div class="staff-card">
+        <div class="staff-avatar sa3">理</div>
+        <div class="staff-role">理学療法士</div>
+        <div class="staff-name">（担当者名）</div>
+        <p class="staff-msg">「日常の動作を一つずつ丁寧に取り戻していただきます」</p>
+      </div>
+      <div class="staff-card">
+        <div class="staff-avatar sa4">相</div>
+        <div class="staff-role">医療相談員（MSW）</div>
+        <div class="staff-name">（担当者名）</div>
+        <p class="staff-msg">「転院の不安を一緒に解消しましょう。何でもご相談ください」</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑪ よくある質問 -->
+  <div class="improve-band">
+    <span class="imp-icon">★</span>
+    <span class="imp-text">FAQを新設。「費用・入院条件・転院の流れ」への疑問を事前に解決し、問い合わせの質と量を改善。</span>
+    <span class="imp-label new-label">新規追加</span>
+  </div>
+
+  <div class="section-wrap alt">
+    <div class="sec-title">よくある質問</div>
+    <p class="sec-sub">転院・入院をご検討中の方からよくいただくご質問にお答えします。</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-mark">Q</div>
+          <div class="faq-q-text">入院の条件はありますか？（胃ろう・気管切開でも大丈夫ですか？）</div>
+          <div class="faq-expand">−</div>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-mark">A</div>
+          <div class="faq-a-text">長期療養が必要な方を対象としています。脳梗塞後遺症・認知症・慢性疾患の方に加え、胃ろう・気管切開など医療処置が必要な方もご相談ください。</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-mark">Q</div>
+          <div class="faq-q-text">入院費用はどのくらいかかりますか？</div>
+          <div class="faq-expand">+</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-mark">Q</div>
+          <div class="faq-q-text">転院の手続きはどのように進めますか？</div>
+          <div class="faq-expand">+</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-mark">Q</div>
+          <div class="faq-q-text">面会はいつでもできますか？</div>
+          <div class="faq-expand">+</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-mark">Q</div>
+          <div class="faq-q-text">施設見学はできますか？</div>
+          <div class="faq-expand">+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑫ アクセス -->
+  <div class="access-section">
+    <div>
+      <div class="access-map">🗺 地図（Google Maps 埋め込み）</div>
+    </div>
+    <div class="access-info">
+      <h3>アクセス</h3>
+      〒180-0014<br>
+      東京都武蔵野市関前3丁目3-15<br>
+      <br>
+      JR中央線・武蔵境駅より 徒歩〇分<br>
+      バス停「〇〇」より 徒歩〇分<br>
+      駐車場：5台（無料）<br>
+      <br>
+      <span class="tel-big">☎ 0422-55-8311</span>
+      <small>（平日 9:00〜17:00）</small>
+    </div>
+  </div>
+
+  <!-- ⑬ お問い合わせセクション（強化） -->
+  <div class="improve-band">
+    <span class="imp-icon">✓</span>
+    <span class="imp-text">問い合わせセクションをトップページに独立設置。電話・FAX・フォームの3チャネルを明示し、ハードルを下げる。</span>
+    <span class="imp-label">改善③</span>
+  </div>
+
+  <section class="contact-section">
+    <h2 class="contact-heading">お気軽にご相談ください</h2>
+    <p class="contact-sub">
+      入院のご相談・施設見学のご予約は、お電話・FAX・メールにてお受けしています。<br>
+      「まず話を聞いてみたい」というご相談も大歓迎です。
+    </p>
+    <div class="contact-grid">
+      <div class="contact-phone-box">
+        <div class="contact-phone-label">代表電話 ／ 入院相談（直通）</div>
+        <div class="contact-phone-num">0422-55-8311</div>
+        <div class="contact-phone-detail">
+          入院相談直通：0422-55-8312<br>
+          FAX：0422-53-0480<br>
+          受付時間：平日 9:00〜17:00
+        </div>
+      </div>
+      <div class="contact-form-box">
+        <div class="contact-form-title">📋 メール・フォームでのご相談</div>
+        <div class="contact-form-sub">
+          24時間受付。翌営業日中に<br>
+          担当者よりご連絡いたします。
+        </div>
+        <div class="contact-form-btn">相談フォームへ →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        医療法人社団 成友会<br>
+        <strong style="font-size:14px; color:rgba(255,255,255,.9);">小森病院</strong><br>
+        〒180-0014　東京都武蔵野市関前3丁目3-15
+      </div>
+      <div>
+        <div class="footer-links">
+          <a>TOP</a>
+          <a>病院紹介・診療内容</a>
+          <a>入院のご案内</a>
+          <a>採用情報</a>
+          <a>こもりヘルパーステーション</a>
+          <a>アクセス</a>
+          <a>プライバシーポリシー</a>
+        </div>
+        <div style="margin-top:8px; font-size:10px; color:rgba(255,255,255,.5);">
+          TEL: 0422-55-8311 ／ 入院相談直通: 0422-55-8312 ／ FAX: 0422-53-0480
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">©2026 医療法人社団 成友会 小森病院 All Rights Reserved.</div>
+  </footer>
+
+</div><!-- /page -->
+
+<!-- 凡例 -->
+<div style="width:794px; margin:16px auto 0; display:flex; flex-wrap:wrap; gap:14px; font-size:11px; color:#555;">
+  <div style="display:flex; align-items:center; gap:6px;">
+    <div style="width:14px; height:10px; background:#2d5a3d; border-radius:2px;"></div>
+    緑帯「改善」= 既存コンテンツの改善箇所
+  </div>
+  <div style="display:flex; align-items:center; gap:6px;">
+    <div style="width:14px; height:10px; background:#b8441a; border-radius:2px;"></div>
+    赤帯「新規追加」= 今回新たに追加するセクション
+  </div>
+  <div style="margin-left:auto; color:#888;">
+    フォント: Shippori Mincho B1（見出し）/ Noto Sans JP（本文）
+  </div>
+</div>
+
+<!-- セクション説明一覧 -->
+<div style="width:794px; margin:24px auto 0; background:#fff; border-radius:6px; padding:20px; box-shadow:0 2px 12px rgba(0,0,0,.12);">
+  <h2 style="font-size:14px; font-weight:bold; color:#1a3828; margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid #2d5a3d;">③ 画像内 各エリアの説明</h2>
+  <table style="width:100%; border-collapse:collapse; font-size:11.5px;">
+    <tr style="background:#e8f2ea;">
+      <th style="padding:7px 10px; text-align:left; color:#1a3828; border:1px solid #c8e0cc; width:22%;">エリア</th>
+      <th style="padding:7px 10px; text-align:left; color:#1a3828; border:1px solid #c8e0cc; width:12%;">種別</th>
+      <th style="padding:7px 10px; text-align:left; color:#1a3828; border:1px solid #c8e0cc;">説明・改善ポイント</th>
+    </tr>
+    <tr>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">① 固定ヘッダー帯</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">電話番号を常時表示。どのページ・どのタイミングでも問い合わせ導線が確保される。テラコッタの「施設見学ボタン」で低ハードルCTAを設置。</td>
+    </tr>
+    <tr style="background:#f8f6f2;">
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">② ナビゲーション</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">ピンクから深緑に変更。清潔感・信頼感・専門性を表現。アクティブタブは濃い森緑で視認性UP。</td>
+    </tr>
+    <tr>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">③ 大型ヒーロー</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">縦260px以上の大型ファーストビュー。実写真を背景に、Shippori Mincho B1でキャッチコピーを大きく展開。金色のアンダーラインで視線を誘導。スクロール促進アニメーション付き。</td>
+    </tr>
+    <tr style="background:#f8f6f2;">
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">④ 数値バー</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#b8441a; font-weight:bold;">新規追加</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">「57床・24h・30年以上・武蔵野市」を暗い背景に金色の数字で表示。数値の説得力で信頼性を即時に訴求する。</td>
+    </tr>
+    <tr>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑤ デュアルCTA</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">ケアマネ向け（赤）とご家族向け（緑）の2色CTAで視覚的に分離。FAXでの照会も明示し多チャネル対応。</td>
+    </tr>
+    <tr style="background:#f8f6f2;">
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑥ 診療時間</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">フォーマットを維持しつつ配色を森緑系に統一。情報の可読性はそのまま、デザインの統一感を確保。</td>
+    </tr>
+    <tr>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑦ 3つの強み</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">各カードに実写真エリアを追加。テキストだけでなく視覚で「夜間看護・リハビリ・看取り」の雰囲気を伝える。</td>
+    </tr>
+    <tr style="background:#f8f6f2;">
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑧ 施設ギャラリー</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#b8441a; font-weight:bold;">新規追加</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">個室・リハビリ室・デイルーム・食堂・エントランスの5枚を横並びで表示。「施設見学を申し込む」ボタンで直接行動につなげる。</td>
+    </tr>
+    <tr>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑨ ご家族の声</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#b8441a; font-weight:bold;">新規追加</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">転院を検討するご家族が最も重視するコンテンツ。3件の体験談を掲載。引用符・アバター・属性情報（年代・関係）を付与し信頼性を高める。</td>
+    </tr>
+    <tr style="background:#f8f6f2;">
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑩ スタッフ紹介</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#b8441a; font-weight:bold;">新規追加</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">医師・看護師長・PT・相談員の4名を顔写真と一言コメントで紹介。「誰が担当するか」が見えることで問い合わせのハードルが下がる。</td>
+    </tr>
+    <tr>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑪ よくある質問</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#b8441a; font-weight:bold;">新規追加</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">費用・入院条件・転院の流れ・面会・見学の5項目。問い合わせ前の疑問を自己解決できるようにし、問い合わせの質も向上させる。</td>
+    </tr>
+    <tr style="background:#f8f6f2;">
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑫ アクセス</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">Googleマップ埋め込み＋アクセス詳細の横並び表示。電話番号もアクセスの近くに再掲し、来院前の最終確認をしやすくする。</td>
+    </tr>
+    <tr>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑬ お問い合わせ</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">トップページに独立したCTAセクションを設置（現状は別ページに格納）。電話・FAX・フォームの3チャネルを明示し、深緑背景で「ここで問い合わせる」と視覚的に強調。</td>
+    </tr>
+    <tr style="background:#f8f6f2;">
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; font-weight:bold;">⑭ フッター</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#2d5a3d; font-weight:bold;">改善</td>
+      <td style="padding:7px 10px; border:1px solid #e0d8c8; color:#555;">ピンクから深い森緑に変更。病院名・住所・全ページリンク・プライバシーポリシーを整理して掲載。</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { font-family: 'Meiryo',sans-serif; font-size:12pt; line-height:1.8; margin:2cm; color:#1a1a1a; }
+  h1 { font-size:18pt; color:#1a3828; border-bottom:3px solid #2d5a3d; padding-bottom:6pt; margin-top:18pt; }
+  h2 { font-size:14pt; color:#1a3828; border-left:5px solid #2d5a3d; padding-left:10pt; margin-top:16pt; background:#f0f5f0; padding:6pt 10pt; }
+  h3 { font-size:12pt; color:#2d5a3d; border-bottom:1px solid #c8e0cc; padding-bottom:4pt; margin-top:12pt; }
+  table { border-collapse:collapse; width:100%; font-size:10.5pt; margin:12pt 0; }
+  th,td { border:1px solid #c8c0a8; padding:5pt 8pt; }
+  th { background:#1a3828; color:white; }
+  tr:nth-child(even) td { background:#f0f5f0; }
+  ul { margin:8pt 0 8pt 20pt; }
+  li { margin:3pt 0; }
+  pre { background:#f5f5f5; border:1px solid #ccc; padding:8pt; font-size:10pt; white-space:pre-wrap; }
+  strong { color:#1a3828; }
+  hr { border:none; border-top:2px solid #c8e0cc; margin:14pt 0; }
+  code { background:#f0f0f0; padding:1pt 4pt; border-radius:2pt; font-size:10.5pt; }
+</style>
+</head>
+<body>
+     <h1>小森病院 ホームページ改善提案書</h1>
+<br>
+<p>作成日：2026年6月19日</p>
+<p>対象：小森病院 トップページ（index.html）</p>
+<br>
+<hr>
+<br>
+<h2>エグゼクティブサマリー</h2>
+<br>
+<p>現在のホームページは診療情報・連絡先の整備は進んでいるが、<strong>「問い合わせ・転院相談につながる」</strong> という観点では大きな改善余地がある。特に ①ファーストビューの訴求力、②信頼性の視覚化（患者家族の声・スタッフ紹介）、③問い合わせ導線の強化 が最優先課題。</p>
+<br>
+<hr>
+<br>
+<h2>1. 現状分析</h2>
+<br>
+<h3>1-1. ターゲットユーザーと現在の対応状況</h3>
+<br>
+<table border='1' cellpadding='6' cellspacing='0' style='border-collapse:collapse;width:100%;font-size:12px;margin-bottom:14px;'>
+<tr style='background:#1a3828;color:white;'><th style='padding:6px 10px;text-align:left;'>ターゲット</th><th style='padding:6px 10px;text-align:left;'>主な目的</th><th style='padding:6px 10px;text-align:left;'>現状の対応</th><th style='padding:6px 10px;text-align:left;'>評価</th></tr>
+<tr><td style='padding:6px 10px;'>ケアマネジャー</td><td style='padding:6px 10px;'>空床確認・転院相談</td><td style='padding:6px 10px;'>CTAボタンあり</td><td style='padding:6px 10px;'>△ 目立ちにくい</td></tr>
+<tr><td style='padding:6px 10px;'>患者ご家族</td><td style='padding:6px 10px;'>施設の雰囲気・費用・安心感</td><td style='padding:6px 10px;'>基本情報のみ</td><td style='padding:6px 10px;'>✗ 不足</td></tr>
+<tr><td style='padding:6px 10px;'>急性期病院</td><td style='padding:6px 10px;'>受け入れ条件・連絡先</td><td style='padding:6px 10px;'>FAX番号あり</td><td style='padding:6px 10px;'>△ 情報量不足</td></tr>
+<tr><td style='padding:6px 10px;'>求職者</td><td style='padding:6px 10px;'>職場環境・待遇</td><td style='padding:6px 10px;'>採用ページあり</td><td style='padding:6px 10px;'>△ 別ページのみ</td></tr>
+</table>
+<br>
+<h3>1-2. 評価できる点</h3>
+<br>
+<ul>
+<li>診療時間・担当医師情報が曜日別に整理されている</li>
+<li>ケアマネ向け・ご家族向けの2系統CTAを設置済み</li>
+<li>院内感染対策の明示（社会的信頼）</li>
+<li>基本的なレスポンシブ対応済み</li>
+</ul>
+<br>
+<h3>1-3. 改善が必要な点（優先度順）</h3>
+<br>
+<table border='1' cellpadding='6' cellspacing='0' style='border-collapse:collapse;width:100%;font-size:12px;margin-bottom:14px;'>
+<tr style='background:#1a3828;color:white;'><th style='padding:6px 10px;text-align:left;'>優先度</th><th style='padding:6px 10px;text-align:left;'>課題カテゴリ</th><th style='padding:6px 10px;text-align:left;'>具体的な問題</th><th style='padding:6px 10px;text-align:left;'>ビジネス影響</th></tr>
+<tr><td style='padding:6px 10px;'>🔴 最高</td><td style='padding:6px 10px;'>ファーストビュー</td><td style='padding:6px 10px;'>メインビジュアルが小さく感情訴求が弱い</td><td style='padding:6px 10px;'>直帰率↑</td></tr>
+<tr><td style='padding:6px 10px;'>🔴 最高</td><td style='padding:6px 10px;'>信頼性構築</td><td style='padding:6px 10px;'>患者家族の声・体験談が0件</td><td style='padding:6px 10px;'>成約率↓</td></tr>
+<tr><td style='padding:6px 10px;'>🔴 最高</td><td style='padding:6px 10px;'>問い合わせ導線</td><td style='padding:6px 10px;'>電話番号がサイドバーに格納、目立たない</td><td style='padding:6px 10px;'>CV率↓</td></tr>
+<tr><td style='padding:6px 10px;'>🟡 高</td><td style='padding:6px 10px;'>施設の可視化</td><td style='padding:6px 10px;'>院内写真がヘッダーのみ</td><td style='padding:6px 10px;'>安心感↓</td></tr>
+<tr><td style='padding:6px 10px;'>🟡 高</td><td style='padding:6px 10px;'>スタッフ信頼性</td><td style='padding:6px 10px;'>看護師・PT等のスタッフ紹介なし</td><td style='padding:6px 10px;'>安心感↓</td></tr>
+<tr><td style='padding:6px 10px;'>🟡 高</td><td style='padding:6px 10px;'>情報提供</td><td style='padding:6px 10px;'>FAQ・費用目安がなく電話問い合わせに依存</td><td style='padding:6px 10px;'>電話負荷↑</td></tr>
+<tr><td style='padding:6px 10px;'>🟢 中</td><td style='padding:6px 10px;'>SEO対策</td><td style='padding:6px 10px;'>構造化データ・OGP・Analyticsなし</td><td style='padding:6px 10px;'>流入↓</td></tr>
+<tr><td style='padding:6px 10px;'>🟢 中</td><td style='padding:6px 10px;'>デザイン品質</td><td style='padding:6px 10px;'>配色・フォントが一般的で競合と差別化できない</td><td style='padding:6px 10px;'>印象↓</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<h2>2. 課題詳細と改善提案</h2>
+<br>
+<h3>課題①：ファーストビューの訴求力不足</h3>
+<br>
+<p><strong>現状の問題</strong></p>
+<ul>
+<li>ヒーローバナーはコンテンツエリア内の一要素（縦約100px程度）</li>
+<li>ピンクのグラデーション背景のみ。実写真なし</li>
+<li>キャッチコピー「住み慣れた地域で、最期までその人らしく。」は良文だが視覚的に埋もれている</li>
+<li>ヘッダーのスライドショーは存在するが、ナビゲーションの上にあり「見せ場」になっていない</li>
+</ul>
+<br>
+<p><strong>改善提案</strong></p>
+<pre style='background:#f5f5f5;padding:10px;border:1px solid #ccc;font-size:11px;line-height:1.6;'>現状：コンテンツ内の小さなグラデーションバナー
+  ↓
+改善：ファーストビュー全体を使った大型ヒーローセクション
+・実写真（スタッフ&#215;患者様、リハビリシーン、院内廊下）を背景に使用
+・Serif フォントで大型キャッチコピーを展開（縦約280px）
+・「住み慣れた地域で、最期までその人らしく。」を視覚的な軸に
+・スクロール促進のアニメーション追加</pre>
+<br>
+<p><strong>期待効果：</strong> ファーストビューでの「ここに任せたい」という情緒的共感の醸成</p>
+<br>
+<hr>
+<br>
+<h3>課題②：信頼性シグナルの欠如</h3>
+<br>
+<p><strong>現状の問題</strong></p>
+<ul>
+<li>ご家族・患者様の声が一切掲載されていない</li>
+<li>スタッフ（看護師・理学療法士・介護士・相談員）の顔と名前が見えない</li>
+<li>「何年の実績」「何名体制」等の数値アピールがない</li>
+</ul>
+<br>
+<p><strong>改善提案</strong></p>
+<pre style='background:#f5f5f5;padding:10px;border:1px solid #ccc;font-size:11px;line-height:1.6;'>追加①：「ご家族様の声」セクション（3〜4件）
+・入院中・退院後のご家族のコメントを掲載
+・写真不要でも有効（イニシャル表示・職業・年代のみで信頼度UP）
+・「転院を迷っていましたが…」など共感を呼ぶエピソード形式
+
+追加②：スタッフ紹介セクション
+・院長・看護師長・理学療法士・医療相談員の顔写真と一言
+・「こんなスタッフが支えます」という安心感の提供
+
+追加③：数値で見る小森病院（スタッツバー）
+・療養病床 57床 ／ 24時間医療・看護体制
+・開院〇年 ／ スタッフ〇名体制 を視覚化</pre>
+<br>
+<p><strong>期待効果：</strong> 問い合わせ前の不安解消、成約率の向上</p>
+<br>
+<hr>
+<br>
+<h3>課題③：問い合わせ導線の弱さ</h3>
+<br>
+<p><strong>現状の問題</strong></p>
+<ul>
+<li>電話番号はサイドバーの1ボックスに収まっており目立たない</li>
+<li>問い合わせフォームは「入院案内」ページ内に格納（トップから2クリック以上）</li>
+<li>「まず気軽に相談してほしい」という低ハードルの入口がない</li>
+</ul>
+<br>
+<p><strong>改善提案</strong></p>
+<pre style='background:#f5f5f5;padding:10px;border:1px solid #ccc;font-size:11px;line-height:1.6;'>改善①：ヘッダーに電話番号を常時表示（固定ヘッダー化）
+・「ご相談・お問い合わせ ☎ 0422-55-8311」を常時ヘッダーに表示
+・スマホではタップで発信できるリンクに
+
+改善②：トップページ下部に独立した「お問い合わせ」セクション
+・電話番号（大きく）+ FAX番号 + 相談フォームへのリンク
+・「まずはお気軽に。施設見学も歓迎です」の低ハードルCTA
+
+改善③：ケアマネ向けFAX導線の強化
+・「空床状況はFAXでもご確認いただけます」のテキストと番号を目立たせる</pre>
+<br>
+<p><strong>期待効果：</strong> 問い合わせのコンバージョン率向上、電話・FAX両チャネルの活用</p>
+<br>
+<hr>
+<br>
+<h3>課題④：施設写真の不足</h3>
+<br>
+<p><strong>現状の問題</strong></p>
+<ul>
+<li>ヘッダーのスライドショー（6枚）以外、コンテンツ内に写真が一切ない</li>
+<li>HTMLコード内に「📷 写真撮影アドバイス」のコメントが多数あるが未実装</li>
+<li>施設の清潔感・温かさが視覚的に伝わらない</li>
+</ul>
+<br>
+<p><strong>改善提案</strong></p>
+<pre style='background:#f5f5f5;padding:10px;border:1px solid #ccc;font-size:11px;line-height:1.6;'>施設ギャラリーセクションの新設
+・個室、リハビリ室、デイルーム、食堂、エントランスの5〜6枚
+・各写真にキャプション付与（「明るい光が差し込む個室」等）
+・「施設を見る・見学を申し込む」リンクへの誘導</pre>
+<br>
+<p><strong>期待効果：</strong> 入院前の不安軽減、施設見学申込率の向上</p>
+<br>
+<hr>
+<br>
+<h3>課題⑤：FAQ・事前情報の欠如</h3>
+<br>
+<p><strong>現状の問題</strong></p>
+<ul>
+<li>よくある質問がなく、すべて電話対応に依存している</li>
+<li>入院費用の目安ページへの導線がない</li>
+<li>転院・入院の具体的な流れがトップから見えない</li>
+</ul>
+<br>
+<p><strong>改善提案</strong></p>
+<pre style='background:#f5f5f5;padding:10px;border:1px solid #ccc;font-size:11px;line-height:1.6;'>FAQセクションの新設（例）
+Q: 入院の条件はありますか？
+A: 長期療養が必要な方（脳梗塞後遺症・認知症・慢性疾患等）を対象としています。
+   胃ろう・気管切開など医療処置が必要な方もご相談ください。
+
+Q: 費用はどのくらいかかりますか？
+A: 医療保険・介護保険の種別・所得区分により異なります。
+   詳しくはお電話でご案内いたします。（0422-55-8312）
+
+Q: 転院の手続きはどのように進めますか？
+A: ①お電話・FAXでのご相談 → ②担当者がヒアリング →
+   ③入院前診察 → ④転院 の流れです。
+
+Q: 面会はいつでもできますか？
+A: 平日・土日・祝日の10:00〜18:00に承っています。
+   ご来院前にお電話でご確認ください。
+
+Q: 施設見学はできますか？
+A: 平日10:00〜16:00で承っています。
+   お気軽にお電話またはFAXでご予約ください。</pre>
+<br>
+<p><strong>期待効果：</strong> 電話問い合わせ件数の削減と質の向上、ユーザーの自己解決率UP</p>
+<br>
+<hr>
+<br>
+<h2>3. 改善ロードマップ</h2>
+<br>
+<h3>フェーズ1：即時対応（〜1ヶ月）</h3>
+<br>
+<table border='1' cellpadding='6' cellspacing='0' style='border-collapse:collapse;width:100%;font-size:12px;margin-bottom:14px;'>
+<tr style='background:#1a3828;color:white;'><th style='padding:6px 10px;text-align:left;'>作業</th><th style='padding:6px 10px;text-align:left;'>難易度</th><th style='padding:6px 10px;text-align:left;'>コスト</th></tr>
+<tr><td style='padding:6px 10px;'>ヘッダーへの電話番号固定表示</td><td style='padding:6px 10px;'>★☆☆</td><td style='padding:6px 10px;'>無料（HTML修正のみ）</td></tr>
+<tr><td style='padding:6px 10px;'>ご家族の声の収集開始（アンケート作成）</td><td style='padding:6px 10px;'>★☆☆</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>FAQコンテンツの草案作成</td><td style='padding:6px 10px;'>★☆☆</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>院内写真の撮影手配</td><td style='padding:6px 10px;'>★★☆</td><td style='padding:6px 10px;'>スマホ撮影なら無料</td></tr>
+</table>
+<br>
+<h3>フェーズ2：コンテンツ充実（1〜2ヶ月）</h3>
+<br>
+<table border='1' cellpadding='6' cellspacing='0' style='border-collapse:collapse;width:100%;font-size:12px;margin-bottom:14px;'>
+<tr style='background:#1a3828;color:white;'><th style='padding:6px 10px;text-align:left;'>作業</th><th style='padding:6px 10px;text-align:left;'>難易度</th><th style='padding:6px 10px;text-align:left;'>コスト</th></tr>
+<tr><td style='padding:6px 10px;'>大型ヒーローセクションへの切り替え</td><td style='padding:6px 10px;'>★★☆</td><td style='padding:6px 10px;'>無料（HTML/CSS修正）</td></tr>
+<tr><td style='padding:6px 10px;'>「ご家族様の声」セクション追加</td><td style='padding:6px 10px;'>★★☆</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>スタッフ紹介セクション追加</td><td style='padding:6px 10px;'>★★☆</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>施設ギャラリー追加</td><td style='padding:6px 10px;'>★★☆</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>FAQセクション追加</td><td style='padding:6px 10px;'>★★☆</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>トップページにお問い合わせセクション設置</td><td style='padding:6px 10px;'>★★☆</td><td style='padding:6px 10px;'>無料</td></tr>
+</table>
+<br>
+<h3>フェーズ3：デザインリニューアル（2〜3ヶ月）</h3>
+<br>
+<table border='1' cellpadding='6' cellspacing='0' style='border-collapse:collapse;width:100%;font-size:12px;margin-bottom:14px;'>
+<tr style='background:#1a3828;color:white;'><th style='padding:6px 10px;text-align:left;'>作業</th><th style='padding:6px 10px;text-align:left;'>難易度</th><th style='padding:6px 10px;text-align:left;'>コスト</th></tr>
+<tr><td style='padding:6px 10px;'>配色・フォントの全体刷新</td><td style='padding:6px 10px;'>★★★</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>スマートフォン体験の最適化</td><td style='padding:6px 10px;'>★★★</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>SEO対策（構造化データ・サイトマップ）</td><td style='padding:6px 10px;'>★★★</td><td style='padding:6px 10px;'>無料</td></tr>
+<tr><td style='padding:6px 10px;'>Google Analytics / Search Console の設定</td><td style='padding:6px 10px;'>★★☆</td><td style='padding:6px 10px;'>無料</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<h2>4. 期待される効果（KPI目標）</h2>
+<br>
+<table border='1' cellpadding='6' cellspacing='0' style='border-collapse:collapse;width:100%;font-size:12px;margin-bottom:14px;'>
+<tr style='background:#1a3828;color:white;'><th style='padding:6px 10px;text-align:left;'>指標</th><th style='padding:6px 10px;text-align:left;'>現状</th><th style='padding:6px 10px;text-align:left;'>改善目標</th><th style='padding:6px 10px;text-align:left;'>主な改善施策</th></tr>
+<tr><td style='padding:6px 10px;'>月間問い合わせ電話数</td><td style='padding:6px 10px;'>要計測</td><td style='padding:6px 10px;'>+30%増</td><td style='padding:6px 10px;'>ヘッダー電話表示・Contact強化</td></tr>
+<tr><td style='padding:6px 10px;'>ページ平均滞在時間</td><td style='padding:6px 10px;'>要計測</td><td style='padding:6px 10px;'>2分以上</td><td style='padding:6px 10px;'>コンテンツ充実・ギャラリー</td></tr>
+<tr><td style='padding:6px 10px;'>直帰率</td><td style='padding:6px 10px;'>要計測</td><td style='padding:6px 10px;'>-20%改善</td><td style='padding:6px 10px;'>ヒーロー強化・FAQ</td></tr>
+<tr><td style='padding:6px 10px;'>施設見学申込</td><td style='padding:6px 10px;'>要計測</td><td style='padding:6px 10px;'>+50%増</td><td style='padding:6px 10px;'>低ハードルCTA・写真訴求</td></tr>
+<tr><td style='padding:6px 10px;'>ケアマネからの転院相談</td><td style='padding:6px 10px;'>要計測</td><td style='padding:6px 10px;'>+20%増</td><td style='padding:6px 10px;'>FAX導線・空床状況の明確化</td></tr>
+</table>
+<br>
+<p>> <strong>注記：</strong> 現状値が未計測のため、まずGoogle Analytics設置を最優先で推奨します。</p>
+<br>
+<hr>
+<br>
+<h2>5. 優先度別 Next Action</h2>
+<br>
+<h3>🟢 今すぐできること（費用ゼロ・技術ハードル低）</h3>
+<br>
+<li>**ヘッダーへの電話番号固定** → HTMLを数行修正するだけで即対応</li>
+<li>**ご家族の声の収集** → アンケート用紙を作成し退院時・面会時に配布</li>
+<li>**FAQ草案の作成** → よく受ける電話質問をリスト化（担当スタッフにヒアリング）</li>
+<br>
+<h3>🟡 早期に対応すべきこと（低コスト・高効果）</h3>
+<br>
+<li>**院内写真の撮影** → スマートフォンで可。明るい自然光の朝に撮影</li>
+<li>**スタッフ顔写真の撮影** → 白衣・ユニフォームで統一感のある写真</li>
+<li>**Google Analytics設置** → 現状を数値で把握するための最優先インフラ</li>
+<br>
+<h3>🔵 中期的に取り組むこと</h3>
+<br>
+<li>**デザインリニューアル** → 本提案書添付「改善後プレビュー（preview_after.html）」を参照</li>
+<li>**コンテンツのSEO最適化** → 「武蔵野市 療養病院」「長期療養 入院」等のキーワード対策</li>
+<br>
+
+</body>
+</html>

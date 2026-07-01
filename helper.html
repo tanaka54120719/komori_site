@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>こもりヘルパーステーション｜小森病院</title>
+  <meta name="description" content="こもりヘルパーステーションは小森病院が運営する訪問介護サービスです。武蔵野市・三鷹市・西東京市にお住まいの方を対象にサービスを提供しています。TEL:0422-51-8486">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Pattern F: ホバーエフェクト & トランジション ── */
+    .info-table tr { transition: background .12s; }
+    .info-table tr:hover td,
+    .info-table tr:hover th { background: #fff8fa; }
+    .sidebar-box { transition: box-shadow .18s; }
+    .sidebar-box:hover { box-shadow: 0 4px 14px rgba(180,100,120,0.10); }
+    .sidebar-links li a {
+      transition: background .12s, padding-left .12s;
+      border-radius: 4px; display: block;
+    }
+    .sidebar-links li a:hover { background: #fff0f3; padding-left: 14px; }
+    .card { transition: box-shadow .18s, transform .15s; }
+    .card:hover { box-shadow: 0 6px 18px rgba(180,100,120,0.12); transform: translateY(-2px); }
+    .check-list li { transition: background .12s; border-radius: 3px; }
+    .check-list li:hover { background: #fff8fa; }
+    .step-item { transition: background .14s, box-shadow .18s; border-radius: 6px; padding: 6px 8px; margin-bottom: 12px; }
+    .step-item:hover { background: #fff8fa; box-shadow: 0 2px 8px rgba(180,100,120,0.08); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <img src="images/header_logo.png" alt="医療法人社団 成友会 小森病院">
+    </div>
+    <div class="header-photo">
+      <img src="images/hospital_exterior.png" alt="小森病院 外観">
+    </div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html">TOP</a>
+    <a href="shinryo.html">病院紹介・<br>診療内容</a>
+    <a href="nyuin.html">入院のご案内</a>
+    <a href="boshu.html">採用情報</a>
+    <a href="helper.html" class="active">こもりヘルパー<br>ステーション</a>
+    <a href="access.html">アクセス</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <p class="breadcrumb"><a href="index.html">TOP</a> <span>›</span> こもりヘルパーステーション</p>
+  <h1 class="page-title">こもりヘルパーステーション</h1>
+
+  <div class="content-grid">
+    <main class="main-content">
+
+      <div class="card" style="background:#fff0f3; border-color:#d4788a; margin-bottom:22px;">
+        <p style="font-size:14px; line-height:2.1; color:#8a3050;">
+          こもりヘルパーステーションは、<strong>小森病院が運営する訪問介護サービス</strong>です。<br>
+          「住み慣れた自宅で生活を続けたい」というご本人・ご家族のご希望を、<br>
+          ヘルパーが自宅を訪問してサポートします。<br>
+          <br>
+          東京都の指定を受けた訪問介護事業所として、<strong>武蔵野市・三鷹市・西東京市</strong>の委託を受けてサービスを提供しています。
+        </p>
+      </div>
+
+      <!-- 指定情報 -->
+      <h2 class="section-heading">指定・委託情報</h2>
+      <table class="info-table">
+        <tr><th>事業所名</th><td>こもりヘルパーステーション</td></tr>
+        <tr><th>運営主体</th><td>医療法人社団 成友会（小森病院内）</td></tr>
+        <tr><th>指定種別</th><td>東京都指定 訪問介護事業所</td></tr>
+        <tr><th>委託自治体</th><td>武蔵野市・三鷹市・西東京市</td></tr>
+        <tr><th>TEL</th><td><strong style="color:#c0392b; font-size:16px;">0422-51-8486</strong></td></tr>
+        <tr><th>受付時間</th><td>平日 9:00〜17:00</td></tr>
+        <tr><th>所在地</th><td>〒180-0014　東京都武蔵野市関前3丁目3-15　（小森病院内）</td></tr>
+      </table>
+
+      <!-- サービス内容 -->
+      <h2 class="section-heading">提供サービス</h2>
+      <p class="body-text">要介護・要支援の認定を受けた方を対象に、以下の訪問介護サービスを提供しています。</p>
+
+      <h3 class="sub-heading">身体介護</h3>
+      <ul class="check-list">
+        <li>入浴介助（清拭・部分浴を含む）</li>
+        <li>排泄介助（トイレ誘導・おむつ交換）</li>
+        <li>食事介助</li>
+        <li>着替え・整容（洗面・口腔ケア等）</li>
+        <li>体位変換・移動・移乗の介助</li>
+        <li>通院介助（外出時の付き添い）</li>
+      </ul>
+
+      <h3 class="sub-heading">生活援助</h3>
+      <ul class="check-list">
+        <li>掃除・洗濯・ゴミ出し</li>
+        <li>調理・配膳・後片付け</li>
+        <li>買い物の代行</li>
+        <li>薬の受け取り</li>
+      </ul>
+
+      <!-- サービス提供地域 -->
+      <h2 class="section-heading">サービス提供地域</h2>
+      <table class="info-table">
+        <tr>
+          <th>対象市区</th>
+          <td>
+            武蔵野市・三鷹市・西東京市<br>
+            <span style="font-size:12px; color:#888;">（詳しくはお電話にてご確認ください）</span>
+          </td>
+        </tr>
+        <tr><th>対象者</th><td>要介護1〜5・要支援1〜2の認定を受けた方（介護保険サービスとして利用できます）</td></tr>
+        <tr><th>利用時間帯</th><td>平日 8:00〜18:00（土日・祝日応相談）</td></tr>
+        <tr><th>費用</th><td>介護保険の自己負担割合（1〜3割）に応じてご負担いただきます。<br>詳しくはご相談ください。</td></tr>
+      </table>
+
+      <!-- 利用開始の流れ -->
+      <h2 class="section-heading">ご利用開始までの流れ</h2>
+      <div class="step-flow">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>ご相談・お問い合わせ</strong>
+            <p>こもりヘルパーステーション（TEL: 0422-51-8486）へお電話ください。サービス内容・利用条件についてご説明します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>介護認定の確認</strong>
+            <p>介護保険の認定を受けていない場合は、市区町村への申請をご案内します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>ケアプランの作成</strong>
+            <p>担当のケアマネージャーと連携し、利用計画を作成します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>サービス開始</strong>
+            <p>ヘルパーがご自宅にお伺いし、サービスを開始します。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ケアマネへ -->
+      <h2 class="section-heading">ケアマネージャーの方へ</h2>
+      <p class="body-text">
+        こもりヘルパーステーションでは、地域のケアマネージャーの皆さまからのご依頼・ご紹介をお待ちしています。
+        サービス提供状況・空き状況等についてはお電話にてお気軽にご確認ください。
+      </p>
+      <div class="card" style="background:#fff0f3; border-color:#d4788a;">
+        <p style="font-size:14px; line-height:2.3; color:#8a3050;">
+          <strong>こもりヘルパーステーション</strong>（小森病院内）<br>
+          TEL：<strong style="font-size:17px; color:#c0392b;">0422-51-8486</strong>（直通）<br>
+          受付時間：平日 9:00〜17:00
+        </p>
+      </div>
+      <p class="note">訪問介護計画書・サービス提供記録等の書類は、担当ケアマネージャーと適宜共有しています。</p>
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <div class="sidebar-title">📞 ヘルパーステーション直通</div>
+        <div class="sidebar-info">
+          <span class="big-tel">0422-51-8486</span>
+          平日 9:00〜17:00
+        </div>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">📞 病院代表</div>
+        <div class="sidebar-info">
+          <span class="big-tel">0422-55-8311</span>
+        </div>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">案内メニュー</div>
+        <ul class="sidebar-links">
+          <li><a href="index.html">▶ TOP</a></li>
+          <li><a href="shinryo.html">▶ 病院紹介・診療内容</a></li>
+          <li><a href="nyuin.html">▶ 入院のご案内</a></li>
+          <li><a href="boshu.html">▶ 採用情報</a></li>
+          <li><a href="helper.html">▶ こもりヘルパーステーション</a></li>
+          <li><a href="access.html">▶ アクセス</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">🏠 委託市区</div>
+        <div class="sidebar-info">
+          武蔵野市<br>
+          三鷹市<br>
+          西東京市
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>医療法人社団 成友会　小森病院</p>
+  <p>〒180-0014　東京都武蔵野市関前3丁目3-15　TEL：0422-55-8311</p>
+  <p style="margin-top:6px;">
+    <a href="index.html">TOP</a> ／ <a href="shinryo.html">病院紹介・<br>診療内容</a> ／ <a href="nyuin.html">入院のご案内</a> ／
+    <a href="boshu.html">採用情報</a> ／ <a href="helper.html">こもりヘルパーステーション</a> ／ <a href="access.html">アクセス</a>
+  </p>
+  <p style="margin-top:8px; font-size:11px; opacity:.5;">©2022 小森病院 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+

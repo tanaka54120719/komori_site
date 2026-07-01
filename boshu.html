@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>採用情報｜小森病院｜看護師・介護士・リハビリ職 募集中</title>
+  <meta name="description" content="小森病院（東京都武蔵野市）のスタッフ採用情報。残業月平均3時間以下・有給消化率85%以上。看護師・介護福祉士・理学療法士など、働きやすい職場環境でご活躍ください。">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── ホバーエフェクト ── */
+    .info-table tr:hover td,
+    .info-table tr:hover th { background:#fff8fa; transition:background .1s; }
+    .sidebar-box:hover { box-shadow:0 4px 14px rgba(180,100,120,0.10); }
+    .sidebar-links li a { transition:background .12s, padding-left .12s; border-radius:4px; display:block; }
+    .sidebar-links li a:hover { background:#fff0f3; padding-left:14px; }
+    .card { transition:box-shadow .18s, transform .15s; }
+    .card:hover { box-shadow:0 6px 18px rgba(180,100,120,0.12); transform:translateY(-2px); }
+    .job-card { transition:box-shadow .18s, transform .15s; }
+    .job-card:hover { box-shadow:0 6px 20px rgba(90,152,112,0.16); transform:translateY(-3px); }
+
+    /* ── 働くメリット ── */
+    .merit-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:24px; }
+    .merit-card { background:#fff; border:2px solid #5a9870; border-radius:8px; padding:18px 14px; text-align:center; }
+    .merit-num { font-size:26px; font-weight:bold; color:#5a9870; line-height:1.2; }
+    .merit-unit { font-size:11px; color:#5a9870; }
+    .merit-label { font-size:12px; font-weight:bold; color:#3a5a48; margin:6px 0 4px; }
+    .merit-note { font-size:11px; color:#777; line-height:1.7; }
+    @media(max-width:760px){ .merit-grid{grid-template-columns:1fr 1fr; gap:10px;} }
+
+    /* ── スタッフインタビュー ── */
+    .interview-list { display:flex; flex-direction:column; gap:18px; margin-bottom:24px; }
+    .interview-card {
+      background:#fff;
+      border:1px solid #f0c0cc;
+      border-radius:8px;
+      padding:22px 24px;
+      display:flex;
+      gap:20px;
+      align-items:flex-start;
+      box-shadow:0 2px 8px rgba(180,100,120,0.07);
+    }
+    .interview-avatar {
+      flex-shrink:0;
+      width:72px; height:72px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#d4788a,#5a9870);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      color:#fff;
+    }
+    .interview-body { flex:1; }
+    .interview-meta { font-size:11px; font-weight:bold; color:#d4788a; margin-bottom:6px; letter-spacing:.06em; }
+    .interview-quote {
+      font-size:15px;
+      font-weight:bold;
+      color:#b05068;
+      margin-bottom:10px;
+      line-height:1.6;
+      background:#fff0f3;
+      border-left:4px solid #d4788a;
+      padding:8px 14px;
+      border-radius:0 4px 4px 0;
+    }
+    .interview-text { font-size:13px; color:#555; line-height:2; }
+    @media(max-width:760px){
+      .interview-card { flex-direction:column; align-items:center; text-align:center; gap:12px; }
+      .interview-quote { text-align:left; }
+      .interview-text { text-align:left; }
+    }
+
+    /* ── 採用カード ── */
+    .job-card { background:#fff; border:1px solid #f0c0cc; border-radius:6px; margin-bottom:18px; overflow:hidden; }
+    .job-card-head { background:#5a9870; color:#fff; font-weight:bold; font-size:15px; padding:10px 16px; display:flex; align-items:center; gap:8px; }
+    .job-card-body table { width:100%; border-collapse:collapse; font-size:13px; }
+    .job-card-body table th { background:#f0faf4; color:#3a5a48; font-weight:bold; padding:9px 14px; border:1px solid #c0dcc8; width:130px; vertical-align:top; white-space:nowrap; }
+    .job-card-body table td { padding:9px 14px; border:1px solid #c0dcc8; line-height:1.75; color:#444; }
+
+    /* ── 職場環境セクション ── */
+    .env-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:22px; }
+    .env-card { background:#f0faf4; border:1px solid #c0dcc8; border-radius:6px; padding:16px 14px; }
+    .env-title { font-size:13px; font-weight:bold; color:#3a5a48; margin-bottom:6px; }
+    .env-text { font-size:12px; color:#555; line-height:1.85; }
+    @media(max-width:760px){ .env-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <img src="images/header_logo.png" alt="医療法人社団 成友会 小森病院">
+    </div>
+    <div class="header-photo">
+      <img src="images/hospital_exterior.png" alt="小森病院 外観">
+    </div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html">TOP</a>
+    <a href="shinryo.html">病院紹介・<br>診療内容</a>
+    <a href="nyuin.html">入院のご案内</a>
+    <a href="boshu.html" class="active">採用情報</a>
+    <a href="helper.html">こもりヘルパー<br>ステーション</a>
+    <a href="access.html">アクセス</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <p class="breadcrumb"><a href="index.html">TOP</a> <span>›</span> 採用情報</p>
+  <h1 class="page-title">採用情報・スタッフ募集</h1>
+
+  <div class="content-grid">
+    <main class="main-content">
+
+      <!-- 採用メッセージ -->
+      <div class="card" style="background:linear-gradient(145deg,#f0faf4 0%,#eef7f2 100%); border-color:#5a9870; border-left-width:5px; margin-bottom:24px;">
+        <p style="font-size:14px; line-height:2.2; color:#2d5a3d;">
+          小森病院では、患者様お一人おひとりと誠実に向き合い、ともに成長できるスタッフを募集しています。<br>
+          「医療のことは難しくてよくわからない」という方も、先輩スタッフが丁寧にサポートしますのでご安心ください。<br>
+          子育て中の方・ブランクのある方も活躍しています。まずはお気軽にご連絡ください。
+        </p>
+      </div>
+
+      <!--
+        📷 写真撮影アドバイス（採用ページ全体）：
+        看護師・介護士・リハビリ職など、職種の異なるスタッフが
+        病院の廊下や休憩室で仲良く並んで笑顔を見せている集合写真が効果的です。
+        「ここで働きたい」と思ってもらえる明るく和やかな雰囲気を意識してください。
+      -->
+
+      <!-- ===== 働くメリット ===== -->
+      <h2 class="section-heading">✨ 小森病院で働く3つのメリット</h2>
+
+      <div class="merit-grid">
+        <div class="merit-card">
+          <!--
+            📷 写真アドバイス：
+            スタッフが定時に笑顔でロッカーを開けているシーン、
+            またはプライベートを楽しんでいる様子のイメージ写真。
+          -->
+          <div class="merit-num">3<span class="merit-unit">時間以下</span></div>
+          <div class="merit-label">残業 月平均</div>
+          <div class="merit-note">プライベートも大切にできます。定時に帰れる日が当たり前です。</div>
+        </div>
+        <div class="merit-card">
+          <div class="merit-num">85<span class="merit-unit">%以上</span></div>
+          <div class="merit-label">有給消化率</div>
+          <div class="merit-note">お休みが取りやすい環境です。急な休みの際も職場でフォローします。</div>
+        </div>
+        <div class="merit-card">
+          <div class="merit-num" style="font-size:20px; padding-top:4px;">安心</div>
+          <div class="merit-label">ブランクOKの研修体制</div>
+          <div class="merit-note">復職・転職の方も安心。先輩スタッフが丁寧にフォローします。</div>
+        </div>
+      </div>
+
+      <!-- ===== 先輩スタッフのインタビュー ===== -->
+      <h2 class="section-heading">💬 先輩スタッフの声</h2>
+      <!--
+        📷 写真撮影アドバイス（スタッフインタビュー）：
+        各インタビュースタッフの自然な笑顔の写真を1枚ずつ用意してください。
+        制服着用で、病棟や廊下など実際の職場環境が背景に見えると
+        リアリティが出て応募者の安心感につながります。
+      -->
+      <div class="interview-list">
+
+        <div class="interview-card">
+          <div class="interview-avatar">👩‍⚕️</div>
+          <!--
+            📷 写真アドバイス：
+            この欄に看護師スタッフの実際の写真（正方形・丸くトリミング）を
+            入れると、さらに親近感が増します。
+          -->
+          <div class="interview-body">
+            <div class="interview-meta">看護師 ／ 入職3年目（30代・子育て中）</div>
+            <div class="interview-quote">「子育てと両立しながら、残業ほぼナシで働けています」</div>
+            <p class="interview-text">
+              以前は大きな病院で働いていましたが、出産を機に転職しました。
+              ここに来て驚いたのは、定時に帰れる日がほとんどだということ。
+              「療養病床だから忙しくないんでしょう？」と聞かれることもありますが、
+              患者様お一人おひとりに時間をかけて向き合えることが、私にとっての
+              やりがいです。急性期ではなかなかできなかった「その人の生活を支える」
+              ケアができています。子どもの行事にも参加できて、毎日充実しています。
+            </p>
+          </div>
+        </div>
+
+        <div class="interview-card">
+          <div class="interview-avatar">🤝</div>
+          <!--
+            📷 写真アドバイス：
+            この欄に介護士スタッフの実際の写真を入れると効果的です。
+            患者様と笑顔で話しているシーンでも素敵です。
+          -->
+          <div class="interview-body">
+            <div class="interview-meta">介護福祉士 ／ 入職1年目（20代）</div>
+            <div class="interview-quote">「患者様お一人おひとりと、深く向き合えるのがここの魅力です」</div>
+            <p class="interview-text">
+              就職活動中は「介護ってキツいイメージがあって…」と正直不安でした。
+              でも入職してみると、先輩スタッフが丁寧に教えてくれる環境で、
+              自分でも驚くほど早く慣れることができました。
+              急性期の病院と違って、長期的に同じ患者様と関われるので、
+              少しずつ回復していく様子を一緒に喜べる瞬間が本当に嬉しいです。
+              「ありがとう」と言われた日は、仕事のやりがいをとても感じます。
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.interview-list -->
+
+      <!-- ===== 職場環境 ===== -->
+      <h2 class="section-heading">🏢 職場環境・福利厚生</h2>
+      <!--
+        📷 写真撮影アドバイス（職場環境）：
+        実際のきれいな休憩室・スタッフルームの様子や、
+        先輩が後輩に優しく指導しているシーンを撮影してください。
+        職場のリアルな雰囲気が伝わる写真が最も効果的です。
+      -->
+      <div class="env-grid">
+        <div class="env-card">
+          <div class="env-title">⏰ 勤務・休暇</div>
+          <div class="env-text">
+            残業月平均3時間以下<br>
+            有給消化率85%以上<br>
+            シフト制で希望休が取りやすい環境
+          </div>
+        </div>
+        <div class="env-card">
+          <div class="env-title">📚 教育・研修</div>
+          <div class="env-text">
+            新入職者向けオリエンテーション<br>
+            ブランクがある方も安心のフォロー体制<br>
+            各種資格取得のサポートあり
+          </div>
+        </div>
+        <div class="env-card">
+          <div class="env-title">💰 待遇・手当</div>
+          <div class="env-text">
+            社会保険完備（健康・厚生年金・雇用・労災）<br>
+            交通費支給（規定内）<br>
+            制服貸与
+          </div>
+        </div>
+        <div class="env-card">
+          <div class="env-title">🌱 働き方</div>
+          <div class="env-text">
+            子育て中のスタッフも多数活躍中<br>
+            パート・時短勤務の相談も可<br>
+            アットホームな職場環境
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 募集職種 ===== -->
+      <h2 class="section-heading">📋 募集職種・応募要件</h2>
+
+      <!-- 看護師・准看護師 -->
+      <div class="job-card">
+        <div class="job-card-head">👩‍⚕️ 看護師・准看護師</div>
+        <div class="job-card-body">
+          <table>
+            <tr><th>雇用形態</th><td>正職員・パート（常勤・非常勤）</td></tr>
+            <tr><th>業務内容</th><td>入院患者の療養上のケア・処置・記録など</td></tr>
+            <tr><th>応募資格</th><td>看護師免許または准看護師免許をお持ちの方（ブランクのある方も歓迎）</td></tr>
+            <tr><th>勤務時間</th><td>シフト制（詳細はご相談ください）</td></tr>
+            <tr><th>勤務場所</th><td>東京都武蔵野市関前3丁目3-15（小森病院）</td></tr>
+            <tr><th>福利厚生</th><td>社会保険完備・交通費支給・制服貸与・有給消化率85%以上</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 介護士・介護福祉士 -->
+      <div class="job-card">
+        <div class="job-card-head">🤝 介護士・介護福祉士</div>
+        <div class="job-card-body">
+          <table>
+            <tr><th>雇用形態</th><td>正職員・パート（常勤・非常勤）</td></tr>
+            <tr><th>業務内容</th><td>入院患者の日常生活援助（食事・排泄・入浴介助等）</td></tr>
+            <tr><th>応募資格</th><td>介護福祉士・ヘルパー資格をお持ちの方（未経験・無資格の方もご相談ください）</td></tr>
+            <tr><th>勤務時間</th><td>シフト制（詳細はご相談ください）</td></tr>
+            <tr><th>勤務場所</th><td>東京都武蔵野市関前3丁目3-15（小森病院）</td></tr>
+            <tr><th>福利厚生</th><td>社会保険完備・交通費支給・制服貸与</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 訪問介護ヘルパー -->
+      <div class="job-card">
+        <div class="job-card-head">🏠 訪問介護ヘルパー（こもりヘルパーステーション）</div>
+        <div class="job-card-body">
+          <table>
+            <tr><th>雇用形態</th><td>パート・登録型ヘルパー</td></tr>
+            <tr><th>業務内容</th><td>ご利用者のご自宅を訪問し、身体介護・生活援助を実施</td></tr>
+            <tr><th>応募資格</th><td>介護福祉士・ホームヘルパー2級以上（初任者研修修了者含む）</td></tr>
+            <tr><th>勤務時間</th><td>週3日〜・1日3時間〜相談可（扶養内勤務可）</td></tr>
+            <tr><th>活動地域</th><td>武蔵野市・三鷹市・西東京市 周辺</td></tr>
+            <tr><th>福利厚生</th><td>交通費支給（規定内）・制服貸与</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 理学療法士・作業療法士 -->
+      <div class="job-card">
+        <div class="job-card-head">🦾 理学療法士・作業療法士</div>
+        <div class="job-card-body">
+          <table>
+            <tr><th>雇用形態</th><td>正職員・パート</td></tr>
+            <tr><th>業務内容</th><td>入院患者の運動器リハビリテーション・日常生活動作（ADL）訓練など</td></tr>
+            <tr><th>応募資格</th><td>理学療法士または作業療法士免許をお持ちの方</td></tr>
+            <tr><th>勤務時間</th><td>平日中心（詳細はご相談ください）</td></tr>
+            <tr><th>勤務場所</th><td>東京都武蔵野市関前3丁目3-15（小森病院）</td></tr>
+            <tr><th>福利厚生</th><td>社会保険完備・交通費支給・制服貸与</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 医療事務 -->
+      <div class="job-card">
+        <div class="job-card-head">📋 医療事務・受付</div>
+        <div class="job-card-body">
+          <table>
+            <tr><th>雇用形態</th><td>正職員・パート</td></tr>
+            <tr><th>業務内容</th><td>外来受付・診療報酬請求（レセプト）・電話対応・入退院手続きなど</td></tr>
+            <tr><th>応募資格</th><td>医療事務経験者歓迎（未経験の方もご相談ください）</td></tr>
+            <tr><th>勤務時間</th><td>平日 9:00〜17:00（詳細はご相談）</td></tr>
+            <tr><th>勤務場所</th><td>東京都武蔵野市関前3丁目3-15（小森病院）</td></tr>
+            <tr><th>福利厚生</th><td>社会保険完備・交通費支給</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 応募方法 -->
+      <h2 class="section-heading">📬 応募方法</h2>
+      <p class="body-text">
+        まずはお電話にてご連絡ください。採用担当者よりご案内いたします。<br>
+        「どんな職場か見てから考えたい」という方も、見学だけのご参加も歓迎しています。お気軽にどうぞ。
+      </p>
+      <div class="card" style="background:#f0faf4; border-color:#5a9870;">
+        <p style="font-size:14px; line-height:2.3; color:#2d5a3d;">
+          <strong>📞 採用担当（小森病院 代表）</strong><br>
+          TEL：<strong style="font-size:17px; color:#3a7a58;">0422-55-8311</strong><br>
+          FAX：0422-53-0480<br>
+          受付時間：平日 9:00〜17:00<br>
+          郵送先：〒180-0014 東京都武蔵野市関前3丁目3-15　小森病院 採用担当 宛
+        </p>
+      </div>
+      <p class="note">※ご応募いただいた個人情報は採用選考のみに使用し、第三者へ提供することはありません。<br>
+      ※面接の際は履歴書（写真貼付）をご持参またはご郵送ください。</p>
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <div class="sidebar-title">📞 採用お問い合わせ</div>
+        <div class="sidebar-info">
+          <span class="big-tel">0422-55-8311</span>
+          平日 9:00〜17:00<br>
+          <small style="color:#888;">（代表へお電話ください）</small><br><br>
+          「見学だけ」もOKです。<br>お気軽にどうぞ。
+        </div>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">✨ 働く3つのメリット</div>
+        <div class="sidebar-info" style="color:#3a5a48; line-height:2.2;">
+          ✅ 残業 月平均3時間以下<br>
+          ✅ 有給消化率85%以上<br>
+          ✅ ブランクOKの研修体制
+        </div>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">案内メニュー</div>
+        <ul class="sidebar-links">
+          <li><a href="index.html">▶ TOP</a></li>
+          <li><a href="shinryo.html">▶ 病院紹介・診療内容</a></li>
+          <li><a href="nyuin.html">▶ 入院のご案内</a></li>
+          <li><a href="boshu.html">▶ 採用情報</a></li>
+          <li><a href="helper.html">▶ こもりヘルパーステーション</a></li>
+          <li><a href="access.html">▶ アクセス</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">🏥 勤務地</div>
+        <div class="sidebar-info">
+          東京都武蔵野市<br>
+          関前3丁目3-15<br>
+          JR三鷹駅より<br>
+          バス利用で約10分
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>医療法人社団 成友会　小森病院</p>
+  <p>〒180-0014　東京都武蔵野市関前3丁目3-15　TEL：0422-55-8311</p>
+  <p style="margin-top:6px;">
+    <a href="index.html">TOP</a> ／
+    <a href="shinryo.html">病院紹介・診療内容</a> ／
+    <a href="nyuin.html">入院のご案内</a> ／
+    <a href="boshu.html">採用情報</a> ／
+    <a href="helper.html">こもりヘルパーステーション</a> ／
+    <a href="access.html">アクセス</a>
+  </p>
+  <p style="margin-top:8px; font-size:11px; opacity:.5;">©2026 医療法人社団 成友会 小森病院 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
