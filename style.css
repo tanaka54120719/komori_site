@@ -1,0 +1,503 @@
+/* ============================================
+   小森病院 共通スタイルシート
+   医療法人社団 成友会
+   配色：ソフトピンク × ソフトグリーン
+============================================ */
+
+/*
+  カラーパレット
+  ─────────────────────────────
+  ピンク系
+    Deep  : #b05068  (濃いローズ　見出し文字など)
+    Main  : #d4788a  (メインピンク　ヘッダー帯・アクセント)
+    Light : #f5c8d4  (薄ピンク　ボーダー・ホバー)
+    Pale  : #fff0f3  (極薄ピンク　テーブルセル背景)
+  グリーン系
+    Deep  : #3a7a58  (濃いグリーン　リンクホバー)
+    Main  : #5a9870  (メイングリーン　リンク・アクセント)
+    Light : #c0dcc8  (薄グリーン　ボーダー)
+    Pale  : #eef7f2  (極薄グリーン　交互行)
+  中間
+    Text  : #4a3545  (温かみのある黒)
+    BG    : #faf8f8  (ページ背景)
+  フッター
+    Footer: #fde4ec  (淡いピンク)
+*/
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Meiryo', 'メイリオ', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-size: 14px;
+  color: #4a3545;
+  background: #faf8f8;
+  min-width: 760px;
+}
+
+a { color: #5a9870; text-decoration: none; }
+a:hover { text-decoration: underline; color: #3a7a58; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   ① ロゴ帯（ヘッダー）
+============================================ */
+.site-header {
+  background: #fff;
+  border-bottom: 3px solid #d4788a;
+  width: 100%;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  min-height: 160px;
+  padding-top: 1em;     /* PC表示：ヘッダー上余白 */
+  padding-bottom: 1em;  /* PC表示：ヘッダー下余白 */
+}
+
+/* 左側：ロゴ画像 */
+.header-logo {
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+.header-logo img {
+  display: block;
+  height: 160px;
+  width: auto;
+}
+
+/* 右側：病院外観写真 */
+.header-photo {
+  flex: 1;
+  overflow: hidden;
+  background: #f5c8d4;
+}
+
+.header-photo img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* ============================================
+   ② ナビゲーション（6タブ）
+============================================ */
+.site-nav {
+  background: #fff;
+  border-bottom: 2px solid #d4788a;
+}
+
+.nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.nav-inner a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 11px 4px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #b05068;
+  background: #fde8ee;
+  border-right: 1px solid #f0b8c8;
+  border-top: 1px solid #f0b8c8;
+  border-bottom: 1px solid #f0b8c8;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  min-height: 46px;
+}
+
+.nav-inner a:first-child {
+  border-left: 1px solid #f0b8c8;
+}
+
+.nav-inner a:hover {
+  background: #d4788a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-inner a.active {
+  background: #b05068;
+  color: #fff;
+  cursor: default;
+}
+
+/* ============================================
+   ③ ページ共通レイアウト
+============================================ */
+.page-wrap {
+  max-width: 900px;
+  margin: 26px auto 52px;
+  padding: 0 16px;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 16px;
+}
+.breadcrumb a { color: #d4788a; }
+.breadcrumb span { margin: 0 5px; }
+
+.page-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b05068;
+  border-left: 5px solid #d4788a;
+  padding: 6px 0 6px 14px;
+  margin-bottom: 24px;
+  background: linear-gradient(to right, #fff0f3, transparent);
+}
+
+.content-grid {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.main-content { flex: 1; min-width: 0; }
+
+.sidebar {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+/* ============================================
+   ④ メインコンテンツ 共通部品
+============================================ */
+.section-heading {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #d4788a, #e8a0b0);
+  padding: 8px 14px;
+  margin: 26px 0 14px;
+  border-radius: 3px;
+}
+.section-heading:first-child { margin-top: 0; }
+
+.sub-heading {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b05068;
+  border-bottom: 2px solid #d4788a;
+  padding-bottom: 5px;
+  margin: 20px 0 10px;
+}
+
+.body-text {
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #f0c0cc;
+  border-radius: 4px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 4px rgba(180,100,120,0.07);
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+  background: #fff;
+}
+
+.info-table th, .info-table td {
+  border: 1px solid #f0c0cc;
+  padding: 9px 14px;
+  font-size: 13px;
+  vertical-align: top;
+  line-height: 1.75;
+}
+
+.info-table th {
+  background: #fff0f3;
+  font-weight: bold;
+  color: #b05068;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.check-list {
+  list-style: none;
+  margin-bottom: 14px;
+}
+
+.check-list li {
+  padding: 5px 0 5px 22px;
+  position: relative;
+  line-height: 1.75;
+  color: #555;
+  border-bottom: 1px dotted #f0c0cc;
+}
+
+.check-list li::before {
+  content: '▶';
+  position: absolute; left: 0;
+  color: #5a9870; font-size: 10px; top: 8px;
+}
+
+.note {
+  font-size: 12px;
+  color: #777;
+  background: #fff8f8;
+  border: 1px dashed #f0c0cc;
+  padding: 10px 14px;
+  border-radius: 3px;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+/* ステップ表示 */
+.step-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 18px;
+}
+
+.step-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.step-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 17px; top: 38px; bottom: 0;
+  width: 2px;
+  background: #f5c8d4;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #d4788a;
+  color: #fff;
+  font-weight: bold; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+}
+
+.step-body { padding-top: 5px; }
+.step-body strong { font-size: 14px; color: #b05068; display: block; margin-bottom: 4px; }
+.step-body p { font-size: 13px; color: #666; }
+
+/* お知らせリスト */
+.news-list { border-top: 1px solid #f0c0cc; }
+
+.news-item {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 10px 4px;
+  border-bottom: 1px solid #f0c0cc;
+  font-size: 13px;
+}
+
+.news-date { color: #999; white-space: nowrap; font-size: 12px; }
+
+.news-tag {
+  font-size: 11px; font-weight: bold;
+  padding: 1px 8px;
+  border-radius: 2px; white-space: nowrap;
+}
+.tag-info    { background: #fde8ee; color: #b05068; }
+.tag-care    { background: #e8f5ee; color: #3a7a58; }
+.tag-recruit { background: #fef0e0; color: #9a5010; }
+.tag-event   { background: #f8e8f8; color: #7a4080; }
+.tag-notice  { background: #f8f0e8; color: #8a6010; }
+
+/* ============================================
+   ⑤ サイドバー
+============================================ */
+.sidebar-box {
+  background: #fff;
+  border: 1px solid #f0c0cc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.sidebar-title {
+  background: linear-gradient(90deg, #d4788a, #e8a0b0);
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 8px 12px;
+}
+
+.sidebar-links { list-style: none; padding: 6px 0; }
+
+.sidebar-links li a {
+  display: block;
+  padding: 7px 14px;
+  font-size: 13px;
+  color: #b05068;
+  border-bottom: 1px dotted #f0c0cc;
+  transition: background .1s;
+}
+.sidebar-links li:last-child a { border-bottom: none; }
+.sidebar-links li a:hover { background: #fff0f3; text-decoration: none; }
+
+.sidebar-info {
+  padding: 12px 14px;
+  font-size: 12px;
+  color: #666;
+  line-height: 2;
+}
+
+.sidebar-info .big-tel {
+  font-size: 17px;
+  font-weight: bold;
+  color: #c0392b;
+  display: block;
+  margin: 4px 0 2px;
+}
+
+/* ============================================
+   ⑥ トップページ専用
+============================================ */
+.hero-banner {
+  background: linear-gradient(135deg, #b05068 0%, #d4788a 55%, #e8a0b0 100%);
+  color: #fff;
+  padding: 24px 28px;
+  border-radius: 4px;
+  margin-bottom: 22px;
+}
+
+.hero-banner h2 {
+  font-size: 17px; font-weight: bold;
+  margin-bottom: 8px; letter-spacing: 0.04em;
+}
+
+.hero-banner p { font-size: 13px; line-height: 2; opacity: .9; }
+
+/* コロナ対策ボックス */
+.corona-box {
+  background: #fff8f0;
+  border: 1px solid #e8c880;
+  border-left: 5px solid #d4a020;
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  line-height: 2;
+  color: #5a4010;
+}
+
+.corona-box h3 { font-size: 14px; color: #8a5010; margin-bottom: 8px; }
+
+/* トップグリッド */
+.top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.top-card {
+  background: #fff;
+  border: 1px solid #f0c0cc;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(180,100,120,0.07);
+}
+
+.top-card-head {
+  background: linear-gradient(90deg, #d4788a, #e8a0b0);
+  color: #fff; font-weight: bold; font-size: 14px;
+  padding: 9px 14px;
+  display: flex; align-items: center; gap: 7px;
+}
+
+.top-card-body {
+  padding: 13px 16px;
+  font-size: 13px; color: #555; line-height: 1.85;
+}
+
+.top-card-body a { color: #5a9870; font-weight: bold; font-size: 13px; }
+
+/* 外来担当表 */
+.doctor-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.doctor-table th, .doctor-table td {
+  border: 1px solid #f0c0cc;
+  padding: 8px 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.doctor-table thead th {
+  background: #fff0f3;
+  font-weight: bold;
+  color: #b05068;
+}
+
+.doctor-table .time-col { background: #fff8fa; font-weight: bold; color: #b05068; }
+
+/* ============================================
+   ⑦ フッター
+============================================ */
+.site-footer {
+  background: #fde4ec;
+  color: #9a5068;
+  text-align: center;
+  padding: 18px 16px;
+  font-size: 12px;
+  line-height: 2.2;
+  border-top: 2px solid #f0b8c8;
+}
+
+.site-footer a { color: #b05068; }
+.site-footer a:hover { color: #8a3050; }
+
+/* ============================================
+   レスポンシブ（スマホ）
+============================================ */
+@media (max-width: 760px) {
+  body { min-width: auto; }
+  .header-inner { flex-direction: column; }
+  .header-photo { width: 100%; height: 130px; }
+  .nav-inner { flex-wrap: wrap; }
+  .nav-inner a {
+    flex: 0 0 33.333%;
+    border-left: 1px solid #f0b8c8;
+    font-size: 11px;
+    padding: 9px 2px;
+    min-height: 42px;
+  }
+  .content-grid { flex-direction: column; }
+  .sidebar { width: 100%; }
+  .top-grid { grid-template-columns: 1fr; }
+}

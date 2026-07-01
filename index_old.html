@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小森病院【公式】東京都武蔵野市｜長期療養・リハビリ・看取りケア対応の療養病床57床</title>
+  <meta name="description" content="東京都武蔵野市の療養病床57床の病院。長期療養・リハビリ・看取りケアに対応。ケアマネ様・急性期病院様からの転院ご相談もお気軽にどうぞ。TEL 0422-55-8312">
+  <link rel="stylesheet" href="style.css">
+  <!-- ===== 淡いピンク × 淡いグリーン カラーオーバーライド ===== -->
+  <style>
+    /* ── ヘッダー ── */
+    .site-header { border-bottom-color: #E8A598; }
+    .header-photo { background: #FDE2E4; }
+
+    /* ── ナビゲーション ── */
+    .site-nav { border-bottom-color: #E8A598; }
+    .nav-inner a { color: #4A6D4B; background: #F2F9EE; border-color: #E2F0D9; }
+    .nav-inner a:hover { background: #7FA998; color: #fff; }
+    .nav-inner a.active { background: #4A6D4B; color: #fff; }
+
+    /* ── ページタイトル・見出し ── */
+    .page-title { color: #4A6D4B; border-left-color: #7FA998; background: linear-gradient(to right, #F2F9EE, transparent); }
+    .section-heading { background: linear-gradient(90deg, #7FA998, #E2F0D9); color: #fff; }
+    .sub-heading { color: #4A6D4B; border-bottom-color: #7FA998; }
+
+    /* ── カード・テーブル・ボーダー ── */
+    .card { border-color: #E2F0D9; box-shadow: 0 1px 4px rgba(127,169,152,0.07); }
+    .info-table th, .info-table td { border-color: #E2F0D9; }
+    .info-table th { background: #F2F9EE; color: #4A6D4B; }
+    .check-list li { border-bottom-color: #E2F0D9; }
+    .check-list li::before { color: #7FA998; }
+    .note { background: #F2F9EE; border-color: #E2F0D9; }
+
+    /* ── ステップ ── */
+    .step-item:not(:last-child)::after { background: #E2F0D9; }
+    .step-num { background: #7FA998; }
+    .step-body strong { color: #4A6D4B; }
+
+    /* ── お知らせ ── */
+    .news-list { border-top-color: #E2F0D9; }
+    .news-item { border-bottom-color: #E2F0D9; }
+    .tag-info { background: #FFF1F2; color: #C38D94; }
+    .tag-care { background: #F2F9EE; color: #4A6D4B; }
+
+    /* ── サイドバー ── */
+    .sidebar-box { border-color: #E2F0D9; }
+    .sidebar-title { background: linear-gradient(90deg, #7FA998, #E2F0D9); }
+    .sidebar-links li a { color: #4A6D4B; border-bottom-color: #E2F0D9; }
+    .sidebar-links li a:hover { background: #F2F9EE; }
+    .sidebar-info .big-tel { color: #4A6D4B; }
+
+    /* ── トップページ専用 ── */
+    .hero-banner { background: linear-gradient(135deg, #4A6D4B 0%, #7FA998 55%, #E2F0D9 100%); }
+    .top-card { border-color: #FDE2E4; box-shadow: 0 1px 4px rgba(232,165,152,0.07); }
+    .top-card-head { background: linear-gradient(90deg, #E8A598, #FDE2E4); color: #fff; }
+    .top-card-body a { color: #4A6D4B; }
+    .doctor-table th, .doctor-table td { border-color: #E2F0D9; }
+    .doctor-table thead th { background: #F2F9EE; color: #4A6D4B; }
+    .doctor-table .time-col { background: #FFF1F2; color: #C38D94; }
+    .breadcrumb a { color: #E8A598; }
+
+    /* ── フッター ── */
+    .site-footer { background: #F2F9EE; color: #4A6D4B; border-top-color: #E2F0D9; }
+    .site-footer a { color: #4A6D4B; }
+    .site-footer a:hover { color: #7FA998; }
+
+    /* ── レスポンシブ ── */
+    @media (max-width: 760px) {
+      .nav-inner a { border-left-color: #E2F0D9; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== ロゴ帯 ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <img src="images/header_logo.png" alt="医療法人社団 成友会 小森病院">
+    </div>
+    <div class="header-photo">
+      <div class="slideshow" id="headerSlideshow">
+        <div class="slide active"><img src="images/hospital_exterior.png" alt="小森病院 外観"></div>
+        <div class="slide"><img src="images/スライド2.jpg" alt="小森病院 院内"></div>
+        <div class="slide"><img src="images/スライド3.jpg" alt="小森病院 スタッフ"></div>
+        <div class="slide"><img src="images/スライド4.jpg" alt="小森病院 病室"></div>
+        <div class="slide"><img src="images/スライド5.jpg" alt="小森病院 リハビリ室"></div>
+        <div class="slide"><img src="images/スライド6.jpg" alt="小森病院 デイルーム"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .slideshow { position:relative; width:100%; height:160px; overflow:hidden; }
+  .slide { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transition:opacity 1s ease-in-out; }
+  .slide.active { opacity:1; }
+  .slide img { display:block; width:100%; height:160px; object-fit:cover; }
+  @media(max-width:760px){ .slideshow{height:130px;} .slide img{height:130px;} }
+</style>
+<script>
+(function(){
+  var slides = document.querySelectorAll('#headerSlideshow .slide');
+  var current = 0;
+  setInterval(function(){
+    slides[current].classList.remove('active');
+    current = (current+1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4000);
+})();
+</script>
+
+<!-- ===== ナビゲーション ===== -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="active">TOP</a>
+    <a href="shinryo.html">病院紹介・<br>診療内容</a>
+    <a href="nyuin.html">入院のご案内</a>
+    <a href="boshu.html">採用情報</a>
+    <a href="helper.html">こもりヘルパー<br>ステーション</a>
+    <a href="access.html">アクセス</a>
+  </div>
+</nav>
+
+<!-- ===== 診療時間セクション ===== -->
+<div class="hours-band">
+  <div class="hours-inner">
+    <div class="hours-band-title">
+      <span>🕐</span> 外来診療時間・担当医師
+    </div>
+    <div class="hours-table-wrap">
+      <table class="hours-table">
+        <thead>
+          <tr>
+            <th class="th-time">診療時間</th>
+            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-time">9:00〜12:00</td>
+            <td class="open">○<br><span class="doctor-name">酒井</span></td>
+            <td class="open">○<br><span class="doctor-name">酒井</span></td>
+            <td class="open">○<br><span class="doctor-name">市川</span></td>
+            <td class="open">○<br><span class="doctor-name">酒井</span></td>
+            <td class="open">○<br><span class="doctor-name">穂苅</span></td>
+            <td class="open">○<br><span class="doctor-name">岩田</span></td>
+          </tr>
+          <tr>
+            <td class="td-time">14:00〜17:00</td>
+            <td class="open">○<br><span class="doctor-name">矢野</span></td>
+            <td class="open">○<br><span class="doctor-name">酒井</span></td>
+            <td class="open">○<br><span class="doctor-name">市川</span></td>
+            <td class="closed">－</td>
+            <td class="open">○<br><span class="doctor-name">穂苅</span></td>
+            <td class="closed">－</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hours-note">
+      ※木曜午後・土曜午後・日曜・祝日は休診<br>
+      ※担当医は変更になる場合があります。<br>
+      <strong>☎ 0422-55-8311</strong>（受付：平日 9:00〜17:00）
+    </p>
+  </div>
+</div>
+
+<style>
+.hours-band { margin-top:22px; background:#fff; border-top:3px solid #E8A598; border-bottom:3px solid #FDE2E4; padding:20px 0 18px; box-shadow:0 2px 8px rgba(232,165,152,.10); }
+.hours-inner { max-width:900px; margin:0 auto; padding:0 16px; }
+.hours-band-title { font-size:15px; font-weight:bold; color:#C38D94; margin-bottom:14px; display:flex; align-items:center; gap:7px; }
+.hours-table-wrap { overflow-x:auto; margin-bottom:12px; }
+.hours-table { border-collapse:collapse; width:100%; min-width:520px; }
+.hours-table th { background:linear-gradient(90deg,#E8A598,#FDE2E4); color:#fff; font-size:13px; font-weight:bold; text-align:center; padding:9px 10px; border:1px solid #FDE2E4; }
+.hours-table .th-time { width:100px; background:#C38D94; font-size:12px; }
+.hours-table td { text-align:center; padding:10px 8px; font-size:13px; border:1px solid #FDE2E4; vertical-align:middle; }
+.hours-table .td-time { background:#FFF1F2; font-size:12px; font-weight:bold; color:#C38D94; text-align:center; white-space:nowrap; padding:10px 12px; }
+.hours-table td.open { background:#fff; color:#E8A598; font-weight:bold; font-size:16px; line-height:1.6; }
+.hours-table td.open .doctor-name { display:block; font-size:15px; font-weight:bold; color:#C38D94; white-space:nowrap; }
+.hours-table td.closed { background:#FAF8F5; color:#ccc; font-size:18px; font-weight:bold; }
+.hours-note { font-size:11px; color:#8C827E; line-height:1.9; margin-top:4px; }
+.hours-note strong { color:#C38D94; font-size:13px; }
+@media(max-width:760px){ .hours-band{margin-top:14px; padding:14px 0 12px;} .hours-table-wrap{overflow-x:scroll;} }
+
+/* ===== デュアルCTAボタン ===== */
+.dual-cta-wrap { display:flex; gap:12px; margin-bottom:22px; }
+.dual-cta { flex:1; display:flex; flex-direction:column; gap:5px; padding:15px 18px; border-radius:7px; text-decoration:none; transition:transform .15s, box-shadow .15s; }
+.dual-cta:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,0.18); text-decoration:none; }
+.dual-cta--care { background:linear-gradient(135deg,#C38D94 0%,#E8A598 100%); color:#fff; }
+.dual-cta--family { background:linear-gradient(135deg,#7FA998 0%,#4A6D4B 100%); color:#fff; }
+.dual-cta-badge { font-size:11px; font-weight:bold; background:rgba(255,255,255,.28); padding:2px 9px; border-radius:10px; display:inline-block; width:fit-content; }
+.dual-cta-main { font-size:14px; font-weight:bold; line-height:1.5; }
+@media(max-width:760px){ .dual-cta-wrap{flex-direction:column;} .dual-cta-main{font-size:13px;} }
+
+/* ===== 3つの強み ===== */
+.strengths-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:24px; }
+.strength-card { background:#fff; border:1px solid #E2F0D9; border-radius:8px; padding:22px 16px 18px; text-align:center; box-shadow:0 2px 8px rgba(127,169,152,0.08); transition:transform .18s, box-shadow .18s; }
+.strength-card:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(127,169,152,0.16); }
+.strength-num { width:46px; height:46px; border-radius:50%; background:linear-gradient(135deg,#7FA998,#4A6D4B); color:#fff; font-size:13px; font-weight:bold; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; letter-spacing:.04em; }
+.strength-heading { font-size:14px; font-weight:bold; color:#4A6D4B; margin-bottom:10px; line-height:1.6; }
+.strength-desc { font-size:12px; color:#666; line-height:1.9; text-align:left; }
+@media(max-width:760px){
+  .strengths-grid { grid-template-columns:1fr; gap:10px; }
+  .strength-card { text-align:left; display:flex; align-items:flex-start; gap:14px; padding:16px; }
+  .strength-num { margin:0; flex-shrink:0; }
+}
+
+/* ===== お知らせリスト ===== */
+.top-card { border-radius:8px; transition:transform .18s, box-shadow .18s; }
+.top-card:hover { transform:translateY(-4px); box-shadow:0 8px 22px rgba(127,169,152,0.16); }
+.top-card-head { flex-direction:column; text-align:center; padding:16px 10px 12px; font-size:14px; gap:6px; }
+.top-card-head .card-icon { font-size:32px; display:block; line-height:1.3; }
+.news-item { transition:background .12s; border-radius:4px; padding-left:8px; padding-right:8px; }
+.news-item:hover { background:#FFF1F2; }
+.info-table tr:hover td, .info-table tr:hover th { background:#F2F9EE; transition:background .1s; }
+</style>
+
+<!-- ===== メインコンテンツ ===== -->
+<div class="page-wrap">
+  <div class="content-grid">
+    <main class="main-content">
+
+      <!--
+        📷 写真撮影アドバイス（ヒーロー全体）：
+        明るい自然光の中で、リハビリ室またはデイルームにて、
+        スタッフが高齢の患者様に優しく寄り添っているシーン。
+        笑顔が見える温かい雰囲気で。スライドショーの写真を
+        明るく撮り直すと大きく印象が変わります。
+      -->
+
+      <!-- ヒーローバナー（新コピー） -->
+      <div class="hero-banner">
+        <h2>住み慣れた地域で、最期までその人らしく。</h2>
+        <p>
+          長期的にお体をケアする安心の環境が、ここにあります。<br>
+          脳梗塞の後遺症・認知症・長期療養が必要な方を、医療と介護が一体となって24時間支えます。<br>
+          東京都武蔵野市 医療療養型病院 ／ 療養病床 57床
+        </p>
+        <div class="hero-deco" aria-hidden="true">
+          <svg viewBox="0 0 72 72" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="8" width="12" height="56" rx="6" fill="white" opacity="0.22"/>
+            <rect x="8" y="30" width="56" height="12" rx="6" fill="white" opacity="0.22"/>
+            <circle cx="36" cy="36" r="26" stroke="white" stroke-width="1.5" opacity="0.13"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ケアマネ・ご家族向けダブルCTAバナー（最重要ボタン） -->
+      <div class="dual-cta-wrap">
+        <a href="nyuin.html#inquiry-form" class="dual-cta dual-cta--care">
+          <span class="dual-cta-badge">ケアマネ様・医療機関様へ</span>
+          <span class="dual-cta-main">現在の空床・受け入れ状況はこちら →</span>
+        </a>
+        <a href="nyuin.html" class="dual-cta dual-cta--family">
+          <span class="dual-cta-badge">ご家族様へ</span>
+          <span class="dual-cta-main">入院の流れ・施設見学のご案内 →</span>
+        </a>
+      </div>
+
+      <!-- 感染対策 -->
+      <div class="corona-box">
+        <h3>🛡️ 院内感染防止対策について</h3>
+        当院では、外来・入院の患者様の治療に影響が出ないよう、院内感染防止対策を徹底しています。
+        ご来院の皆様にはご理解・ご協力をお願いいたします。<br>
+        ・マスクの着用（お持ちでない方はお申し付けください）<br>
+        ・手指消毒（院内各所にアルコール消毒液を設置）<br>
+        ・来院時の体温測定　・手すり・カウンターなどの定期的な消毒の実施
+      </div>
+
+      <!-- ===== 3つの強み ===== -->
+      <h2 class="section-heading">🌟 小森病院の3つの強み</h2>
+      <div class="strengths-grid">
+
+        <div class="strength-card">
+          <!--
+            📷 写真撮影アドバイス①「24時間体制」：
+            夜間の病棟廊下で、看護師が患者様のそばで優しく声をかけているシーン。
+            温かみのある間接照明で「安心感」が伝わる写真をお願いします。
+          -->
+          <div class="strength-num">01</div>
+          <h3 class="strength-heading">24時間体制の<br>医療・看護</h3>
+          <p class="strength-desc">医師が常駐し、夜間の急な体調変化にも迅速に対応いたします。いつでも専門スタッフがそばにいる安心をお届けします。</p>
+        </div>
+
+        <div class="strength-card">
+          <!--
+            📷 写真撮影アドバイス②「リハビリ」：
+            理学療法士が患者様と目線を合わせ、笑顔で歩行をサポートしているシーン。
+            明るい自然光が入るリハビリ室で。患者様の頑張りと、スタッフの優しさが
+            伝わる構図でお願いします。
+          -->
+          <div class="strength-num">02</div>
+          <h3 class="strength-heading">生活に根差した<br>リハビリ</h3>
+          <p class="strength-desc">「もう一度、自分の手でお茶を飲みたい」——日々の生活の喜びを取り戻すための、お一人おひとりに合わせたリハビリを行います。</p>
+        </div>
+
+        <div class="strength-card">
+          <!--
+            📷 写真撮影アドバイス③「看取りケア」：
+            落ち着いた間接照明の個室で、スタッフの手が患者様の手を温かく包んでいる
+            アップ写真。プライバシーに配慮しながら「寄り添い」が伝わる静かで
+            温かい構図でお願いします。
+          -->
+          <div class="strength-num">03</div>
+          <h3 class="strength-heading">ご家族も安心の<br>お看取りケア</h3>
+          <p class="strength-desc">最期の時間を「痛みのない、穏やかな時間」にすることをお約束します。ご本人とご家族の想いを最優先に、最後まで温かく寄り添います。</p>
+        </div>
+
+      </div><!-- /.strengths-grid -->
+
+      <!--
+        ====================================================
+          ✏️  お知らせの更新方法（3分で完了します）
+        ====================================================
+        ① 以下「news-item」ブロックを1つコピーします。
+        ② 日付・タグ種類・内容テキストを書き換えます。
+        ③ 新しいものほど上（リストの先頭）に追加します。
+        ④ 古い記事が5件以上になったら、下から削除してください。
+
+        【タグ種類一覧】
+          tag-info   → お知らせ（ピンク）
+          tag-care   → 医療・看護（緑）
+          tag-recruit→ 採用情報（オレンジ）
+          tag-event  → イベント（紫）
+          tag-notice → 院内掲示（黄）
+        ====================================================
+      -->
+      <h2 class="section-heading">📢 最新のお知らせ</h2>
+      <div class="card" style="padding:0;">
+        <div class="news-list">
+
+          <!-- ▼▼▼ 新しいお知らせをここに追加してください ▼▼▼ -->
+
+          <div class="news-item">
+            <span class="news-date">2026.06.02</span>
+            <span class="news-tag tag-info">お知らせ</span>
+            <span>院内掲示（保険医療機関及び保険医療養担当規則に基づく掲示）を更新しました</span>
+          </div>
+
+          <div class="news-item">
+            <span class="news-date">2026.05.07</span>
+            <span class="news-tag tag-info">面会</span>
+            <span><a href="nyuin.html#sec-visit">ご面会について（2026年4月20日よりルール変更）</a></span>
+          </div>
+
+          <div class="news-item">
+            <span class="news-date">2025.09.26</span>
+            <span class="news-tag tag-care">予防接種</span>
+            <span>インフルエンザ予防接種のご案内 → <a href="shinryo.html">詳細はこちら</a></span>
+          </div>
+
+          <!-- ▲▲▲ 新しいお知らせはここより上に追加 ▲▲▲ -->
+
+        </div>
+      </div>
+
+      <!-- 診療科目 -->
+      <h2 class="section-heading">🩺 診療科目・ご利用案内</h2>
+      <div class="top-grid">
+
+        <div class="top-card">
+          <div class="top-card-head"><span class="card-icon">🩺</span>内科</div>
+          <div class="top-card-body">
+            風邪・インフルエンザから、糖尿病・高血圧・脳血管疾患などの慢性的な病気まで幅広く対応します。<br>
+            <a href="shinryo.html">▶ 詳しくはこちら</a>
+          </div>
+        </div>
+
+        <div class="top-card">
+          <!--
+            📷 写真アドバイス（リハビリカード）：
+            明るい室内でリハビリ中のシーンを追加すると、ページの温かみが増します。
+          -->
+          <div class="top-card-head"><span class="card-icon">🦽</span>リハビリ・機能回復</div>
+          <div class="top-card-body">
+            日常生活の動作を一つひとつ丁寧に取り戻すお手伝いをします。理学療法士が個別のプログラムでサポート。<br>
+            <a href="shinryo.html#sec-rehab">▶ 詳しくはこちら</a>
+          </div>
+        </div>
+
+        <div class="top-card">
+          <div class="top-card-head"><span class="card-icon">💉</span>予防接種</div>
+          <div class="top-card-body">
+            各種予防接種を実施しています。インフルエンザ・肺炎球菌など。事前にお電話にてご予約ください。<br>
+            <a href="shinryo.html">▶ 詳しくはこちら</a>
+          </div>
+        </div>
+
+        <div class="top-card">
+          <div class="top-card-head"><span class="card-icon">🏥</span>長期療養のご入院</div>
+          <div class="top-card-body">
+            長期的にお体をケアする安心の環境（57床）。胃ろう・気管切開など医療処置が必要な方もご相談ください。<br>
+            <a href="nyuin.html">▶ 入院案内はこちら</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 医院概要 -->
+      <h2 class="section-heading">🏥 医院概要</h2>
+      <table class="info-table">
+        <tr><th>医院名</th><td>小森病院（コモリビョウイン）</td></tr>
+        <tr><th>法人名</th><td>医療法人社団 成友会</td></tr>
+        <tr><th>住所</th><td>〒180-0014　東京都武蔵野市関前3丁目3-15</td></tr>
+        <tr><th>電話番号</th><td>0422-55-8311</td></tr>
+        <tr><th>FAX番号</th><td>0422-53-0480</td></tr>
+        <tr><th>院長名</th><td>酒井 忠司（さかい ただし）</td></tr>
+        <tr><th>医師</th><td>
+          医師5名（男性4名・女性1名）<br>
+          岩田 好文　日本内科学会 総合内科専門医<br>
+          矢野 尚　日本内科学会 総合内科専門医<br>
+          酒井 忠司　日本糖尿病学学会<br>
+          穂苅万季子　内科・神経内科（毎週金曜担当）
+        </td></tr>
+        <tr><th>病床数</th><td>療養病床 57床（長期的にお体をケアする安心の環境）</td></tr>
+        <tr><th>施設基準</th><td>療養病棟入院基本料1 ／ 運動器リハビリテーション料3</td></tr>
+        <tr><th>駐車場</th><td>5台（無料）</td></tr>
+        <tr><th>お支払い</th><td>現金のみ（クレジットカード等はお取り扱いしておりません）</td></tr>
+      </table>
+
+    </main>
+
+    <!-- サイドバー -->
+    <aside class="sidebar">
+
+      <!-- 空床・受け入れ状況ボタン（最重要） -->
+      <div class="sidebar-box" style="border-color:#C38D94; border-width:2px;">
+        <div class="sidebar-title" style="background:#C38D94;">🏥 空床・受け入れ状況</div>
+        <div class="sidebar-info" style="padding-bottom:14px;">
+          ケアマネ様・医療機関様<br>
+          <a href="nyuin.html#inquiry-form"
+             style="display:block; background:#4A6D4B; color:#fff; text-align:center; padding:9px 8px; border-radius:5px; margin-top:10px; font-weight:bold; font-size:13px; text-decoration:none; transition:opacity .15s;"
+             onmouseover="this.style.opacity='.82'" onmouseout="this.style.opacity='1'">
+            確認・ご相談はこちら →
+          </a>
+          <small style="display:block; margin-top:6px; color:#999; font-size:11px;">入院相談直通：0422-55-8312</small>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-title">📞 お問い合わせ</div>
+        <div class="sidebar-info">
+          代表
+          <span class="big-tel">0422-55-8311</span>
+          入院相談（直通）
+          <span class="big-tel" style="font-size:15px;">0422-55-8312</span>
+          平日 9:00〜17:00
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-title">案内メニュー</div>
+        <ul class="sidebar-links">
+          <li><a href="index.html">▶ TOP</a></li>
+          <li><a href="shinryo.html">▶ 病院紹介・診療内容</a></li>
+          <li><a href="nyuin.html">▶ 入院のご案内</a></li>
+          <li><a href="boshu.html">▶ 採用情報</a></li>
+          <li><a href="helper.html">▶ こもりヘルパーステーション</a></li>
+          <li><a href="access.html">▶ アクセス</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-title">🏥 病床数</div>
+        <div class="sidebar-info">
+          療養病床<br>
+          <strong style="font-size:20px; color:#4A6D4B;">57床</strong><br>
+          （医療療養型）<br>
+          <small style="color:#999;">ご家族・ケアマネ様からの<br>転院ご相談もどうぞ</small>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>医療法人社団 成友会　小森病院</p>
+  <p>〒180-0014　東京都武蔵野市関前3丁目3-15　TEL：0422-55-8311</p>
+  <p style="margin-top:6px;">
+    <a href="index.html">TOP</a> ／
+    <a href="shinryo.html">病院紹介・診療内容</a> ／
+    <a href="nyuin.html">入院のご案内</a> ／
+    <a href="boshu.html">採用情報</a> ／
+    <a href="helper.html">こもりヘルパーステーション</a> ／
+    <a href="access.html">アクセス</a>
+  </p>
+  <p style="margin-top:8px; font-size:11px; opacity:.5;">©2026 医療法人社団 成友会 小森病院 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

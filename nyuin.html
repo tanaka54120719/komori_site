@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>入院のご案内｜小森病院</title>
+  <meta name="description" content="小森病院（東京都武蔵野市）の入院についてご案内します。療養病床57床。入院相談は医療相談員へ直通：0422-55-8312">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Pattern F: ホバーエフェクト & トランジション ── */
+    .info-table tr { transition: background .12s; }
+    .info-table tr:hover td,
+    .info-table tr:hover th { background: #fff8fa; }
+    .sidebar-box { transition: box-shadow .18s; }
+    .sidebar-box:hover { box-shadow: 0 4px 14px rgba(180,100,120,0.10); }
+    .sidebar-links li a {
+      transition: background .12s, padding-left .12s;
+      border-radius: 4px; display: block;
+    }
+    .sidebar-links li a:hover { background: #fff0f3; padding-left: 14px; }
+    .faq-q { transition: background .12s; }
+    .faq-q:hover { background: #fff0f3; }
+    .card { transition: box-shadow .18s, transform .15s; }
+    .card:hover { box-shadow: 0 6px 18px rgba(180,100,120,0.12); transform: translateY(-2px); }
+    .check-list li { transition: background .12s; border-radius: 3px; }
+    .check-list li:hover { background: #fff8fa; }
+    .consult-form input:focus,
+    .consult-form select:focus,
+    .consult-form textarea:focus {
+      outline: none;
+      border-color: #d4788a;
+      box-shadow: 0 0 0 3px rgba(212,120,138,0.15);
+      transition: box-shadow .2s, border-color .2s;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <img src="images/header_logo.png" alt="医療法人社団 成友会 小森病院">
+    </div>
+    <div class="header-photo">
+      <img src="images/hospital_exterior.png" alt="小森病院 外観">
+    </div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html">TOP</a>
+    <a href="shinryo.html">病院紹介・<br>診療内容</a>
+    <a href="nyuin.html" class="active">入院のご案内</a>
+    <a href="boshu.html">採用情報</a>
+    <a href="helper.html">こもりヘルパー<br>ステーション</a>
+    <a href="access.html">アクセス</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <p class="breadcrumb"><a href="index.html">TOP</a> <span>›</span> 入院のご案内</p>
+  <h1 class="page-title">入院のご案内</h1>
+
+  <div class="content-grid">
+    <main class="main-content">
+
+      <!-- 私たちが大切にしていること -->
+      <div class="philosophy-box">
+        <div class="philosophy-deco" aria-hidden="true">
+          <svg viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="38">
+            <path d="M0 44V26.4C0 17.6 2.4 11.2 7.2 7.2 12 3.2 18.8 1.2 27.6 1.2L28.8 6C23.2 7.2 18.8 9.2 15.6 12 12.4 14.8 10.8 18.8 10.8 24H22.4V44H0ZM37.6 44V26.4C37.6 17.6 40 11.2 44.8 7.2 49.6 3.2 56.4 1.2 65.2 1.2L66.4 6C60.8 7.2 56.4 9.2 53.2 12 50 14.8 48.4 18.8 48.4 24H60V44H37.6Z" fill="#f0c0cc" opacity="0.6"/>
+          </svg>
+        </div>
+        <h2 class="philosophy-heading">私たちが大切にしていること</h2>
+        <p class="philosophy-text">
+          医療処置が必要な状態であっても、患者様が安心感を持ち、穏やかな日常を過ごせること。<br>
+          それを最優先に考え、患者様おひとりおひとりに寄り添ったケアを提供しています。<br>
+          入院に関するご不安やご質問は、どんな小さなことでもお気軽にご相談ください。
+        </p>
+        <div class="philosophy-footer">
+          <span class="philosophy-sig">小森病院　医療相談員・スタッフ一同</span>
+        </div>
+      </div>
+
+      <style>
+        /* ===== 施設の想い ===== */
+        .philosophy-box {
+          position: relative;
+          background: linear-gradient(145deg, #fff8fa 0%, #fff0f3 60%, #fff0f3 100%);
+          border: 1px solid #f0c0cc;
+          border-left: 5px solid #d4788a;
+          border-radius: 6px;
+          padding: 28px 28px 22px 32px;
+          margin-bottom: 24px;
+          overflow: hidden;
+          box-shadow: 0 2px 10px rgba(212,120,138,.10);
+        }
+        .philosophy-deco {
+          position: absolute;
+          top: 14px; right: 18px;
+          opacity: .35;
+          pointer-events: none;
+        }
+        .philosophy-heading {
+          font-size: 15px;
+          font-weight: bold;
+          color: #b05068;
+          margin: 0 0 16px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .philosophy-heading::before {
+          content: '';
+          display: inline-block;
+          width: 6px; height: 6px;
+          border-radius: 50%;
+          background: #d4788a;
+          box-shadow: 0 0 0 3px rgba(212,120,138,.25);
+          flex-shrink: 0;
+        }
+        .philosophy-text {
+          font-size: 14px;
+          line-height: 2.3;
+          color: #6a3a50;
+          margin: 0 0 18px;
+          padding-left: 16px;
+          border-left: 2px dotted #f0b8c8;
+        }
+        .philosophy-footer {
+          text-align: right;
+        }
+        .philosophy-sig {
+          font-size: 12px;
+          color: #c09aaa;
+          letter-spacing: 0.06em;
+        }
+        @media (max-width: 760px) {
+          .philosophy-box { padding: 20px 18px 16px 20px; }
+          .philosophy-text { font-size: 13px; padding-left: 12px; }
+        }
+      </style>
+
+      <!-- 療養病床（わかりやすい解説） -->
+      <div style="background:#fff8fa; border:2px solid #d4788a; border-radius:8px; padding:20px 22px; margin-bottom:22px;">
+        <h3 style="font-size:15px; font-weight:bold; color:#b05068; margin-bottom:10px;">💡 「長期療養（療養病床）」とはどんな場所ですか？</h3>
+        <p style="font-size:14px; line-height:2.1; color:#6a3a50;">
+          <strong>脳梗塞の後遺症・認知症・骨折後などで、ご自宅での介護が一時的または長期的に難しくなった方のための病床です。</strong><br>
+          急性期病院で治療が一段落した後も、医療と介護が一体となって日常生活を24時間サポートします。<br>
+          胃ろう・気管切開など医療処置が必要な状態でも、安心してお任せいただけます。
+        </p>
+      </div>
+
+      <!-- 病院の概要 -->
+      <div class="card" style="background:#fff0f3; border-color:#d4788a; margin-bottom:22px;">
+        <p style="font-size:14px; line-height:2.1; color:#8a3050;">
+          小森病院は東京都武蔵野市にある <strong>医療療養型病院（57床）</strong> です。<br>
+          長期療養が必要な患者さまに対し、医師・看護師・介護士・リハビリスタッフなどが連携してケアを提供しています。<br>
+          入院のご相談は医療相談員（直通：<strong style="color:#c0392b;">0422-55-8312</strong>）までお電話ください。
+        </p>
+      </div>
+
+      <!-- 入院相談の流れ -->
+      <h2 class="section-heading" id="sec-flow">入院相談から入院までの流れ</h2>
+      <p class="body-text" style="margin-bottom:20px;">「まだ相談していいのか迷っている」という段階でも大丈夫です。まずはお気軽にご連絡ください。</p>
+
+      <div class="nstep-flow">
+
+        <div class="nstep-item">
+          <div class="nstep-left">
+            <div class="nstep-circle">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path d="M6 6h4l2 5-2.5 1.5a14 14 0 006 6L17 16l5 2v4c0 1-1 2-2 2C9 24 4 11 4 8c0-1 1-2 2-2z" fill="white" stroke="white" stroke-width="0.5"/>
+              </svg>
+            </div>
+            <div class="nstep-line"></div>
+          </div>
+          <div class="nstep-right">
+            <div class="nstep-label">STEP <span>1</span></div>
+            <h3 class="nstep-title">お電話またはフォームでご相談</h3>
+            <p class="nstep-hint">「こんな状態でも受け入れてもらえる？」という段階でOKです。</p>
+            <p class="nstep-desc">入院相談担当者（直通：<strong><a href="tel:0422558312" style="color:#c0392b;">0422-55-8312</a></strong>）へお電話いただくか、<a href="#form">Webフォーム</a>からご送信ください。患者様の医療処置・病状・ご希望をお気軽にお知らせください。</p>
+          </div>
+        </div>
+
+        <div class="nstep-item">
+          <div class="nstep-left">
+            <div class="nstep-circle">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <circle cx="16" cy="10" r="5" fill="white"/>
+                <path d="M6 26c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="nstep-line"></div>
+          </div>
+          <div class="nstep-right">
+            <div class="nstep-label">STEP <span>2</span></div>
+            <h3 class="nstep-title">担当者よりご連絡<span class="nstep-badge">1営業日以内</span></h3>
+            <p class="nstep-hint">現在の状態や希望をお伺いします。</p>
+            <p class="nstep-desc">入院相談員より折り返しご連絡いたします。患者様の現在の状態・医療処置・ご希望入院時期などを詳しくお聞かせください。この時点での受け入れ可否の目安もお伝えします。</p>
+          </div>
+        </div>
+
+        <div class="nstep-item">
+          <div class="nstep-left">
+            <div class="nstep-circle">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <rect x="5" y="7" width="22" height="18" rx="2" stroke="white" stroke-width="2"/>
+                <path d="M5 13h22" stroke="white" stroke-width="2"/>
+                <path d="M11 4v6M21 4v6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="nstep-line"></div>
+          </div>
+          <div class="nstep-right">
+            <div class="nstep-label">STEP <span>3</span></div>
+            <h3 class="nstep-title">施設見学・詳細のご確認<span class="nstep-badge nstep-badge--opt">任意</span></h3>
+            <p class="nstep-hint">実際の療養環境をご覧いただけます。</p>
+            <p class="nstep-desc">ご希望の方には、病院内（病室・食堂・リハビリ室など）の見学をご案内します。担当者と直接お話いただく機会にもなりますので、ご不安な点はお気軽にご質問ください。</p>
+          </div>
+        </div>
+
+        <div class="nstep-item">
+          <div class="nstep-left">
+            <div class="nstep-circle">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path d="M10 6h12a2 2 0 012 2v18a2 2 0 01-2 2H10a2 2 0 01-2-2V8a2 2 0 012-2z" stroke="white" stroke-width="2"/>
+                <path d="M13 12h6M13 16h6M13 20h4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="nstep-line"></div>
+          </div>
+          <div class="nstep-right">
+            <div class="nstep-label">STEP <span>4</span></div>
+            <h3 class="nstep-title">必要書類のご準備</h3>
+            <p class="nstep-hint">診療情報提供書・看護サマリーなどをご用意いただきます。</p>
+            <p class="nstep-desc">現在の主治医・転院元の病院より<strong>診療情報提供書（紹介状）</strong>と<strong>看護サマリー</strong>をご用意ください。急性期病院のMSW（医療ソーシャルワーカー）様にご相談いただくとスムーズです。書類の内容をもとに医師が入院の可否を判断します。</p>
+          </div>
+        </div>
+
+        <div class="nstep-item nstep-item--last">
+          <div class="nstep-left">
+            <div class="nstep-circle nstep-circle--goal">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path d="M7 17l7 7L26 8" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="nstep-right">
+            <div class="nstep-label nstep-label--goal">STEP <span>5</span></div>
+            <h3 class="nstep-title">入院日の決定・ご入院</h3>
+            <p class="nstep-hint">スタッフ一同でお迎えします。</p>
+            <p class="nstep-desc">入院日が確定しましたら、入院当日にご家族にご来院いただき、書類へのご署名・入院費用の説明などを行います。担当医・看護師・介護士が連携し、患者様の状態に合ったケアプランを作成してご療養を開始します。</p>
+          </div>
+        </div>
+
+      </div><!-- /.nstep-flow -->
+
+      <style>
+        /* ===== 新ステップフロー ===== */
+        .nstep-flow {
+          margin: 0 0 22px;
+        }
+        .nstep-item {
+          display: flex;
+          gap: 0;
+          align-items: stretch;
+        }
+        /* 左側：アイコン＋縦線 */
+        .nstep-left {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-shrink: 0;
+          width: 56px;
+        }
+        .nstep-circle {
+          width: 48px; height: 48px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #5a9870 0%, #d4788a 100%);
+          display: flex; align-items: center; justify-content: center;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(42,122,138,.28);
+          position: relative; z-index: 1;
+        }
+        .nstep-circle--goal {
+          background: linear-gradient(135deg, #8a3050 0%, #5a9870 100%);
+          box-shadow: 0 2px 12px rgba(42,122,138,.40);
+          width: 52px; height: 52px;
+        }
+        .nstep-line {
+          flex: 1;
+          width: 2px;
+          background: linear-gradient(to bottom, #f0c0cc 0%, #fde8ee 100%);
+          margin: 2px 0;
+          min-height: 24px;
+        }
+        /* 右側：テキスト */
+        .nstep-right {
+          flex: 1;
+          padding: 0 0 28px 18px;
+        }
+        .nstep-item--last .nstep-right { padding-bottom: 4px; }
+        .nstep-label {
+          font-size: 11px;
+          font-weight: bold;
+          color: #d4788a;
+          letter-spacing: 0.12em;
+          margin-bottom: 4px;
+          display: flex;
+          align-items: baseline;
+          gap: 3px;
+          padding-top: 10px;
+        }
+        .nstep-label span { font-size: 16px; color: #5a9870; }
+        .nstep-label--goal span { color: #8a3050; }
+        .nstep-title {
+          font-size: 14px;
+          font-weight: bold;
+          color: #b05068;
+          margin: 0 0 6px;
+          line-height: 1.5;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .nstep-badge {
+          font-size: 11px;
+          font-weight: bold;
+          background: #c0392b;
+          color: #fff;
+          padding: 2px 8px;
+          border-radius: 10px;
+          letter-spacing: 0.04em;
+        }
+        .nstep-badge--opt {
+          background: #d4788a;
+        }
+        .nstep-hint {
+          font-size: 13px;
+          color: #5a9870;
+          background: #fff0f3;
+          border-left: 3px solid #d4788a;
+          padding: 5px 10px;
+          margin: 0 0 8px;
+          border-radius: 0 3px 3px 0;
+          line-height: 1.6;
+        }
+        .nstep-desc {
+          font-size: 13px;
+          color: #444;
+          line-height: 1.9;
+          margin: 0;
+        }
+        .nstep-desc a { color: #5a9870; }
+        @media (max-width: 760px) {
+          .nstep-left { width: 44px; }
+          .nstep-circle { width: 40px; height: 40px; }
+          .nstep-circle--goal { width: 44px; height: 44px; }
+          .nstep-right { padding-left: 14px; }
+        }
+      </style>
+
+      <!-- 受入可能処置 -->
+      <h2 class="section-heading" id="sec-accept">受入可能な医療処置</h2>
+      <p class="body-text">当院では以下の処置が必要な患者さまの入院をお受けしています。</p>
+      <ul class="check-list">
+        <li>経管栄養（鼻腔・胃瘻）</li>
+        <li>中心静脈栄養（IVH）</li>
+        <li>尿道留置カテーテル</li>
+        <li>人工肛門（ストーマ）管理</li>
+        <li>酸素療法</li>
+        <li>痰吸引（口腔・気道内）</li>
+        <li>気管切開の管理</li>
+        <li>褥瘡（床ずれ）の処置</li>
+        <li>インスリン注射（糖尿病管理）</li>
+        <li>点滴・静脈注射</li>
+      </ul>
+      <p class="note">上記以外の処置や特殊な医療的管理が必要な場合は、入院相談時にご相談ください。</p>
+
+      <!-- 対応可能な医療処置・病態 -->
+      <h2 class="section-heading" id="sec-treatment">対応可能な医療処置・病態</h2>
+      <p class="body-text">当院では以下の医療処置・病態に対応しています。詳しくはお電話またはフォームにてご相談ください。</p>
+
+      <div class="tx-grid">
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon">PEG</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">胃ろう（PEG）管理</p>
+            <p class="tx-desc">胃瘻からの経管栄養・薬剤注入・カテーテル管理に対応しています。</p>
+          </div>
+        </div>
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon">経管<br>栄養</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">経鼻経管栄養</p>
+            <p class="tx-desc">鼻腔チューブによる経管栄養管理・注入処置を行っています。</p>
+          </div>
+        </div>
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon">気管<br>切開</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">気管切開・気管カニューレ管理</p>
+            <p class="tx-desc">気管カニューレの管理・交換・痰吸引（口腔・気道内）に対応しています。</p>
+          </div>
+        </div>
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon">O₂</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">在宅酸素・酸素療法</p>
+            <p class="tx-desc">酸素投与が必要な患者さまの継続管理を行っています。</p>
+          </div>
+        </div>
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon">IVH</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">中心静脈栄養（IVH）</p>
+            <p class="tx-desc">中心静脈カテーテルによる高カロリー輸液管理に対応しています。</p>
+          </div>
+        </div>
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon">褥瘡<br>処置</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">褥瘡処置（各ステージ）</p>
+            <p class="tx-desc">ステージⅠ〜Ⅳの褥瘡に対し、医師・看護師による処置・予防ケアを行っています。</p>
+          </div>
+        </div>
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon">点滴<br>注射</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">点滴・注射管理</p>
+            <p class="tx-desc">末梢静脈・中心静脈からの点滴・インスリン注射等の管理に対応しています。</p>
+          </div>
+        </div>
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon" style="background:linear-gradient(135deg,#5a7898,#d4788a);">認知<br>症</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">認知症ケア</p>
+            <p class="tx-desc">認知症の進行した患者さまに対し、安心・安全な療養環境を提供しています。</p>
+          </div>
+        </div>
+
+        <div class="tx-card">
+          <div class="tx-icon-wrap">
+            <div class="tx-icon" style="background:linear-gradient(135deg,#4a6070,#c09aaa);">看取<br>り</div>
+          </div>
+          <div class="tx-body">
+            <p class="tx-name">看取り・終末期ケア</p>
+            <p class="tx-desc">ご本人・ご家族のご意向を尊重しながら、穏やかな最期を支える終末期ケアを行っています。</p>
+          </div>
+        </div>
+
+      </div><!-- /.tx-grid -->
+
+      <div class="card" style="background:#fff0f3; border-color:#d4788a; margin-bottom:22px;">
+        <p style="font-size:13px; line-height:2.1; color:#8a3050;">
+          現在の受け入れ状況についてはお電話またはフォームにてお問い合わせください。<br>
+          ベッドの空き状況・対応可能な処置の詳細は、入院相談員が個別にご説明します。<br>
+          入院相談直通：<strong style="color:#c0392b;">0422-55-8312</strong>（平日 9:00〜17:00）／ または <a href="#form" style="color:#5a9870; font-weight:bold;">入院相談フォーム</a>
+        </p>
+      </div>
+
+      <style>
+        /* ===== 対応可能処置カード ===== */
+        .tx-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 12px;
+          margin-bottom: 18px;
+        }
+        .tx-card {
+          background: #fff;
+          border: 1px solid #f0c0cc;
+          border-radius: 6px;
+          padding: 16px 14px 14px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+          transition: box-shadow .18s, transform .18s;
+        }
+        .tx-card:hover {
+          box-shadow: 0 4px 14px rgba(90,158,168,.22);
+          transform: translateY(-2px);
+        }
+        .tx-icon-wrap { display: flex; }
+        .tx-icon {
+          width: 48px; height: 48px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #5a9870 0%, #d4788a 100%);
+          color: #fff;
+          font-size: 11px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          line-height: 1.4;
+          letter-spacing: 0.02em;
+          flex-shrink: 0;
+        }
+        .tx-name {
+          font-size: 13px;
+          font-weight: bold;
+          color: #b05068;
+          margin: 0 0 5px;
+          line-height: 1.5;
+        }
+        .tx-desc {
+          font-size: 12px;
+          color: #555;
+          line-height: 1.8;
+          margin: 0;
+        }
+        @media (max-width: 760px) {
+          .tx-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        }
+        @media (max-width: 480px) {
+          .tx-grid { grid-template-columns: 1fr; }
+        }
+      </style>
+
+      <!-- 面会について -->
+      <h2 class="section-heading" id="sec-visit">ご面会について</h2>
+      <!--
+        📷 写真撮影アドバイス（面会）：
+        面会室または病室で、ご家族が患者様の手を握って
+        嬉しそうに話している温かいシーンが効果的です。
+        患者様のプライバシーに十分配慮した角度でお願いします。
+      -->
+      <div class="card" style="background:#fff8e8; border-color:#e8c860; margin-bottom:14px;">
+        <p style="font-size:13px; color:#5a4010; line-height:2;">
+          <strong>2026年4月20日よりご面会のルールを変更いたしました。</strong><br>
+          大切なご家族との時間を守るため、<strong>平日はもちろん土日祝日の面会にも対応</strong>しています。<br>
+          遠方にお住まいの方のために<strong>オンライン面会（ビデオ通話）</strong>もご利用いただけます。<br>
+          詳しくはお電話（0422-55-8311）にてご確認ください。
+        </p>
+      </div>
+      <table class="info-table">
+        <tr><th>面会時間</th><td><strong>平日・土日祝　13:00〜17:00</strong>（年中無休で対応）</td></tr>
+        <tr><th>面会人数</th><td>1回 2名様まで（ご事情がある場合はご相談ください）</td></tr>
+        <tr><th>オンライン面会</th><td>
+          遠方のご家族向けに、ビデオ通話によるオンライン面会をご利用いただけます。<br>
+          ご希望の方はお電話（0422-55-8311）にてご予約をお願いします。
+        </td></tr>
+        <tr><th>お願い事項</th><td>
+          ・発熱・咳・のどの痛みなどの症状がある方はご面会をご遠慮ください<br>
+          ・マスクの着用にご協力ください<br>
+          ・手指消毒（入口のアルコール消毒液をご使用ください）<br>
+          ・感染状況によってはご面会を一時停止する場合があります
+        </td></tr>
+      </table>
+
+      <!-- 費用の目安 -->
+      <h2 class="section-heading" id="sec-cost">入院費用について</h2>
+      <p class="body-text">
+        医療療養型病院の入院費用は、患者さまの医療区分・介護度・年齢・所得等によって異なります。健康保険・後期高齢者医療保険が適用されます。入院費用の詳細は入院相談員よりご説明します。
+      </p>
+      <table class="info-table">
+        <tr><th>保険適用</th><td>健康保険・国民健康保険・後期高齢者医療保険</td></tr>
+        <tr><th>お支払い方法</th><td>現金のみ（クレジットカード等はお取り扱いしておりません）</td></tr>
+        <tr><th>お支払いサイクル</th><td>月末締め・翌月初旬にご請求書を発行します</td></tr>
+      </table>
+      <p class="note">入院に関するご不明な点は、入院相談員（直通：0422-55-8312）までお気軽にお電話ください。</p>
+
+      <!-- 持ち物 -->
+      <h2 class="section-heading" id="sec-items">入院時の主な持ち物</h2>
+      <ul class="check-list">
+        <li>保険証・医療費受給者証・介護保険証（お持ちの方）</li>
+        <li>限度額適用認定証（お持ちの方）</li>
+        <li>紹介状・お薬手帳・最近の検査データ等</li>
+        <li>着替え（パジャマ・肌着等）</li>
+        <li>洗面用具・歯ブラシ・タオル</li>
+        <li>紙おむつ（必要な方。費用は実費）</li>
+        <li>補聴器・メガネ（お使いの方）</li>
+        <li>印鑑（入院手続き書類へのご署名）</li>
+      </ul>
+      <p class="note">※貴重品・多額の現金はお持ちにならないようお願いします。<br>
+      ※入院時に必要なものについては、入院相談時に個別にご案内します。</p>
+
+      <!-- よくあるご質問 -->
+      <h2 class="section-heading" id="sec-faq">よくあるご質問（FAQ）</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            胃ろうや気管切開がある場合でも入院できますか？
+          </button>
+          <div class="faq-a" hidden>
+            はい、対応可能です。医療依存度の高い患者様の受け入れを積極的に行っています。まずはお気軽にご相談ください。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            入院までどのくらいの期間がかかりますか？
+          </button>
+          <div class="faq-a" hidden>
+            ご相談いただいてから、通常1〜2週間程度でご入院いただけます。お急ぎの場合はその旨をご相談時にお伝えください。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            面会はいつでもできますか？
+          </button>
+          <div class="faq-a" hidden>
+            面会時間を設けています。詳しくはお電話にてご確認ください。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            看取りまでお願いできますか？
+          </button>
+          <div class="faq-a" hidden>
+            はい、終末期・看取りまで責任を持って対応いたします。患者様とご家族が安心して過ごせるよう、スタッフ一同でサポートします。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            入院にかかる費用はどのくらいですか？
+          </button>
+          <div class="faq-a" hidden>
+            病状や要介護度によって異なります。概算のご説明も含め、まずはお気軽にご相談ください。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            急性期病院から転院する場合、どのような手続きが必要ですか？
+          </button>
+          <div class="faq-a" hidden>
+            病院の医療ソーシャルワーカー（MSW）様を通じてご紹介いただくか、ご家族から直接ご連絡いただいても構いません。診療情報提供書（紹介状）と看護サマリーをご準備いただければスムーズです。
+          </div>
+        </div>
+
+      </div><!-- /.faq-list -->
+
+      <style>
+        .faq-list { margin-bottom: 22px; }
+        .faq-item { border-bottom: 1px solid #f0c0cc; }
+        .faq-q {
+          width: 100%; text-align: left; background: none; border: none;
+          padding: 13px 36px 13px 16px; font-size: 13px; font-weight: bold;
+          color: #b05068; cursor: pointer; position: relative; line-height: 1.6;
+        }
+        .faq-q::before { content: 'Q'; position: absolute; left: 0; color: #d4788a; font-weight: bold; }
+        .faq-q::after {
+          content: '＋'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+          font-size: 16px; color: #d4788a; transition: transform .2s;
+        }
+        .faq-q[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
+        .faq-a {
+          padding: 4px 16px 14px 16px; font-size: 13px; color: #555; line-height: 1.9;
+          border-left: 3px solid #f5c8d4; margin: 0 0 4px 16px;
+        }
+        .faq-a[hidden] { display: none; }
+      </style>
+
+      <script>
+      (function(){
+        document.querySelectorAll('.faq-q').forEach(function(btn){
+          btn.addEventListener('click', function(){
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            var ans = this.nextElementSibling;
+            if(expanded){ ans.hidden = true; } else { ans.hidden = false; }
+          });
+        });
+      })();
+      </script>
+
+      <!-- ================================================================
+           医療安全・苦情対応セクション
+           ================================================================ -->
+      <h2 class="section-heading" id="sec-safety">🛡️ 医療安全・ご意見・苦情対応について</h2>
+      <!--
+        📷 写真撮影アドバイス（医療安全）：
+        1階ロビーにある「ご意見箱」や「相談窓口」の場所を示す
+        明るくわかりやすい写真があると、開かれた病院であることが伝わります。
+      -->
+      <div style="background:#f8faf8; border:1px solid #c0dcc8; border-left:5px solid #5a9870; border-radius:6px; padding:22px 24px; margin-bottom:18px;">
+        <p style="font-size:14px; line-height:2.2; color:#2d5a3d;">
+          当院では、患者様とご家族様に毎日を安心して過ごしていただけるよう、<strong>医療安全委員会を毎月開催</strong>し、
+          転倒防止・感染対策などの取り組みを継続しています。
+        </p>
+        <p style="font-size:14px; line-height:2.2; color:#2d5a3d; margin-top:10px;">
+          また、万が一、日々のケアの中で<strong>「気になること」「不満に感じること」</strong>がございましたら、
+          どうぞ遠慮なくお寄せください。<br>
+          いただいたご意見は、必ず誠実に改善へとつなげます。
+        </p>
+      </div>
+      <div class="card" style="margin-bottom:22px;">
+        <h3 style="font-size:14px; font-weight:bold; color:#b05068; margin-bottom:12px;">ご意見・ご相談の窓口</h3>
+        <ul class="check-list">
+          <li>
+            <strong>ご意見箱</strong>：1階ロビーに設置しています。いつでもご投函ください（無記名でも構いません）。
+          </li>
+          <li>
+            <strong>1階 相談窓口</strong>：医療相談員がご対応します。まずはお声がけください。
+          </li>
+          <li>
+            <strong>お電話</strong>：代表 0422-55-8311 平日 9:00〜17:00
+          </li>
+        </ul>
+        <p style="font-size:12px; color:#888; margin-top:10px; line-height:1.8;">
+          ※患者様の権利を守るため、ご意見の内容がご本人への不利益につながることは一切ありません。<br>
+          ※外部の相談窓口として、東京都医療相談窓口（東京都福祉局）もご利用いただけます。
+        </p>
+      </div>
+
+      <!-- 入院相談フォーム -->
+      <h2 class="section-heading" id="inquiry-form">入院相談フォーム</h2>
+      <p class="body-text">ご相談はお電話（<strong style="color:#c0392b;">0422-55-8312</strong>）のほか、下記フォームからもお気軽にどうぞ。1営業日以内にご連絡いたします。</p>
+
+      <div id="form-success" hidden style="background:#eef7f2; border:1px solid #81c784; border-radius:6px; padding:20px 24px; margin-bottom:20px; color:#2e7d32; font-size:14px; line-height:2;">
+        ✅ お問い合わせありがとうございます。<br>
+        <strong>1営業日以内にご連絡いたします。</strong><br>
+        お急ぎの場合はお電話（0422-55-8312）にてご連絡ください。
+      </div>
+
+      <!-- ★ 公開時：YOUR_FORM_ID を Formspree で取得した実際のIDに差し替えてください -->
+      <!-- ★ Formspree登録URL: https://formspree.io/ （無料プランで月50件まで） -->
+      <form id="inquiry-form-el" class="consult-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST" novalidate>
+        <input type="hidden" name="_subject" value="【小森病院】入院相談フォームからのお問い合わせ">
+        <input type="hidden" name="_language" value="ja">
+
+        <div class="form-row">
+          <label class="form-label" for="if-name">お名前 <span class="form-req">必須</span></label>
+          <div class="form-input">
+            <input type="text" id="if-name" name="name" placeholder="例：小森 太郎" required>
+            <span class="form-err" id="err-name"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="if-tel">ご連絡先電話番号 <span class="form-req">必須</span></label>
+          <div class="form-input">
+            <input type="tel" id="if-tel" name="tel" placeholder="例：0422-55-8311" required>
+            <span class="form-err" id="err-tel"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="if-email">メールアドレス</label>
+          <div class="form-input">
+            <input type="email" id="if-email" name="email" placeholder="例：info@example.com">
+            <span class="form-err" id="err-email"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <fieldset class="form-fieldset">
+            <legend class="form-label">患者様の現在地</legend>
+            <div class="form-input">
+              <div class="radio-group">
+                <label><input type="radio" name="location" value="自宅"> 自宅</label>
+                <label><input type="radio" name="location" value="急性期病院"> 急性期病院</label>
+                <label><input type="radio" name="location" value="他の施設"> 他の施設</label>
+                <label><input type="radio" name="location" value="その他"> その他</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-row">
+          <fieldset class="form-fieldset">
+            <legend class="form-label">主な医療処置</legend>
+            <div class="form-input">
+              <div class="check-group">
+                <label><input type="checkbox" name="treatment" value="胃ろう"> 胃ろう</label>
+                <label><input type="checkbox" name="treatment" value="気管切開"> 気管切開</label>
+                <label><input type="checkbox" name="treatment" value="人工呼吸器"> 人工呼吸器</label>
+                <label><input type="checkbox" name="treatment" value="中心静脈栄養"> 中心静脈栄養</label>
+                <label><input type="checkbox" name="treatment" value="透析"> 透析</label>
+                <label><input type="checkbox" name="treatment" value="特になし"> 特になし</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="if-timing">ご希望の入院時期（目安）</label>
+          <div class="form-input">
+            <input type="text" id="if-timing" name="timing" placeholder="例：できるだけ早く・1か月以内など">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="if-message">ご相談内容</label>
+          <div class="form-input">
+            <textarea id="if-message" name="message" rows="5" placeholder="病状・処置内容・その他ご質問などをご記入ください"></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <fieldset class="form-fieldset">
+            <legend class="form-label">希望の連絡方法</legend>
+            <div class="form-input">
+              <div class="radio-group">
+                <label><input type="radio" name="contact_pref" value="電話"> 電話</label>
+                <label><input type="radio" name="contact_pref" value="メール"> メール</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">送信する</button>
+        </div>
+
+      </form>
+
+      <style>
+        .consult-form { background:#fff; border:1px solid #f0c0cc; border-radius:6px; padding:24px 28px; margin-bottom:20px; }
+        .form-fieldset { border:none; padding:0; margin:0; display:contents; }
+        .form-row { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
+        .form-label { flex:0 0 140px; font-size:13px; font-weight:bold; color:#b05068; padding-top:8px; line-height:1.5; }
+        .form-req { display:inline-block; background:#d4788a; color:#fff; font-size:10px; padding:1px 5px; border-radius:2px; margin-left:4px; font-weight:normal; }
+        .form-input { flex:1; }
+        .form-input input[type="text"],
+        .form-input input[type="tel"],
+        .form-input input[type="email"],
+        .form-input textarea {
+          width:100%; border:1px solid #f0c0cc; border-radius:4px; padding:8px 10px;
+          font-size:13px; font-family:inherit; color:#4a3545;
+          transition:border-color .15s;
+        }
+        .form-input input:focus, .form-input textarea:focus {
+          outline:none; border-color:#d4788a; box-shadow:0 0 0 2px rgba(212,120,138,.15);
+        }
+        .form-input input.is-error { border-color:#e53935; }
+        .form-err { display:block; font-size:11px; color:#e53935; margin-top:3px; min-height:14px; }
+        .radio-group, .check-group { display:flex; flex-wrap:wrap; gap:6px 18px; padding-top:6px; }
+        .radio-group label, .check-group label { font-size:13px; display:flex; align-items:center; gap:5px; cursor:pointer; }
+        .form-submit { text-align:center; margin-top:8px; }
+        .btn-submit {
+          background:linear-gradient(90deg,#d4788a,#e8a0b0); color:#fff;
+          border:none; border-radius:4px; padding:12px 48px; font-size:14px;
+          font-weight:bold; cursor:pointer; letter-spacing:.05em;
+          transition:opacity .15s;
+        }
+        .btn-submit:hover { opacity:.85; }
+        @media(max-width:760px){
+          .form-row { flex-direction:column; gap:4px; }
+          .form-label { flex:none; padding-top:0; }
+        }
+      </style>
+
+      <script>
+      (function(){
+        var form = document.getElementById('inquiry-form-el');
+        var success = document.getElementById('form-success');
+        if(!form) return;
+        function validate(){
+          var ok = true;
+          var name = document.getElementById('if-name');
+          var tel  = document.getElementById('if-tel');
+          var email= document.getElementById('if-email');
+          document.getElementById('err-name').textContent = '';
+          document.getElementById('err-tel').textContent  = '';
+          document.getElementById('err-email').textContent= '';
+          name.classList.remove('is-error'); tel.classList.remove('is-error'); email.classList.remove('is-error');
+          if(!name.value.trim()){ document.getElementById('err-name').textContent='お名前を入力してください'; name.classList.add('is-error'); ok=false; }
+          if(!tel.value.trim()){ document.getElementById('err-tel').textContent='電話番号を入力してください'; tel.classList.add('is-error'); ok=false; }
+          if(email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){ document.getElementById('err-email').textContent='メールアドレスの形式が正しくありません'; email.classList.add('is-error'); ok=false; }
+          return ok;
+        }
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          if(!validate()) return;
+          // Formspree へ fetch で送信
+          var btn = form.querySelector('.btn-submit');
+          btn.disabled = true;
+          btn.textContent = '送信中...';
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          }).then(function(res){
+            if(res.ok){
+              form.hidden = true;
+              success.hidden = false;
+              success.scrollIntoView({behavior:'smooth', block:'center'});
+            } else {
+              btn.disabled = false;
+              btn.textContent = '送信する';
+              alert('送信に失敗しました。お電話（0422-55-8312）にてご連絡ください。');
+            }
+          }).catch(function(){
+            btn.disabled = false;
+            btn.textContent = '送信する';
+            alert('通信エラーが発生しました。お電話（0422-55-8312）にてご連絡ください。');
+          });
+        });
+      })();
+      </script>
+
+    </main>
+
+    <!-- サイドバー -->
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <div class="sidebar-title">📞 入院相談（直通）</div>
+        <div class="sidebar-info">
+          <span class="big-tel">0422-55-8312</span>
+          平日 9:00〜17:00
+        </div>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">案内メニュー</div>
+        <ul class="sidebar-links">
+          <li><a href="index.html">▶ TOP</a></li>
+          <li><a href="shinryo.html">▶ 診療内容</a></li>
+          <li><a href="nyuin.html">▶ 入院のご案内</a></li>
+          <li><a href="boshu.html">▶ 採用情報</a></li>
+          <li><a href="helper.html">▶ こもりヘルパーステーション</a></li>
+          <li><a href="access.html">▶ アクセス</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">📋 入院相談メニュー</div>
+        <ul class="sidebar-links sidebar-submenu">
+          <li><a href="#sec-flow">▶ 入院相談から入院までの流れ</a></li>
+          <li><a href="#sec-accept">▶ 受入可能な医療処置</a></li>
+          <li><a href="#sec-treatment">▶ 対応可能な医療処置・病態</a></li>
+          <li><a href="#sec-visit">▶ ご面会について</a></li>
+          <li><a href="#sec-cost">▶ 入院費用について</a></li>
+          <li><a href="#sec-items">▶ 入院時の主な持ち物</a></li>
+          <li><a href="#sec-faq">▶ よくあるご質問</a></li>
+          <li><a href="#sec-safety">▶ 医療安全・ご意見窓口</a></li>
+          <li><a href="#inquiry-form">▶ 入院相談フォーム</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">🏥 病床数</div>
+        <div class="sidebar-info">
+          療養病床<br>
+          <strong style="font-size:20px; color:#b05068;">57床</strong><br>
+          （医療療養型）
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>医療法人社団 成友会　小森病院</p>
+  <p>〒180-0014　東京都武蔵野市関前3丁目3-15　TEL：0422-55-8311</p>
+  <p style="margin-top:6px;">
+    <a href="index.html">TOP</a> ／ <a href="shinryo.html">病院紹介・診療内容</a> ／ <a href="nyuin.html">入院のご案内</a> ／
+    <a href="boshu.html">採用情報</a> ／ <a href="helper.html">こもりヘルパーステーション</a> ／ <a href="access.html">アクセス</a>
+  </p>
+  <p style="margin-top:8px; font-size:11px; opacity:.5;">©2022 小森病院 All Rights Reserved.</p>
+</footer>
+</body>
+</html>
