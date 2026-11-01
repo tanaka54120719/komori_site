@@ -209,7 +209,7 @@
     <div class="max-w-7xl mx-auto flex items-start gap-3">
       <span class="shrink-0 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded mt-0.5">重要</span>
       <p class="text-xs text-red-800 leading-relaxed flex-grow">
-        院内感染対策のため、発熱・咳症状のある方はご来院前に<strong>お電話（0422-55-8311）</strong>でご確認ください。面会時間は13:00〜17:00（1回2名まで）です。
+        院内感染対策のため、発熱・咳症状のある方はご来院前に<strong>お電話（0422-55-8311）</strong>でご確認ください。
       </p>
       <button onclick="document.getElementById('important-notice-bar').style.display='none'"
         class="shrink-0 text-red-400 hover:text-red-600 text-lg leading-none mt-0.5" aria-label="閉じる">&times;</button>
@@ -239,10 +239,10 @@
           </div>
           <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-cozy-text leading-tight">
             住み慣れた地域で、<br>
-            <span class="text-leaf-dark">最期までその人らしく。</span>
+            <span class="text-leaf-dark">その人らしく。</span>
           </h2>
           <p class="text-base md:text-lg text-cozy-gray max-w-2xl leading-relaxed">
-            小森病院は東京都武蔵野市にある医療療養型病院（57床）です。脳梗塞の後遺症・認知症・長期療養が必要な方を、医師・看護師・介護士・リハビリスタッフが24時間連携して支えます。
+            小森病院は東京都武蔵野市にある医療療養型病院（57床）です。長期療養が必要な方を、医師・看護師・看護補助者・介護士・リハビリスタッフが24時間連携して支えます。
           </p>
           <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 pt-2">
             <a href="#" onclick="showPage('page-admission')" class="btn-primary w-full sm:w-auto">
@@ -288,7 +288,7 @@
             <i class="fa-solid fa-bed-pulse"></i>
           </div>
           <h3 class="font-bold text-sm mb-0.5">入院案内</h3>
-          <p class="text-[11px] text-cozy-gray leading-snug">空床確認・相談フォーム</p>
+          <p class="text-[11px] text-cozy-gray leading-snug">空床確認・入院のご相談</p>
         </a>
         <a href="#" onclick="showPage('page-homecare')" class="quick-card bg-white p-5 rounded-2xl shadow-sm border border-leaf-pale text-center group">
           <div class="w-11 h-11 bg-leaf-pale rounded-full flex items-center justify-center text-leaf-dark text-lg mx-auto mb-3">
@@ -346,7 +346,7 @@
                 <tr class="border-b border-leaf-soft/50">
                   <td class="py-2 font-semibold text-xs whitespace-nowrap">9:00〜12:00</td>
                   <td class="py-2 text-center"><span class="text-leaf-dark font-bold text-xs">○</span><br><span class="text-xs text-cozy-gray">酒井</span></td>
-                  <td class="py-2 text-center"><span class="text-leaf-dark font-bold text-xs">○</span><br><span class="text-xs text-cozy-gray">酒井</span></td>
+                  <td class="py-2 text-center"><span class="text-leaf-dark font-bold text-xs">○</span><br><span class="text-xs text-cozy-gray">矢野</span></td>
                   <td class="py-2 text-center"><span class="text-leaf-dark font-bold text-xs">○</span><br><span class="text-xs text-cozy-gray">市川</span></td>
                   <td class="py-2 text-center"><span class="text-leaf-dark font-bold text-xs">○</span><br><span class="text-xs text-cozy-gray">酒井</span></td>
                   <td class="py-2 text-center"><span class="text-leaf-dark font-bold text-xs">○</span><br><span class="text-xs text-cozy-gray">穂苅</span></td>
@@ -366,7 +366,9 @@
           </div>
           <p class="text-xs text-cozy-gray leading-relaxed">
             ※木曜午後・土曜午後・日曜・祝日は休診<br>
-            ※金曜は穂苅先生による内科・神経内科（頭痛外来）
+            ※金曜は穂苅先生による内科・神経内科（頭痛外来）<br>
+            ※予約なしでも受診可。お熱や咳の症状がある方は、受診前にお電話をお願いいたします。<br>
+            ※外来受診木曜、土曜は12:30まで受付。
           </p>
           <div class="mt-4 pt-4 border-t border-leaf-soft/50 flex flex-col sm:flex-row gap-4">
             <a href="#" onclick="showPage('page-services')" class="text-center bg-leaf-dark text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-opacity-95 transition-all">外来・診療案内を見る</a>
@@ -383,63 +385,43 @@
             <span class="text-xs text-leaf-dark font-bold cursor-pointer hover:underline">一覧を見る &rarr;</span>
           </div>
 
-          <!-- タブボタン -->
-          <div class="flex gap-1 mb-3 flex-wrap" role="tablist">
-            <button onclick="switchNewsTab('all')" id="news-tab-all"
-              class="news-tab active-tab px-3 py-1 text-xs font-bold rounded-full border border-leaf-dark bg-leaf-dark text-white transition-all">
-              すべて
-            </button>
-            <button onclick="switchNewsTab('patient')" id="news-tab-patient"
-              class="news-tab px-3 py-1 text-xs font-bold rounded-full border border-leaf-soft text-leaf-dark bg-white hover:bg-leaf-pale transition-all">
-              患者さん
-            </button>
-            <button onclick="switchNewsTab('medical')" id="news-tab-medical"
-              class="news-tab px-3 py-1 text-xs font-bold rounded-full border border-leaf-soft text-leaf-dark bg-white hover:bg-leaf-pale transition-all">
-              医療関係者
-            </button>
-            <button onclick="switchNewsTab('recruit')" id="news-tab-recruit"
-              class="news-tab px-3 py-1 text-xs font-bold rounded-full border border-leaf-soft text-leaf-dark bg-white hover:bg-leaf-pale transition-all">
-              採用情報
-            </button>
-          </div>
-
-          <!-- お知らせ一覧 -->
+          <!-- お知らせ一覧（区分なし・タイトルをクリックするとPDFを表示） -->
           <div id="news-list" class="divide-y divide-gray-100 text-sm flex-grow">
 
-            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-center gap-1.5" data-cat="patient">
-              <span class="text-xs text-cozy-gray sm:w-24 shrink-0">2026.06.02</span>
-              <span class="bg-sakura-soft text-sakura-dark text-[10px] px-2 py-0.5 rounded font-bold self-start shrink-0">患者さん</span>
-              <span class="flex-grow text-sm">院内掲示（保険医療機関及び保険医療養担当規則に基づく掲示）を更新しました</span>
+            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-start gap-1.5">
+              <span class="text-xs text-cozy-gray sm:w-24 shrink-0 sm:pt-0.5">2026.10.16</span>
+              <div class="flex-grow text-sm">
+                <span class="font-semibold">令和８年度病院診療情報デジタル推進事業一般競争入札実施について</span>
+                <p class="text-xs text-cozy-gray mt-1 leading-relaxed">令和8年10月15日（木）一般競争入札は終了いたしました。入札業者様要望等が多く対応いただき御礼申し上げます。</p>
+              </div>
             </div>
 
-            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-center gap-1.5" data-cat="patient">
-              <span class="text-xs text-cozy-gray sm:w-24 shrink-0">2026.05.07</span>
-              <span class="bg-sakura-soft text-sakura-dark text-[10px] px-2 py-0.5 rounded font-bold self-start shrink-0">患者さん</span>
-              <a href="#" onclick="showPage('page-admission')" class="hover:text-leaf-dark flex-grow text-sm">ご面会について（2026年4月20日よりルール変更）</a>
+            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-start gap-1.5">
+              <span class="text-xs text-cozy-gray sm:w-24 shrink-0 sm:pt-0.5">2026.09.28</span>
+              <div class="flex-grow text-sm">
+                <a href="pdf/news_digital_nyusatsu.pdf" target="_blank" rel="noopener" class="hover:text-leaf-dark hover:underline">令和８年度病院診療情報デジタル推進事業一般競争入札実施について <i class="fa-regular fa-file-pdf text-sakura-dark ml-1"></i></a>
+              </div>
             </div>
 
-            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-center gap-1.5" data-cat="medical">
-              <span class="text-xs text-cozy-gray sm:w-24 shrink-0">2026.04.10</span>
-              <span class="bg-leaf-soft text-leaf-dark text-[10px] px-2 py-0.5 rounded font-bold self-start shrink-0">医療関係者</span>
-              <a href="#" onclick="showPage('page-admission')" class="hover:text-leaf-dark flex-grow text-sm">転院・入院相談の受付フローを更新しました（ケアマネ・MSW向け）</a>
+            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-start gap-1.5">
+              <span class="text-xs text-cozy-gray sm:w-24 shrink-0 sm:pt-0.5">2026.09.16</span>
+              <div class="flex-grow text-sm">
+                <a href="pdf/news_senpatsu_iyakuhin.pdf" target="_blank" rel="noopener" class="hover:text-leaf-dark hover:underline">後発医薬品(ジェネリック医薬品)を先発医薬品の処方を希望される場合は、特別の料金をお支払いいただきます。 <i class="fa-regular fa-file-pdf text-sakura-dark ml-1"></i></a>
+              </div>
             </div>
 
-            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-center gap-1.5" data-cat="recruit">
-              <span class="text-xs text-cozy-gray sm:w-24 shrink-0">2026.03.15</span>
-              <span class="bg-amber-100 text-amber-700 text-[10px] px-2 py-0.5 rounded font-bold self-start shrink-0">採用情報</span>
-              <a href="#" onclick="showPage('page-recruit')" class="hover:text-leaf-dark flex-grow text-sm">看護師（正職員）・介護福祉士を募集しています</a>
+            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-start gap-1.5">
+              <span class="text-xs text-cozy-gray sm:w-24 shrink-0 sm:pt-0.5">2026.09.15</span>
+              <div class="flex-grow text-sm">
+                <a href="pdf/news_covid19_vaccine.pdf" target="_blank" rel="noopener" class="hover:text-leaf-dark hover:underline">コロナウイルスワクチン接種について <i class="fa-regular fa-file-pdf text-sakura-dark ml-1"></i></a>
+              </div>
             </div>
 
-            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-center gap-1.5" data-cat="patient">
-              <span class="text-xs text-cozy-gray sm:w-24 shrink-0">2025.09.26</span>
-              <span class="bg-sakura-soft text-sakura-dark text-[10px] px-2 py-0.5 rounded font-bold self-start shrink-0">患者さん</span>
-              <a href="#" onclick="showPage('page-services')" class="hover:text-leaf-dark flex-grow text-sm">インフルエンザ予防接種のご案内</a>
-            </div>
-
-            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-center gap-1.5" data-cat="recruit">
-              <span class="text-xs text-cozy-gray sm:w-24 shrink-0">2025.08.01</span>
-              <span class="bg-amber-100 text-amber-700 text-[10px] px-2 py-0.5 rounded font-bold self-start shrink-0">採用情報</span>
-              <a href="#" onclick="showPage('page-recruit')" class="hover:text-leaf-dark flex-grow text-sm">理学療法士・作業療法士の募集を開始しました</a>
+            <div class="news-item py-2.5 flex flex-col sm:flex-row sm:items-start gap-1.5">
+              <span class="text-xs text-cozy-gray sm:w-24 shrink-0 sm:pt-0.5">2026.09.15</span>
+              <div class="flex-grow text-sm">
+                <a href="pdf/news_influenza.pdf" target="_blank" rel="noopener" class="hover:text-leaf-dark hover:underline">インフルエンザ予防接種について <i class="fa-regular fa-file-pdf text-sakura-dark ml-1"></i></a>
+              </div>
             </div>
 
           </div>
@@ -565,9 +547,9 @@
           <h3 class="text-2xl font-bold">医院概要</h3>
           <div class="space-y-2 text-sm text-cozy-gray">
             <p><strong class="text-cozy-text">院長:</strong> 酒井 忠司</p>
-            <p><strong class="text-cozy-text">医師:</strong> 5名（岩田好文・矢野尚・酒井忠司・穂苅万季子）</p>
+            <p><strong class="text-cozy-text">医師:</strong> 5名（岩田・矢野・市川・穂苅）</p>
             <p><strong class="text-cozy-text">病床数:</strong> <span class="text-leaf-dark font-bold text-lg">57床</span>（医療療養型）</p>
-            <p><strong class="text-cozy-text">施設基準:</strong> 療養病棟入院基本料1</p>
+            <p><strong class="text-cozy-text">施設基準:</strong> 療養病棟入院基本料Ⅰ</p>
             <p><strong class="text-cozy-text">駐車場:</strong> 5台（無料）</p>
           </div>
         </div>
@@ -603,9 +585,6 @@
               <p class="text-[9px] text-cozy-gray">入院相談直通：平日 9:00〜17:00</p>
             </div>
           </div>
-          <a href="#" onclick="showPage('page-admission')" class="w-full sm:w-auto bg-sakura-soft text-sakura-dark font-bold px-8 py-4 rounded-2xl hover:bg-sakura-soft/80 hover:-translate-y-0.5 transition-all text-center flex items-center justify-center gap-2">
-            <i class="fa-regular fa-envelope"></i> 入院相談フォームはこちら
-          </a>
         </div>
       </div>
     </section>
@@ -650,7 +629,7 @@
               <h4 class="text-2xl font-bold mb-4 text-leaf-dark">「第二の我が家」として、その人らしい毎日を支えます。</h4>
               <p class="text-sm md:text-base text-cozy-gray leading-relaxed mb-6">
                 私たちは、急性期のような「病気を治すためだけの場所」ではありません。お一人おひとりの人生に寄り添い、穏やかで心地よい毎日を過ごしていただくための「第二の我が家」です。<br><br>
-                脳梗塞の後遺症・認知症・長期療養が必要な方を、医師・看護師・介護士・リハビリスタッフが24時間連携して支えます。地域のケアマネジャー様、病院様と手を取り合い、切れ目のない安心をお届けします。
+                長期療養が必要な方を、医師・薬剤師、言語聴覚士、理学療法士、管理栄養士、放射線技師、検査技師、看護師、看護補助者、相談員、介護士、等全スタッフが連携して支えます。地域のケアマネジャー様、病院様と手を取り合い、切れ目のない安心をお届けします。
               </p>
             </div>
             <div class="md:col-span-5">
@@ -705,7 +684,7 @@
                 「第二の我が家」という理念のもと、患者様お一人おひとりがその人らしく、穏やかで尊厳ある日々を送れるよう、医師・看護師・介護士・理学療法士が一丸となって支えています。
               </p>
               <p class="text-sm text-cozy-gray leading-relaxed mb-4">
-                脳梗塞の後遺症、認知症、その他長期療養が必要な方はもちろん、胃ろう・気管切開などの医療処置が必要な方も受け入れております。ケアマネジャー様・急性期病院様からのご紹介も随時受け付けておりますので、どうぞお気軽にお問い合わせください。
+                長期療養が必要な方はもちろん、胃ろう・気管切開などの医療処置が必要な方も受け入れております。ケアマネジャー様・急性期病院様からのご紹介も随時受け付けておりますので、どうぞお気軽にお問い合わせください。
               </p>
               <p class="text-sm text-cozy-gray leading-relaxed">
                 患者様とご家族の笑顔を見るたびに、この仕事の尊さを実感しております。これからも地域に根差した医療・介護を提供してまいります。
@@ -732,9 +711,9 @@
               <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">入院相談直通</td><td class="py-3"><strong class="text-sakura-dark">0422-55-8312</strong></td></tr>
               <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">FAX</td><td class="py-3">0422-53-0480</td></tr>
               <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">院長</td><td class="py-3">酒井 忠司</td></tr>
-              <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">医師</td><td class="py-3">5名（岩田好文・矢野尚・酒井忠司・穂苅万季子）</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">医師</td><td class="py-3">5名（岩田・矢野・市川・穂苅）</td></tr>
               <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">病床数</td><td class="py-3"><span class="text-leaf-dark font-bold text-lg">57床</span>（医療療養型）</td></tr>
-              <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">施設基準</td><td class="py-3">療養病棟入院基本料1 ／ 運動器リハビリテーション料3</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">施設基準</td><td class="py-3">療養病棟入院基本料Ⅰ ／ 運動器リハビリテーション料Ⅲ</td></tr>
               <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">医療DX</td><td class="py-3">マイナ保険証・オンライン資格確認対応</td></tr>
               <tr class="border-b border-gray-100"><td class="py-3 font-bold text-leaf-dark">駐車場</td><td class="py-3">5台（無料）</td></tr>
               <tr><td class="py-3 font-bold text-leaf-dark">お支払い</td><td class="py-3">現金のみ</td></tr>
@@ -756,7 +735,7 @@
           <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
             <h4 class="text-lg font-bold text-leaf-dark mb-4">療養病床（医療療養型）57床</h4>
             <p class="text-sm text-cozy-gray leading-relaxed mb-6">
-              脳梗塞の後遺症・認知症・骨折後など、長期的な医療と介護が必要な方のための病床です。急性期病院での治療が一段落した後も、24時間医師・看護師・介護士が連携して生活をサポートします。
+              長期的な医療と介護が必要な方のための病床です。急性期病院での治療が一段落した後も、24時間医師・看護師・介護士が連携して生活をサポートします。
             </p>
             <div class="grid md:grid-cols-3 gap-4">
               <div class="bg-leaf-pale/40 p-4 rounded-xl">
@@ -773,12 +752,7 @@
               <div class="bg-leaf-pale/40 p-4 rounded-xl">
                 <h5 class="font-bold text-sm text-leaf-dark mb-2 flex items-center gap-1"><i class="fa-solid fa-person-walking"></i> リハビリテーション</h5>
                 <ul class="text-xs text-cozy-gray space-y-1 leading-relaxed">
-                  <li>・運動器リハビリテーション料3</li>
-                  <li>・骨折後・術後の回復支援</li>
-                  <li>・脳梗塞後遺症の機能維持</li>
-                  <li>・廃用症候群への対応</li>
-                  <li>・日常生活動作（ADL）訓練</li>
-                  <li>・認知症の方への優しいリハビリ</li>
+                  <li>・運動器リハビリテーション料Ⅲ</li>
                 </ul>
               </div>
               <div class="bg-sakura-pale/40 p-4 rounded-xl">
@@ -787,8 +761,7 @@
                   <li>・24時間医師常駐体制</li>
                   <li>・緩和ケア的アプローチ</li>
                   <li>・ご本人・ご家族の意向最優先</li>
-                  <li>・土日祝日面会対応</li>
-                  <li>・オンライン面会（ビデオ通話）</li>
+                  <li>・土曜日のみ面会対応</li>
                 </ul>
               </div>
             </div>
@@ -800,11 +773,12 @@
               <div class="space-y-2">
                 <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">7:00</span><span class="text-cozy-gray">起床・洗面・朝の整容介助</span></div>
                 <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">8:00</span><span class="text-cozy-gray">朝食・服薬管理</span></div>
-                <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">10:00</span><span class="text-cozy-gray">リハビリテーション・レクリエーション</span></div>
+                <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">9:00</span><span class="text-cozy-gray">排泄援助</span></div>
+                <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">10:00</span><span class="text-cozy-gray">入浴介助、身体清潔援助、バイタルチェック、処置</span></div>
                 <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">12:00</span><span class="text-cozy-gray">昼食・服薬管理・午睡</span></div>
               </div>
               <div class="space-y-2">
-                <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">14:00</span><span class="text-cozy-gray">面会・リハビリ・入浴介助</span></div>
+                <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">14:00</span><span class="text-cozy-gray">排泄援助、入浴介助、バイタルチェック</span></div>
                 <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">17:00</span><span class="text-cozy-gray">夕食・服薬管理</span></div>
                 <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">21:00</span><span class="text-cozy-gray">消灯・夜間見守り</span></div>
                 <div class="flex gap-3 items-start text-sm"><span class="font-bold text-leaf-dark w-16 shrink-0">終夜</span><span class="text-cozy-gray">夜間巡回・緊急対応（医師常駐）</span></div>
@@ -972,8 +946,6 @@
           <a href="#adm-cost" class="text-xs px-3 py-1.5 rounded-full border border-sakura-soft bg-white text-sakura-dark hover:bg-sakura-pale transition-colors">入院費用</a>
           <a href="#adm-items" class="text-xs px-3 py-1.5 rounded-full border border-sakura-soft bg-white text-sakura-dark hover:bg-sakura-pale transition-colors">持ち物</a>
           <a href="#adm-faq" class="text-xs px-3 py-1.5 rounded-full border border-sakura-soft bg-white text-sakura-dark hover:bg-sakura-pale transition-colors">よくあるご質問</a>
-          <a href="#adm-safety" class="text-xs px-3 py-1.5 rounded-full border border-sakura-soft bg-white text-sakura-dark hover:bg-sakura-pale transition-colors">医療安全・ご意見</a>
-          <a href="#adm-form" class="text-xs px-3 py-1.5 rounded-full border border-sakura-soft bg-white text-sakura-dark hover:bg-sakura-pale transition-colors">入院相談フォーム</a>
         </div>
       </div>
     </section>
@@ -984,7 +956,7 @@
         <div class="md:col-span-7 text-center md:text-left">
           <span class="section-en text-leaf-dark font-bold text-xs tracking-wider uppercase">FLOW OF ADMISSION</span>
           <h3 class="text-2xl font-bold mt-2">入院相談から入院までの流れ（5ステップ）</h3>
-          <p class="text-xs text-cozy-gray max-w-xl mx-auto md:mx-0 mt-2">「まだ相談していいのか迷っている」という段階でも大丈夫です。まずはお気軽にご連絡ください。</p>
+          <p class="text-xs text-cozy-gray max-w-xl mx-auto md:mx-0 mt-2">入院をご希望の方は、以下の流れにそって相談を受け付けます。</p>
         </div>
         <div class="md:col-span-5">
           <img src="images/スライド5.jpg" alt="小森病院 療養・リハビリの様子" class="w-full h-44 object-cover rounded-2xl shadow-sm">
@@ -1001,9 +973,9 @@
           </div>
           <div class="flex-1 pb-8 pl-4 pt-1">
             <p class="text-xs font-bold text-sakura-dark tracking-wider mb-1">STEP 1</p>
-            <h4 class="font-bold text-sm mb-1 text-leaf-dark">お電話・フォームでご相談</h4>
-            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">「こんな状態でも受け入れてもらえる？」という段階でOK。</p>
-            <p class="text-xs text-cozy-gray leading-relaxed">入院相談担当者（直通：0422-55-8312）へお電話いただくか、Webフォームからご送信ください。</p>
+            <h4 class="font-bold text-sm mb-1 text-leaf-dark">情報共有・打診（お電話・FAXにて）</h4>
+            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">入院・入所先の相談ご担当者またはケアマネジャーへ転院希望をお伝え下さい。</p>
+            <p class="text-xs text-cozy-gray leading-relaxed">検討に必要な情報をFAXまたは電話で頂戴します。<br><strong class="text-cozy-text">①診療情報提供書　②検査データ　③ADL表</strong>　など</p>
           </div>
         </div>
 
@@ -1014,10 +986,10 @@
             <div class="flex-1 w-0.5 bg-sakura-soft my-1 min-h-6"></div>
           </div>
           <div class="flex-1 pb-8 pl-4 pt-1">
-            <p class="text-xs font-bold text-sakura-dark tracking-wider mb-1">STEP 2 <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded-full ml-1 font-normal">1営業日以内</span></p>
-            <h4 class="font-bold text-sm mb-1 text-leaf-dark">担当者よりご連絡</h4>
-            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">現在の状態や希望をお伺いします。</p>
-            <p class="text-xs text-cozy-gray leading-relaxed">入院相談員より折り返しご連絡いたします。患者様の現在の状態・医療処置・ご希望入院時期などをお聞きします。</p>
+            <p class="text-xs font-bold text-sakura-dark tracking-wider mb-1">STEP 2</p>
+            <h4 class="font-bold text-sm mb-1 text-leaf-dark">院内検討（速やかな受入判断）</h4>
+            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">いただいた情報を医師・看護師及び必要部署で共有し、受け入れを検討致します。</p>
+            <p class="text-xs text-cozy-gray leading-relaxed">※検討の結果受け入れ困難となる場合もございます。ご了承下さい。</p>
           </div>
         </div>
 
@@ -1028,10 +1000,10 @@
             <div class="flex-1 w-0.5 bg-sakura-soft my-1 min-h-6"></div>
           </div>
           <div class="flex-1 pb-8 pl-4 pt-1">
-            <p class="text-xs font-bold text-sakura-dark tracking-wider mb-1">STEP 3 <span class="bg-sakura-accent text-white text-xs px-2 py-0.5 rounded-full ml-1 font-normal">任意</span></p>
-            <h4 class="font-bold text-sm mb-1 text-leaf-dark">施設見学・詳細のご確認</h4>
-            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">実際の療養環境をご覧いただけます。</p>
-            <p class="text-xs text-cozy-gray leading-relaxed">ご希望の方には病室・食堂・リハビリ室などの見学をご案内します。ご不安な点はお気軽にご質問ください。</p>
+            <p class="text-xs font-bold text-sakura-dark tracking-wider mb-1">STEP 3</p>
+            <h4 class="font-bold text-sm mb-1 text-leaf-dark">ご家族との面談（病院見学・説明）</h4>
+            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">受け入れ可能と判断させて頂きましたら、相談員まで連絡下さい。入院相談の日時を調整させて頂きます。</p>
+            <p class="text-xs text-cozy-gray leading-relaxed">入院相談にて病院説明、ご質問にお答え致します。<span class="block mt-1 text-cozy-gray">※相談後に再度検討させて頂く事もございます。</span></p>
           </div>
         </div>
 
@@ -1043,9 +1015,9 @@
           </div>
           <div class="flex-1 pb-8 pl-4 pt-1">
             <p class="text-xs font-bold text-sakura-dark tracking-wider mb-1">STEP 4</p>
-            <h4 class="font-bold text-sm mb-1 text-leaf-dark">必要書類のご準備</h4>
-            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">診療情報提供書・看護サマリーなどをご用意いただきます。</p>
-            <p class="text-xs text-cozy-gray leading-relaxed">現在の主治医・転院元病院より<strong class="text-cozy-text">診療情報提供書（紹介状）</strong>と<strong class="text-cozy-text">看護サマリー</strong>をご用意ください。急性期病院のMSW様にご相談いただくとスムーズです。</p>
+            <h4 class="font-bold text-sm mb-1 text-leaf-dark">入院決定・日程調整</h4>
+            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">入院相談後、ご家族より入院希望を頂戴しましたら入院日を調整致します。</p>
+            <p class="text-xs text-cozy-gray leading-relaxed">※ベッド状況により調整まで時間がかかる事もございます。<span class="block mt-1 text-cozy-gray">※ご家族の都合を考慮いたしますが、院内調整日時を優先させていただく事がございます。</span></p>
           </div>
         </div>
 
@@ -1056,9 +1028,9 @@
           </div>
           <div class="flex-1 pb-2 pl-4 pt-1">
             <p class="text-xs font-bold text-sakura-dark tracking-wider mb-1">STEP 5</p>
-            <h4 class="font-bold text-sm mb-1 text-leaf-dark">入院日決定・ご入院</h4>
-            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">スタッフ一同でお迎えします。</p>
-            <p class="text-xs text-cozy-gray leading-relaxed">入院当日にご家族にご来院いただき、書類へのご署名・費用説明などを行い、担当医・看護師・介護士が連携してご療養を開始します。</p>
+            <h4 class="font-bold text-sm mb-1 text-leaf-dark">ご入院</h4>
+            <p class="text-xs text-cozy-gray bg-sakura-pale border-l-2 border-sakura-accent px-3 py-1 mb-2 leading-relaxed">調整させて頂きました日時にて入院となります。</p>
+            <p class="text-xs text-cozy-gray leading-relaxed">入院当日、必要書類とお持物をご準備のうえ入院となります。</p>
           </div>
         </div>
 
@@ -1073,10 +1045,17 @@
           <div class="space-y-4">
             <h4 class="font-bold text-lg text-leaf-dark border-b-2 border-leaf-soft pb-2"><i class="fa-solid fa-people-roof mr-1"></i> ご面会について</h4>
             <div class="bg-sakura-pale p-4 rounded-xl text-xs text-cozy-text">
-              <p class="font-bold text-sakura-dark mb-1">面会時間： 平日・土日祝　13:00〜17:00（年中無休）</p>
-              <p class="mb-1">面会人数：1回 2名様まで</p>
-              <p class="mb-1">遠方のご家族向けに<strong>オンライン面会（ビデオ通話）</strong>もご利用いただけます。</p>
-              <p class="text-cozy-gray">※感染状況等により制限する場合があります。</p>
+              <p class="font-bold text-sakura-dark mb-1">１）ご面会日：月～土（日曜・祝日・年末年始を除く）</p>
+              <p class="mb-0.5 pl-4">10:00～11:30（11:00までにご来院下さい）</p>
+              <p class="mb-2 pl-4">15:00～16:30（16:00までにご来院下さい）</p>
+              <p class="mb-1">２）処置、ケア等を優先させて頂くために事前予約は継続となります。今まで通り、<strong>代表電話（0422-55-8311）</strong>にご連絡下さい。予約なしでの対応はしておりません。</p>
+              <p class="mb-1">３）ご面会時間：30分</p>
+              <p class="mb-1">４）ご面会人数：ご家族3～4名（中学生以上）・5名以上は密な環境となりますので、お控えください。</p>
+              <p class="mb-1">５）咳等の風邪症状のある方はご面会できませんので、ご了承ください。</p>
+              <p class="mb-1">６）来院前に検温の上、当院にて健康チェックシートにご記入して頂きます。</p>
+              <p class="mb-2">７）マスク着用（不織布）と手指消毒したのちご面会して頂きます。</p>
+              <p class="text-cozy-gray">※感染状況によっては再度ご面会制限をさせて頂く事がございます。</p>
+              <p class="text-cozy-gray">※直前のご予約は処置・ケア等によりお待ち頂くことがございます。</p>
             </div>
           </div>
           <div id="adm-cost" class="space-y-4">
@@ -1092,9 +1071,6 @@
             <ul class="text-xs text-cozy-gray space-y-1">
               <li><i class="fa-solid fa-check text-leaf-dark mr-1"></i>保険証・介護保険証・限度額認定証</li>
               <li><i class="fa-solid fa-check text-leaf-dark mr-1"></i>紹介状・お薬手帳・最近の検査データ</li>
-              <li><i class="fa-solid fa-check text-leaf-dark mr-1"></i>着替え（パジャマ・肌着等）</li>
-              <li><i class="fa-solid fa-check text-leaf-dark mr-1"></i>洗面用具・歯ブラシ・タオル</li>
-              <li><i class="fa-solid fa-check text-leaf-dark mr-1"></i>紙おむつ（必要な方・費用は実費）</li>
               <li><i class="fa-solid fa-check text-leaf-dark mr-1"></i>印鑑（入院手続書類への署名用）</li>
             </ul>
           </div>
@@ -1141,82 +1117,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- 医療安全・ご意見・苦情対応 -->
-        <div id="adm-safety" class="max-w-3xl mx-auto mb-12">
-          <h3 class="text-xl font-bold text-center mb-6">医療安全・ご意見・苦情対応について</h3>
-          <div class="space-y-4">
-            <div class="bg-white p-6 rounded-2xl border border-leaf-soft shadow-sm">
-              <h4 class="font-bold text-leaf-dark mb-3 flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> 医療安全への取り組み</h4>
-              <p class="text-sm text-cozy-gray leading-relaxed">
-                小森病院では、患者様に安全で安心な医療を提供するため、医療安全管理委員会を設置し、院内の医療事故防止に取り組んでいます。インシデント・アクシデントの情報を職員間で共有し、再発防止策を継続的に実施しています。
-              </p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-leaf-soft shadow-sm">
-              <h4 class="font-bold text-leaf-dark mb-3 flex items-center gap-2"><i class="fa-regular fa-comment-dots"></i> ご意見・苦情対応について</h4>
-              <p class="text-sm text-cozy-gray leading-relaxed mb-4">
-                患者様およびご家族様からのご意見・苦情は、より良い医療サービスの向上に役立てるため、真摯に受け止めております。お気づきの点がございましたら、以下の方法でお申し出ください。
-              </p>
-              <div class="bg-leaf-pale/40 p-4 rounded-xl text-xs text-cozy-gray space-y-2">
-                <p><strong class="text-cozy-text">■ 院内窓口：</strong>各病棟スタッフステーション・受付窓口までお申し出ください</p>
-                <p><strong class="text-cozy-text">■ 意見箱：</strong>院内各所に意見箱を設置しています（無記名でもご利用可能）</p>
-                <p><strong class="text-cozy-text">■ お電話：</strong>代表 <strong class="text-sakura-dark">0422-55-8311</strong>（平日 9:00〜17:00）</p>
-                <p><strong class="text-cozy-text">■ 患者相談窓口：</strong>患者様の相談・苦情に対応する担当者が窓口にて対応いたします</p>
-              </div>
-              <p class="text-xs text-cozy-gray mt-3 leading-relaxed">
-                ※都道府県の医療安全相談窓口（東京都保健医療局 医療安全課 TEL: 03-5320-4435）へもご相談いただけます。
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 入院相談フォーム -->
-        <div id="adm-form" class="max-w-2xl mx-auto">
-          <h3 class="text-xl font-bold text-center mb-2">入院相談フォーム</h3>
-          <p class="text-xs text-cozy-gray text-center mb-6">ご相談はお電話（<strong class="text-sakura-dark">0422-55-8312</strong>）のほか、下記フォームからもお気軽にどうぞ。1営業日以内にご連絡いたします。</p>
-
-          <form id="inquiry-form-el" class="bg-white border border-sakura-soft rounded-2xl p-6 md:p-8 space-y-4" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="【小森病院】入院相談フォームからのお問い合わせ">
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-bold text-cozy-text mb-1">お名前 <span class="bg-sakura-dark text-white text-[10px] px-1.5 py-0.5 rounded ml-1">必須</span></label>
-                <input type="text" name="name" required placeholder="例：小森 太郎" class="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-leaf-dark">
-              </div>
-              <div>
-                <label class="block text-xs font-bold text-cozy-text mb-1">電話番号 <span class="bg-sakura-dark text-white text-[10px] px-1.5 py-0.5 rounded ml-1">必須</span></label>
-                <input type="tel" name="tel" required placeholder="例：0422-55-8311" class="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-leaf-dark">
-              </div>
-            </div>
-            <div>
-              <label class="block text-xs font-bold text-cozy-text mb-1">患者様の現在地</label>
-              <div class="flex flex-wrap gap-4 pt-1">
-                <label class="flex items-center gap-2 text-sm"><input type="radio" name="location" value="自宅"> 自宅</label>
-                <label class="flex items-center gap-2 text-sm"><input type="radio" name="location" value="急性期病院"> 急性期病院</label>
-                <label class="flex items-center gap-2 text-sm"><input type="radio" name="location" value="他の施設"> 他の施設</label>
-                <label class="flex items-center gap-2 text-sm"><input type="radio" name="location" value="その他"> その他</label>
-              </div>
-            </div>
-            <div>
-              <label class="block text-xs font-bold text-cozy-text mb-1">主な医療処置（複数選択可）</label>
-              <div class="flex flex-wrap gap-3 pt-1">
-                <label class="flex items-center gap-1.5 text-sm"><input type="checkbox" name="treatment" value="胃ろう"> 胃ろう</label>
-                <label class="flex items-center gap-1.5 text-sm"><input type="checkbox" name="treatment" value="気管切開"> 気管切開</label>
-                <label class="flex items-center gap-1.5 text-sm"><input type="checkbox" name="treatment" value="中心静脈栄養"> 中心静脈栄養</label>
-                <label class="flex items-center gap-1.5 text-sm"><input type="checkbox" name="treatment" value="酸素療法"> 酸素療法</label>
-                <label class="flex items-center gap-1.5 text-sm"><input type="checkbox" name="treatment" value="特になし"> 特になし</label>
-              </div>
-            </div>
-            <div>
-              <label class="block text-xs font-bold text-cozy-text mb-1">ご相談内容</label>
-              <textarea name="message" rows="4" placeholder="病状・処置内容・その他ご質問などをご記入ください" class="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-leaf-dark"></textarea>
-            </div>
-            <div class="text-center pt-2">
-              <button type="submit" class="bg-leaf-dark text-white font-bold px-10 py-3 rounded-xl hover:bg-opacity-95 transition-all shadow-sm">
-                送信する
-              </button>
-            </div>
-          </form>
         </div>
       </div>
     </section>
@@ -1320,7 +1220,7 @@
           <p class="text-xs text-cozy-gray mt-2 leading-relaxed">定時に帰れる日が当たり前。プライベートも大切にできます。</p>
         </div>
         <div class="bg-white border-2 border-leaf-accent rounded-2xl p-6 text-center">
-          <p class="text-4xl font-bold text-leaf-dark">85<span class="text-xl">%以上</span></p>
+          <p class="text-4xl font-bold text-leaf-dark"><span class="text-xl">ほぼ</span>100<span class="text-xl">%</span></p>
           <p class="font-bold text-sm text-cozy-text mt-1">有給消化率</p>
           <p class="text-xs text-cozy-gray mt-2 leading-relaxed">お休みが取りやすい環境。急な休みの際も職場でフォローします。</p>
         </div>
@@ -1352,7 +1252,7 @@
               <tr class="border-b border-leaf-soft/30"><td class="py-2 font-bold w-28">業務内容</td><td class="py-2">入院患者の療養上のケア・処置・記録など</td></tr>
               <tr class="border-b border-leaf-soft/30"><td class="py-2 font-bold">応募資格</td><td class="py-2">看護師免許または准看護師免許をお持ちの方（ブランクのある方も歓迎）</td></tr>
               <tr class="border-b border-leaf-soft/30"><td class="py-2 font-bold">勤務時間</td><td class="py-2">シフト制（詳細はご相談ください）</td></tr>
-              <tr><td class="py-2 font-bold">福利厚生</td><td class="py-2">社会保険完備・交通費支給・制服貸与・有給消化率85%以上</td></tr>
+              <tr><td class="py-2 font-bold">福利厚生</td><td class="py-2">社会保険完備・交通費支給・制服貸与・有給消化率ほぼ100%</td></tr>
             </tbody>
           </table>
         </div>
@@ -1503,9 +1403,6 @@
             <a href="tel:0422558312" class="flex-1 bg-white text-leaf-dark font-bold px-4 py-3 rounded-xl text-center hover:bg-leaf-pale transition-all text-sm">
               <i class="fa-solid fa-phone mr-1"></i> 0422-55-8312（入院相談直通）
             </a>
-            <a href="#" onclick="showPage('page-admission')" class="flex-1 bg-sakura-soft text-sakura-dark font-bold px-4 py-3 rounded-xl text-center hover:bg-opacity-90 transition-all text-sm">
-              <i class="fa-regular fa-envelope mr-1"></i> 入院相談フォームへ
-            </a>
           </div>
           <p class="text-xs text-leaf-pale/70 mt-3">代表: 0422-55-8311 ／ FAX: 0422-53-0480 ／ 平日 9:00〜17:00</p>
         </div>
@@ -1549,11 +1446,11 @@
             <ul class="space-y-2 text-sm text-cozy-gray">
               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>胃ろう（PEG）・経鼻経管栄養</li>
               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>中心静脈栄養（IVH・CV）</li>
-              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>気管切開管理・人工呼吸器（条件あり）</li>
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>気管切開管理</li>
               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>酸素療法・吸引</li>
               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>インスリン自己注射・持続点滴</li>
               <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>褥瘡処置・ストーマ管理</li>
-              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>尿道カテーテル・膀胱瘻管理</li>
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-leaf-accent shrink-0"></span>尿道カテーテル</li>
             </ul>
           </div>
           <div class="bg-white p-6 rounded-2xl shadow-sm border border-leaf-pale">
@@ -1582,22 +1479,25 @@
             <div class="text-center space-y-2">
               <div class="w-12 h-12 rounded-full bg-leaf-dark text-white flex items-center justify-center font-bold text-lg mx-auto">1</div>
               <h4 class="font-bold text-sm text-leaf-dark">お電話でご連絡</h4>
-              <p class="text-xs text-cozy-gray leading-relaxed">入院相談直通（0422-55-8312）へ。患者様の状態・医療処置・希望時期をお知らせください。</p>
+              <p class="text-xs text-cozy-gray leading-relaxed">入院・入所先の医療相談員へ転院希望の旨をお伝えください。</p>
+              <p class="text-xs text-cozy-gray leading-relaxed">・必要書類（診療情報提供書・検査データ・ＡＤＬ表 etc）</p>
             </div>
             <div class="text-center space-y-2">
               <div class="w-12 h-12 rounded-full bg-leaf-dark text-white flex items-center justify-center font-bold text-lg mx-auto">2</div>
               <h4 class="font-bold text-sm text-leaf-dark">受入判断・回答</h4>
-              <p class="text-xs text-cozy-gray leading-relaxed">医師・看護師長が内容を確認し、原則<strong>1営業日以内</strong>にご連絡いたします。</p>
+              <p class="text-xs text-cozy-gray leading-relaxed">医師・看護師長が内容を確認し、受け入れを検討致します。</p>
+              <p class="text-xs text-cozy-gray leading-relaxed">※検討の結果、受け入れ困難となる場合もございます。</p>
             </div>
             <div class="text-center space-y-2">
               <div class="w-12 h-12 rounded-full bg-leaf-dark text-white flex items-center justify-center font-bold text-lg mx-auto">3</div>
-              <h4 class="font-bold text-sm text-leaf-dark">書類のご提出</h4>
-              <p class="text-xs text-cozy-gray leading-relaxed">診療情報提供書・看護サマリー・リハビリサマリー（必要時）をFAXまたは持参でご送付ください。</p>
+              <h4 class="font-bold text-sm text-leaf-dark">入院相談</h4>
+              <p class="text-xs text-cozy-gray leading-relaxed">患者様の親族の方が、ご来院頂き、当院についてのご説明や入院費についてご案内させて頂きます。</p>
             </div>
             <div class="text-center space-y-2">
               <div class="w-12 h-12 rounded-full bg-leaf-dark text-white flex items-center justify-center font-bold text-lg mx-auto">4</div>
               <h4 class="font-bold text-sm text-leaf-dark">転院日決定・受入</h4>
               <p class="text-xs text-cozy-gray leading-relaxed">転院日を調整し、当日スタッフがお出迎えします。ご家族へのご説明も丁寧に行います。</p>
+              <p class="text-xs text-cozy-gray leading-relaxed">※入院相談後に院内で最終判定会議を行います。</p>
             </div>
           </div>
         </div>
@@ -1610,23 +1510,14 @@
           <h3 class="text-2xl font-bold text-leaf-dark">必要書類</h3>
         </div>
         <div class="bg-white rounded-2xl shadow-sm border border-leaf-pale p-8">
-          <div class="grid md:grid-cols-3 gap-4">
+          <div class="grid md:grid-cols-2 gap-4">
             <div class="bg-leaf-pale/40 p-4 rounded-xl">
               <h4 class="font-bold text-sm text-leaf-dark mb-3 flex items-center gap-1"><i class="fa-solid fa-file-circle-check"></i> 必須書類</h4>
               <ul class="text-xs text-cozy-gray space-y-1.5">
                 <li>・診療情報提供書（紹介状）</li>
-                <li>・看護サマリー</li>
+                <li>・ＡＤＬ表</li>
                 <li>・最近の検査データ</li>
                 <li>・薬剤情報提供書（お薬手帳）</li>
-              </ul>
-            </div>
-            <div class="bg-leaf-pale/40 p-4 rounded-xl">
-              <h4 class="font-bold text-sm text-leaf-dark mb-3 flex items-center gap-1"><i class="fa-solid fa-file-circle-plus"></i> 必要に応じて</h4>
-              <ul class="text-xs text-cozy-gray space-y-1.5">
-                <li>・リハビリテーションサマリー</li>
-                <li>・栄養管理計画書</li>
-                <li>・褥瘡に関する情報</li>
-                <li>・退院支援計画書</li>
               </ul>
             </div>
             <div class="bg-sakura-pale/40 p-4 rounded-xl">
@@ -1818,7 +1709,6 @@
             <li><a href="#" onclick="showPage('page-admission')" class="text-cozy-gray hover:text-leaf-dark transition-colors">入院費用について</a></li>
             <li><a href="#" onclick="showPage('page-admission')" class="text-cozy-gray hover:text-leaf-dark transition-colors">持ち物リスト</a></li>
             <li><a href="#" onclick="showPage('page-admission')" class="text-cozy-gray hover:text-leaf-dark transition-colors">よくあるご質問</a></li>
-            <li><a href="#" onclick="showPage('page-admission')" class="text-cozy-gray hover:text-leaf-dark transition-colors">入院相談フォーム</a></li>
           </ul>
         </div>
 
