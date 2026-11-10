@@ -1,0 +1,11 @@
+# Claude / エディタの作業用設定
+.claude/
+.vscode/
+
+# OSが自動生成するファイル
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Officeの一時ファイル
+~$*
